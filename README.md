@@ -4,5 +4,5 @@
 
 ### 23.03.08 ~ ing
 
-:+1: 23.04.10 layoutEx 업로드
+:+1: 23.04.11 layou_stickytEx 과제 생성
 </div>
