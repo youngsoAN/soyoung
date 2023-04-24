@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx8</title>
+  <style>
+    /*
+    h1 {
+      text-align: center;
+    }
+    .container {
+      margin: 0 auto;
+      background-color: rgb(101, 101, 160);
+      width: 60vw;
+      height: 60vh;
+
+      display: flex;
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+    .container img {
+      width: 20vw; height: 20vh;
+    }
+    .container img .title3 {
+      justify-content: center;
+    }*/
+    h1 {
+      text-align: center;
+    }
+    .container {
+      background-color: rgb(179, 212, 255);
+      margin: 0 auto;
+      width: 70vh; 
+      /*height: 70vh;*/
+      aspect-ratio: 1;
+
+      display: flex;/* 내가 부여한 값보다 플렉스가 더 우선임 */
+      flex-flow: column wrap;
+      /*align-items: center;*/
+      align-content: space-evenly;
+      justify-content: space-evenly;
+    }
+    .container figure {
+      border: 1px solid #fff;
+      /*width: 50%;*/
+      box-sizing: border-box;
+      margin: 0;
+      width: 43%;
+    }
+    .container figure img {
+      vertical-align: top;/* 이미지가 인라인이면 띄어져있는 부분 발생해서 디스플레이 블록 하거나 이거 하면 됨 */
+      width: 100%;
+    }
+    .container figure figcaption {
+      background-color: rgb(255, 79, 176);
+      font-weight: bold; font-size: 1.1rem; text-transform: capitalize;
+      text-align: center;
+      padding: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>상하 정렬 갤러리</h1>
+  <article>
+    <div class="container">
+      <figure>
+        <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img1">
+        <figcaption>title1</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/DDA0DD/000?text=img2" alt="img2">
+        <figcaption>title2</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/DB7093/000?text=img3" alt="img3">
+        <figcaption>title3</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/FFC0CB/000?text=img4" alt="img4">
+        <figcaption>title4</figcaption>
+      </figure>
+    </div>
+  </article>
+  
+</body>
+</html>

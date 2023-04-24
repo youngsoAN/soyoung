@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx2</title>
+  <style>
+    .box {
+      font-weight: bold; font-size: 1.5rem; 
+      list-style: none; padding: 0;
+      border: 2px solid #000;
+      width: 70vw; height: 80vh; margin: 3em auto;
+
+      display: flex;
+      /*flex-direction: column;주축이 y 축으로 변함 */
+
+      /*flex-direction: row;
+      flex-wrap: wrap;
+
+      justify-content: center; 주축 기준 정렬
+      align-items: center; 교차축 기준 개별 아이템 정렬
+      align-content: center; 교차축 기준 여러 아이템을 하나의 그룹으로 두고 정렬 */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .box .item {/* .box의 flex-item 이자 글자들의 flex-container */
+      width: 50%; height: 16%;
+      /*margin: 0 0.5%;*/
+      /*line-height: 16%; 한줄일때만 가능 */
+
+      display: flex;/* 이때부터 라인하이트 안먹음 */
+      justify-content: center;
+      align-items: center;
+    }
+    .box .item1 {
+      background-color: rgb(255, 194, 217);
+    }
+    .box .item2 {
+      background-color: rgb(255, 224, 253);
+    }
+    .box .item3 {
+      background-color: rgb(203, 209, 255);
+    }
+    .box .item4 {
+      background-color: rgb(176, 217, 255);
+    }
+    .box .item5 {
+      background-color: rgb(214, 233, 255);
+    }
+  </style>
+</head>
+<body>
+  <!-- 내부 박스, 글자 좌우, 상하 중앙 정렬 -->
+  <ul class="box">
+    <li class="item item1">item1<br>item</li>
+    <li class="item item2">item2<br>item</li>
+    <li class="item item3">item3<br>item</li>
+    <li class="item item4">item4<br>item</li>
+    <li class="item item5">item5<br>item</li>
+  </ul>
+</body>
+</html>

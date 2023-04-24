@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* css 문서 내부에서 다른 문서 호출 */
+/* pretendard Variable, sans-serif */
+@import url("../assets/css/pretendardvariable-dynamic-subset.css");
+
+/* 'Castoro Titling', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",Dotum, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+main {
+  background-color: #ddd;
+  height: 200vh;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 100px;
+}
+h1 {
+  background-color: #FF6969;
+  color: #fff;
+  font-family: 'Castoro Titling', Georgia, 'Times New Roman', Times, serif;
+  /*font-weight: bold;*/
+  font-size: 1.5rem;
+  /*height: 100px;/ 높이값 주는 방법 1
+  line-height: 100px;*/
+  /*padding: 2.7rem; 높이값 주는 방법 2 */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;/* 높이값 주는 방법 3 */
+}
+.gnb {
+  background-color: #ffd1d1;
+  color: #c74242;
+
+  height: 50px;
+  display: flex;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+}
+.gnb a {
+  display: block;
+}
+/* 각각의 대메뉴 제목 */
+.gnb > li > a {/* 자식 선택자를 사용해야 대메뉴랑 소메뉴 li a  안겹침 */
+  font-weight: 600;
+  font-size: 1.2rem;
+  min-width: 100px;/* 최소한으로 작아지지 말라 */
+  height: 50px;
+  line-height: 50px;
+
+  /*display: flex; 높이값 2
+  align-items: center;
+   flex 사용해서 정렬하면 justfiy-content 안주면 또 왼쪽으로 치우침*/
+   border-right: 1px solid #ffffff;
+}
+.gnb > li:last-child > a{
+  border-right: none;
+}
+.gnb > li > a:hover {
+  background-color: #ff9292;
+  color: #fff;
+}
+.gnb .sub_menu {/*소메뉴*/
+  display: none;
+}
+/* 각 대메뉴에 마우스를 올리면 해당 대메뉴의 소메뉴가 나타남 */
+.gnb > li:hover > .sub_menu {
+  display: block;
+}
+.gnb .sub_menu a {
+  background-color: #ffe7e1;
+  color: #972a76;
+  border-bottom: #ffffff 1px solid;
+  height: 30px;
+  line-height: 30px;
+}
+.gnb .sub_menu a:hover {
+  background-color: #fff;
+  color: #c74242;
+}
+.gnb .sub_menu li:last-child a {
+  border-bottom: none;
+}

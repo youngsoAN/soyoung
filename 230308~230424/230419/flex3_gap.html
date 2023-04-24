@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flex3_gap</title>
+  <style>
+    body { margin:0; font-size: 2em; font-weight: bold; text-align: center; }
+
+    .wrapper .item1{  background-color: #ffb6b6;}
+    .wrapper .item2{  background-color: #fbffc4;}
+    .wrapper .item3{  background-color: #c8ffca;}
+    .wrapper .item4{  background-color: #c5cfff;}
+    .wrapper {
+      color: #fff; border: 6px solid #000; width: 80vw; margin: 2vw auto;
+    }
+
+    #container {
+      display: flex;
+
+      flex-flow: wrap-reverse row-reverse;
+
+      /* 아이템의 행과 열 사이의 간격 */
+      gap: 0;/* 기본값 */
+      gap: 20px 10px;/* row-gap colum-gap */
+      gap: 20px;
+    }
+    #container .item {
+      width: 40%;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>gap</h1>
+  <div class="wrapper" id="container"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+    <div class="item item4">item4</div><!-- flex-item -->
+  </div>
+</body>
+</html>

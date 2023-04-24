@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx9</title>
+  <style>/*
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .container {
+      margin: 0 auto;
+      border: 3px solid #000;
+      width: 70vw;
+
+      display: flex;
+      flex-flow: column wrap;
+      align-content: space-evenly;
+      justify-content: space-evenly;
+
+      aspect-ratio: 1.5;
+    }
+    .container figure {
+      box-sizing: border-box;
+      margin: 0;
+      width: 30%;
+    }
+    .container img {
+      display: block;
+      width: 100%;
+    }
+    .container figcaption {
+      background-color: rgb(0, 0, 0);
+      color: #fff;
+      text-align: center;
+      padding: 4px 0;
+    }*/
+    h1 {
+      text-align: center;
+    }
+    .gallery {/* flex-container */
+      list-style: none; padding: 0;
+      margin: 0 auto;
+      border: 6px solid #000;
+      width: 80vw;
+
+      display: flex;
+      flex-flow: wrap;
+      /*gap: 0.5rem; 열과 행에 들어가는 여백 */
+    }
+    .gallery li {/* flex-item */
+      margin: 1%;
+      width: 33.33333%;
+  }
+    .gallery li img {/* flex-item 아님 */
+      vertical-align: top;
+      width: 100%;
+    }
+    .gallery li h3 {/* flex-item 아님 */
+      margin: 0;
+      background-color: rgb(138, 255, 216);
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+  <ul class="gallery">
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img1">
+      <h3>title1</h3>
+    </li>
+    
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img2"><h3>title2</h3>
+    </li>
+    
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img3"><h3>title3</h3>
+    </li>
+    
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img4"><h3>title4</h3>
+    </li>
+    
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img5"><h3>title5</h3>
+    </li>
+    <li>
+      <img src="https://via.placeholder.com/300x200/9370DB/000?text=img1" alt="img6"><h3>title6</h3>
+    </li>
+</ul>
+  
+  <!--
+
+  
+      <figure>
+        <img src="https://via.placeholder.com/300x200/DDA0DD/000?text=img2" alt="img2">
+        <figcaption>title2</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/DB7093/000?text=img3" alt="img3">
+        <figcaption>title3</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/FFC0CB/000?text=img4" alt="img4">
+        <figcaption>title4</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/A9BCF5/000?text=img5" alt="img5">
+        <figcaption>title5</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/300x200/E2A9F3/000?text=img6" alt="img6">
+        <figcaption>title6</figcaption>
+      </figure>
+    </div>
+  </article>
+  -->
+</body>
+</html>

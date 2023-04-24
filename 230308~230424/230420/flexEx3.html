@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx3</title>
+  <style>
+    body {
+      margin: 0; font-weight: bold; font-size: 2em;
+    }
+    /*.container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: aquamarine;
+    }*/
+
+
+    .container header {
+      background-color: rgb(255, 125, 186); height: 14vh;
+    }
+    .container nav {
+      background-color: rgb(255, 199, 126); padding: 1vh; height: 6vh;
+    }
+    .container main {/* flex-container */
+      display: flex;
+      /* 교차축의 기본은 strech이기 때문에 전체가 채워짐 */
+      height: 78vh;/* 100vh - height: 14vh - nav padding 2vh - height 6vh */
+    }
+    .container aside {
+      background-color: rgb(255, 242, 167); width: 30%; 
+    }
+    .container section {
+      background-color: rgb(255, 146, 146); width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+      <aside>aside</aside>
+      <section>section</section>
+    </main>
+  </div>
+  
+</body>
+</html>

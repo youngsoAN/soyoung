@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx4</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    /*.container { 방법1
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }*/
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .container footer {
+      background-color: rgb(255, 161, 117);
+      /* margin: 0 auto; 부모요소에 플렉스가 적용되어 있으면 작동x */
+
+      width: 1600px;/* 1600/ 1920*100 = 83.33333333333334vh */
+      width: 83vh;
+      padding: 30px;/* 30/999*100 = 3.003 */
+      padding: 3.003vh;
+
+      /* align-self : flex-end; 방법2 */
+
+      /* 부모요소에 플렉스 적용시 자식 아이템은 margin을 통해 개별적으로 위치 지정 가능. 더 섬세하게 조정 가능 */
+      /*margin: auto; center center 오버라이드 방식 */
+      /*margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽에 배치*/
+      /*margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽에 배치*/
+      /*margin-bottom: auto; 여백이 아래에 들어가기 때문에 아이템은 위쪽에 배치 */
+      /*margin-top: auto;같은 이유로 아래에 배치됨*/
+      margin: 5em auto auto 2em;
+      margin: auto auto 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <footer>
+      <h2>바닥글</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos sit ipsa, non, necessitatibus eum est maxime quam consequuntur ut enim sed fugit beatae excepturi tenetur animi facilis amet neque nobis.</p>
+    </footer>
+  </div>
+</body>
+</html>

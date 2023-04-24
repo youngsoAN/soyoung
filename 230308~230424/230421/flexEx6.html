@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx6</title>
+  <style>
+    /* 혼자한거...
+    html {
+      margin: 0;
+    }
+    section {
+      margin: 0 auto;
+      background-color: rgb(186, 245, 255);
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+    }
+    section h2 {
+      margin: 0;
+      background-color: rgb(162, 162, 219);
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+
+      align-items: flex-start;
+    }
+    section input {
+      padding: 0;
+      height: 20px;
+    }
+    section h3 {
+      background-color: rgb(173, 199, 233);
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+
+      align-items: flex-start;
+    }
+    */
+
+    body {  margin: 0; font-size: 1.1rem; text-align: center; }
+
+    .container { 
+      background-color: rgb(206, 232, 255);
+      display: flex;
+    }
+    .container h1 { background-color: rgb(150, 206, 255); margin: 0; font-size: 1.4rem; aspect-ratio: 1; width: 10vw;
+    display: flex;
+    justify-content: center; align-items: center;}
+    .container form {/* flex-item / flex-container */
+      display: flex;
+      align-items: center;
+    }
+    .container form * {/* form 전체선택 */
+      outline: none;
+      font-size: 1.1rem;
+      border: 1ps solid #000;
+    }
+    .container form [type=search] {
+      border-right: none;
+      margin-left: 10px;
+      width: 200px;
+      padding: 5px;
+      height: 30px;
+    }
+    .container form [type=submit] {
+      height: 30px
+    }
+    .container form [type=submit]:hover {
+      background-color: rgb(198, 255, 255); color: blue; cursor: pointer;
+    }
+    .container nav {background-color: rgb(176, 205, 255); width: 4rem;
+    display: flex;
+    justify-content: center; align-items: center;
+    
+    margin-left: auto;/* 플렉스 아이템을 오른쪽으로 배치 */
+  }
+  </style>
+</head>
+<body>
+  <div class="container"><!-- flex-container 바로 밑에 있는 자식만 (아이템만) 부모로 묶어서 가능?? 하다고 함 -->
+    <h1>로고</h1><!-- flex-item -->
+    <form><!-- flex-item -->
+      <input type="search" name="search" id="search">
+      <button type="submit">검색</button>
+    </form>
+    <nav>메뉴</nav><!-- flex-item -->
+  </div>
+  <!-- 혼자함 스바..
+  <section>
+    <h2>로고</h2>
+    <input type="text" placeholder="">
+    <button>검색</button>
+    <h3>메뉴</h3>
+  </section>
+-->
+</body>
+</html>

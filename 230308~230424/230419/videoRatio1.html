@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>videoRatio1</title>
+  <style>
+    .container {
+      width: 100%;
+      padding-top: 56.25%;
+      position: relative;
+      /*overflow: hidden;*/
+    }
+    .container .youtube {
+      width: 100%; height: 100%;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+    /*
+      유튜브 16 : 9 ==  padding-top의 %를 사용해서 비율조정: 9 나누기 16 곱하기 100 =56.25%
+      일반 비디오 4 : 3 == 3 / 4 * 100 = 75%
+      3 : 2 == 2 / 3 * 100 == 66.666666%
+      8 : 5 == 5 / 8 * 100 = 62.5%
+      1 : 1 == 100%
+    */ 
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe src="https://www.youtube.com/embed/t3PisI5aXzY" title="비디오 비율 조정" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="youtube"></iframe>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fluidLayout3</title>
+  <style>
+  .container {  background-color: aliceblue; width: 80vw; margin: 0 auto; font-size: 23px; font-weight: bold;  }
+  .container .box { border: 3px solid #000; box-sizing: border-box; }
+  .container .box::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .container .box {}
+  .container .box .item_col { height: 30vh;}
+  .container .item1 .item_col { background-color: rgb(189, 217, 255);}
+  .container .item2 .item_col { background-color: rgb(136, 184, 255); float: left; width: 31.333333%; margin: 1%;}
+  .container .item3 .item_col { background-color: rgb(111, 162, 255); float: left; margin: 0.5vw; width:calc(16.666666% - 1vw); }
+  /*
+    calc(); css 함수
+      다른 단위 값들끼리 연산이 가능 ( +, -, /, * )
+      연산자 사이에는 반드시 띄어쓰기가 필요
+  */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box item1">
+      <div class="item_col">1행1열</div>
+    </div>
+    <div class="box item2">
+      <div class="item_col">2행1열</div>
+      <div class="item_col">2행2열</div>
+      <div class="item_col">2행3열</div>
+    </div>
+    <div class="box item3">
+      <div class="item_col">3행1열</div>
+      <div class="item_col">3행2열</div>
+      <div class="item_col">3행3열</div>
+      <div class="item_col">3행4열</div>
+      <div class="item_col">3행5열</div>
+      <div class="item_col">3행6열</div>
+    </div>
+  </div>
+</body>
+</html>

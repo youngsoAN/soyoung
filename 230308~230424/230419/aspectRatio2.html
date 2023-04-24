@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>aspectRatio2</title>
+  <style>
+    img {
+      display: block;
+      margin: 20px;
+      border: 1px solid #000;
+      width: 300px
+    }
+    .img1 {
+      aspect-ratio: auto 1 / 1;
+    }
+    .img2 {
+      aspect-ratio: auto 16 / 9;
+    }
+    .img3 {
+      aspect-ratio: 0.75;
+    }
+  </style>
+</head>
+<body>
+  <h1>aspectRatio2</h1>
+
+  <img src="https://picsum.photos/300/300" alt="picsum" class="img1">
+  <img src="https://picsum.photos/300/300" alt="picsum" class="img2">
+  <img src="https://picsum.photos/300/300" alt="picsum" class="img3">
+</body>
+</html>

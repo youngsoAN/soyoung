@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flex3 : flex-flow</title>
+  <style>
+    body { margin:0; font-size: 2em; font-weight: bold; text-align: center; }
+
+    .wrapper .item1{  background-color: #ffb6b6;}
+    .wrapper .item2{  background-color: #fbffc4;}
+    .wrapper .item3{  background-color: #c8ffca;}
+    .wrapper .item4{  background-color: #c5cfff;}
+    .wrapper {
+      color: #fff; border: 6px solid #000; width: 80vw; margin: 2vw auto;
+    }
+    #container {
+      display: flex;/* 상속되는 값이 아님(직계자식만 가능) */
+      /*flex-direction: row;
+      flex-wrap: wrap;*/
+
+      /* flex-direction, flex-wrap 을 한번에 작성하고자 할 때 사용. 순서 상관 없음 */
+      flex-flow: row wrap;
+      flex-flow: wrap;/* 생략된 값은 기본값 적용 */
+    }
+    #container .item {
+      width: 50%;
+      aspect-ratio: 2 /1;
+    }
+    #container .item1 {
+      flex-wrap: wrap;
+    }
+    #container .item3 {
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>flex3 : flex-flow</h1>
+  <div class="wrapper" id="container"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div>
+</body>
+</html>

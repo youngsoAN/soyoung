@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flex6_align-item</title>
+  <style>
+    body { margin:0; font-size: 2em; font-weight: bold; text-align: center; }
+
+      .wrapper .item1{  background-color: #ffb6b6;}
+      .wrapper .item2{  background-color: #fbffc4;}
+      .wrapper .item3{  background-color: #c8ffca;}
+
+      .wrapper {/* flex-container */
+         border: 6px solid #000; width: 80vw; margin: 2vw auto;
+
+        display: flex;
+        flex-flow: row nowrap;/* direction wrap */
+        justify-content: center;/* 주축 기준 정렬 */
+        height: 40vh;
+      }
+
+      #container1 {
+        /* 교차축 기준 아이템 정렬 */
+        align-items: stretch;/* 기본값 아이템 높이값이 없어도 컨테이너의 높이값 만큼 아이템 확장 정렬 */
+        align-items: flex-start;/* 교차축 기준 시작점부터 정렬 */
+        align-items: flex-end;/* 교차축 기준 끝점부터 정렬 */
+        align-items: center;/* 교차축 기준 중앙 정렬 */
+      }
+      #container2 {
+        /* 주축의 값을 y ,열,세로 로 변경 */
+        flex-direction: column;
+        
+        /* 교차축은 x,행,가로 로 변경 */
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+  <h1>flex6 : align-item</h1>
+  <div class="wrapper" id="container1"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div>
+  <div class="wrapper" id="container2">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+</html>
