@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>수열선택자</title>
+  <style>
+    /* 원 크기 width: 100px, 박스 중앙정렬 */
+/* 혼자한거
+ .container {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  background-color: rgb(212, 226, 226);
+  width: 480px;
+  height: 720px;
+
+  text-align: center;
+  line-height: 100px;
+ }
+ .container.box p {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+
+  border-radius: 50%;
+
+  float: left;
+  margin: 10px;
+ }
+ .container.box div {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  margin: 10px;
+  float: left;
+ }
+*/
+    .box {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+
+      width: 480px;/* 3열 정렬 = 120*3 4열 정렬 = 120*4 */
+      margin: 50px auto;
+      background-color: #ddd;
+
+      overflow: hidden;/* 자식에게 float가 적용되면 부모의 높이 값이 인식되지 않기 때문에 부모 요소에 overflow 적용하여 높이 값 인식 -여기서는 배경색이 부모 높이값만큼 나타났음 */
+    }
+    .box p, .box div {/* 실제 사이즈를 구해서 4열 정렬해줘야함  w100 + m(10+10) =120 */
+      width: 100px; height: 100px;
+      line-height: 100px;
+      border-radius: 50%;
+      background-color: rgb(239, 248, 245);
+
+      float: left;
+      margin: 10px;
+
+      box-sizing: border-box;/* width (paddinf+border) +margin */
+    }
+
+    /*
+      수열 선택자, 의사 클래스
+      :first-child {} 같은 부모를 둔 자식들 중 첫번째 자식
+      :last-child {} 같은 부모를 둔 자식들 중 마지막 자식
+      :nth-child(n) {} 같은 부모를 둔 자식들 중 n번째 자식
+
+      :first-of-type {} 같은 부모를 둔 자식들 중 '같은 타입'의 첫번째 자식
+      :last-of-type {} 같은 부모를 둔 자식들 중 '같은 타입의' 마지막 자식
+      :nth-of-type(n) {} 같은 부모를 둔 자식들 중 '같은 타입'의 n번째 자식
+
+      (even) 짝수
+      (odd) 홀수
+      (3n+1) 3개를 기준으로 첫번째
+      (3n) 3번째
+    */
+    .box p:first-child {/* 같은 부모를 둔 자식들 중 처음 나오는 요소가 p인 경우 적용 */
+      background-color: orange;
+    }
+    .container div:first-child {/* 같은 부모를 둔 자식들 중에 처음 나오는 요소가 div가 아니기 때문에 적용x */
+      color: red;
+    }
+    /*.container p:first-child { 같은 부모를 둔 자식들 중에 처음 나오는 요소가 p가 맞아서 적용가능
+      color: red;
+    }*/
+    .container div:first-of-type {/* 같은 부모를 둔 자식들 중 같은 타입의 첫번째 div에 적용 */
+      color: violet;
+    }
+    .box div:last-of-type {/* 각 부모 안에서 같은 타입의 자식들 중 마지막 div에 적용 */
+      background-color: rgb(194, 175, 233);
+    }
+    .container p:last-child {/* 가장 마지막에 나오는 자식이 p 이기 때문에 적용된거임 */
+      background-color: tomato;
+    }
+    .box p:nth-child(7) {/* 자식들 중 7번째 위치에 p 가 있기 때문에 적용됐음 */
+      border: 3px solid #000;
+    }
+    .box p:nth-child(10) { /* 자식들 중 10번째 위치에 p 가 있어야 적용됨 */
+      border: 3px solid #be4d4d;
+    }
+    .box div:nth-of-type(2) {/* 자식들 중 같은 타입의 2번째 div 라는 뜻임 */
+      color: #046e24;
+    }
+    .container p:nth-child(even) {/* 짝수 위치의 p에 적용 */
+      background-color: rgb(112, 211, 211);
+    }
+    .wrapper p:nth-child(odd) {/* 홀수 위치의 p */
+      background-color: coral;
+      color: rgb(60, 60, 122);
+    }
+    .container :nth-child(odd) {/* 실제하지 않는 요소 없이 작성시 요소 구분 없이 전체 적용 */
+      font-style: italic;
+    }
+    .container :nth-child(even) {/* 실제하지 않는 요소 없이 작성시 요소 구분 없이 전체 적용 */
+      text-decoration: line-through;
+    }
+    .container p:nth-child(3n+2) {/* 3개를 기준으로 2번째 p 적용 */
+      border-radius: 0;
+    }
+    .container p:nth-child(5n) {/* 5개를 기준으로 5번째 p */
+    border: 3px solid #ff0095;
+    }
+    .container p:nth-of-type(4n+1) {/* 같은 타입의 p중에 4개를 기준으로 1번째 */
+      border-radius: 50% 0;
+    }
+    /* 3~11 까지 선택 */
+    .wrapper :nth-child(n+3):nth-child(-n+11) {
+      border: 3px dashed #be5392;
+    }
+    /* 5번부터 시작해서 11번째까지. 2개 중 첫번째에 적용 */
+    .wrapper :nth-child(2n+5):nth-child(-n+11) {
+      color: rgb(189, 28, 28);
+    }
+  </style>
+</head>
+<body>
+  <h1>수열선택자 - 의사클래스</h1>
+  <div class="container box">
+    <p>01</p>
+    <p>02</p>
+    <p>03</p>
+    <div>04</div>
+    <div>05</div>
+    <p>06</p>
+    <p>07</p>
+    <p>08</p>
+    <p>09</p>
+    <div>10</div>
+    <p>11</p>
+    <p>12</p>
+    <p>13</p>
+    <p>14</p>
+    <p>15</p>
+    <p>16</p>
+    <p>17</p>
+    <p>18</p>
+    <div>19</div>
+    <p>20</p>
+    <p>21</p>
+  </div>
+  <div class="wrapper box">
+    <p>01</p>
+    <p>02</p>
+    <p>03</p>
+    <p>04</p>
+    <div>div5</div>
+    <div>div6</div>
+    <p>07</p>
+    <p>08</p>
+    <p>09</p>
+    <p>10</p>
+    <p>11</p>
+    <p>12</p>
+    <p>13</p>
+    <p>14</p>
+  </div>
+</body>
+</html>

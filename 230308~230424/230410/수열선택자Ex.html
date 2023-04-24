@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>수열선택자Ex</title>
+  <style>
+  /* 혼자한거
+    .gnb {
+      list-style: none;
+      font-weight: bold;
+      font-size: 30px;
+      
+      margin: 20px auto;
+      width: 990px;
+    }
+    .gnb li {
+      float: left;
+      width: 110px; height: 70px;
+      line-height: 70px;
+
+      text-align: center;
+      display: block;
+    }
+    .gnb .Lround {
+      border-radius: 30px 0 0 30px;
+    }
+    .gnb .Rround {
+      border-radius: 0 30px 30px 0;
+    }
+    .gnb li:nth-child(even) {
+      background-color: rgb(115, 159, 255);
+      color: azure;
+    }
+    .gnb li:nth-child(odd) {
+      background-color: rgb(255, 92, 92);
+    }
+    .gnb li:nth-child(3){
+      background-color: #ffe91f;
+    }
+    .gnb li:nth-child(7) {
+      background-color: #ffe91f;
+    }
+  */
+
+  .gnb {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 50px auto;
+
+    /* width: 900px; */
+    width: 80%;
+    overflow: hidden;
+  }
+  .gnb li {
+    float: left;
+    width: 11.111111%;/* .gnb의 width 값이 80% 였기 때문에 9등분함 */
+  }
+  .gnb li a {
+    text-decoration: none;
+    color: black;
+    background-color: #ddd;
+    display: block;
+
+    /* width: 100px; */
+    height: 50px;
+    line-height: 50px;
+  }
+  .gnb li:first-child a {
+    border-radius: 30px 0 0 30px;
+  }
+  .gnb li:last-child a {
+    border-radius: 0 30px 30px 0;
+  }
+  .gnb li:nth-child(even) a {
+    background-color: rgb(245, 197, 255);
+  }
+  .gnb li:nth-child(4n+3) a {
+    background-color: rgb(147, 177, 221);
+  }
+  .gnb li:nth-child(4n+1) a {
+    background-color: rgb(175, 240, 189);
+  }
+  </style>
+</head>
+<body>
+  <menu class="gnb">
+    <li class="Lround"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li class="Rround"><a href="#">9</a></li>
+  </menu>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>배경중첩backgroundMulti</title>
+  <style>
+    body {
+      text-align: center;
+
+      /* 중첩은 쉼표로 구분. 먼저 작성된 값이 위에 보여짐 */
+      /* background-image: url(./images/line.jpg), url(./images/more-leaves.png);
+      background-repeat: no-repeat, repeat;
+      background-position: 50%;
+      background-attachment:  fixed, scroll;
+      background-size: 700px, auto; */
+
+      background:
+      url(./images/line.jpg) no-repeat fixed 30% 50% / 700px,
+      url(./images/more-leaves.png);
+    }
+  </style>
+</head>
+<body>
+  <h1>배경중첩 background Multi</h1>
+</body>
+</html>

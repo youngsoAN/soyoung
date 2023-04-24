@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>layout_stickyEx.1</title>
+  <style>
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+    body, h1 {
+      margin: 0;
+      line-height: 1.6;
+    }
+    h1 {
+      background-color: cadetblue;
+      color: aliceblue;
+      text-align: center;
+      padding: 50px 0;
+    }
+    .gnb {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      position: sticky;
+      top: 0;
+    }
+    .gnb li {
+      float: left;
+
+      width: 25%;
+    }
+    .gnb li a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: rgb(63, 108, 114);
+      font-weight: bold;
+      text-align: center;
+
+      display: block;
+      height: 50px; line-height: 50px;
+    }
+    .gnb li a:hover {
+      background-color: rgb(8, 39, 21);
+    }
+    .container {
+      width: 50%;
+      margin: 50px auto;
+    }
+    /* 혼자한거
+    body {
+      margin: 0;
+      background-color: antiquewhite;
+    }
+    h1 {
+      background-color: rgb(99, 174, 245);
+      color: aliceblue;
+
+      margin: 0 auto;
+      height: 150px;
+      line-height: 150px;
+
+      text-align: center;
+    }
+    menu {
+      list-style: none;
+      margin: 0;
+      
+      height: 50px;
+      line-height: 50px;
+
+      position: sticky;
+      top: 0; left: 0;
+
+      padding: 0;
+    }
+    .gnb {
+      background-color: rgb(245, 202, 146);
+    }
+    .gnb li {
+      display: inline-block;
+    }
+    .gnb li a {
+      text-decoration: none;
+      font-size: 20px;
+      color: black;
+    }
+    main {
+      margin: 0 auto;
+      padding-top: 100px;
+      width: 500px;
+    }
+    */
+  </style>
+</head>
+<body>
+  <h1>position:sticky 연습 1</h1>
+  <menu class="gnb clearfix">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+  <main class="container">
+    <p>대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다. 국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다</p>
+    <p>대법원장은 국회의 동의를 얻어 대통령이 임명한다. 근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다.
+    재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를 방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다.</p>
+    <p>제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+
+    <p>새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다.</p>
+
+    <p>대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여 국회재적의원 과반수의 찬성이 있어야 한다.</p>
+
+    <P>언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 언론·출판이 타인의 명예나 권리를 침해한 때에는 피해자는 이에 대한 피해의 배상을 청구할 수 있다.
+    </p>
+    <p>대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다. 국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다</p>
+    <p>대법원장은 국회의 동의를 얻어 대통령이 임명한다. 근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다.
+    재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를 방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다.</p>
+    <p>제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다.</p>
+
+    <p>새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다.</p>
+
+    <p>대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여 국회재적의원 과반수의 찬성이 있어야 한다.</p>
+
+    <P>언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 언론·출판이 타인의 명예나 권리를 침해한 때에는 피해자는 이에 대한 피해의 배상을 청구할 수 있다.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere, autem in quia sapiente illum doloribus dolorem nam. Commodi voluptate quisquam officia earum, delectus explicabo ratione optio facilis corrupti reprehenderit.</p>
+  </main>
+</body>
+</html>

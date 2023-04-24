@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  font-size: 18px;
+}
+.border {
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+.container {/* 1042 */
+  margin: 7px auto;
+  width: 1000px;
+}
+.container h1 {
+  margin: 0;
+  padding: 44px 20px;
+}
+.container main {
+  margin: 20px 0;
+  background-color: rgb(202, 252, 235);
+
+  overflow: hidden;/* 자식 요소에 float로 인해 높이값 인식이 안되는 문제를 해결 */
+}
+.container main article {/* 440px */
+  float: left;
+  width: 358px;/* 440 - b2 - p40 */
+  margin: 0 20px;
+  /* box-sizing: border-box; */
+}
+.container main aside {/* (container 컨텐츠 영역 1000 - article 실제크기 440) / 2 = 280 */
+  float: left;
+  width: 238px;/* 280 - b2 - p40 */
+  background-color: #000;
+  color: #fff;
+
+}
+
+
+/* 혼자한거 1
+body {
+  margin: 0 auto;
+  font-size: 18px;
+}
+.border {
+  border: 1px solid #000;
+  padding: 20px;
+}
+.container {/* 1042 
+  margin: 7px auto;
+  width: 1000px;
+}
+.container h1 {
+  margin: 0;
+  padding: 44px 20px;
+}
+.container main {
+  margin: 20px 0;
+}
+.container main article {
+  float: left;
+  width: 440px;
+  margin-left: 20px;
+}
+.container main aside {
+  float: left;
+
+  width: 200px;
+
+  border: none;
+  background-color: #000;
+  color: #fff;
+
+  /* container w1000 - article 실제크기 602 - aside 실제크기 368 
+}
+
+.border .right {
+  width: 200px;
+  float: right;
+}
+.container main::after {/* clearfix 
+  content: "";
+  display: block;
+  clear: both;
+}
+*/
+
+/* 혼자한거 2
+body {
+  font-size: 18px;
+  margin: 0 auto;
+}
+.border {
+  border: 1px solid #000;
+  
+}
+.container {
+  margin: 7px auto;
+  width: 1000px;
+}
+.container h1 {
+  margin: 20px;
+  padding: 44px 20px;
+}
+.container aside {
+  background-color: #000;
+  color: aliceblue;
+
+  width: 200px;
+  padding: 20px;
+  border: none;
+
+  float: left;
+  margin-left: 20px;
+}
+.container article {
+  float: left;
+  width: 400px;
+  padding: 20px;
+  margin-left: 20px;
+}
+.border .right {
+  float: right;
+  margin-left: 20px;
+}
+.container main {
+  float: left;
+}
+.container main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container footer {
+  margin: 20px;
+  padding: 20px;
+}
+*/

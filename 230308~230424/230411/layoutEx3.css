@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+body {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  float: left;
+}
+.wrapper {
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  width: 940px;
+}
+nav.wrapper {
+ background-color: rgb(164, 164, 243); 
+ margin: 30px auto;
+}
+.wrapper .gnb {
+  margin: 30px auto;
+  width: 600px;/* li의 실제크기로 중앙정렬할 수 있다. 120px*5=600 (li widht값 * 5 =600) */
+
+}
+.wrapper .gnb a {
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 120px;
+  /* padding: 0 45px; - 이 방법도 사용할 수는 있지만 글자 길이에 따라 가로값이 달라지는게 단점이라 잘 안씀 */
+}
+.wrapper .gnb a:hover {
+  background-color: rgb(96, 226, 226);
+}
+article.wrapper {
+  background-color: rgb(255, 194, 80);
+  height: 100px;
+  line-height: 100px;
+}
+.wrapper h2 {
+  margin: 0;
+}
+footer.wrapper {
+  background-color: cadetblue;
+}
+.listWrapper {
+  width: 940px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.listWrapper li {
+  background-color: rgb(29, 84, 133);
+  color: aliceblue;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+}
+.listWrapper li:nth-child(2) {
+  margin: 0 20px;
+}

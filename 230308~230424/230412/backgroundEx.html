@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>backgroundEx과제</title>
+  <style>
+    .box {
+      margin: 20px auto;
+      width: 400px;
+      border: 3px solid #000;
+      border-radius: 20px;
+    }
+    .box p {
+      margin: 16px auto;
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #000;
+      border-radius: 20px;
+      padding: 3px;
+      input:focus {background-color: yellow;}
+    }
+    p:nth-child(1) {
+      background-color: rgb(255, 151, 151);
+    }
+    p:nth-child(2) {
+      background-color: rgb(255, 185, 159);
+    }
+    p:nth-child(3) {
+      background-color: rgb(255, 229, 159);
+    }
+    input:nth-child(1) {
+      border: none;
+      background-color: rgb(255, 151, 151);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>📛<input type="text" name="focus" placeholder="이름을 입력하세요"></p>
+    <p>📧<input type="text" name="focus" placeholder="이메일 입력하세요"></p>
+    <p>📞<input type="text" name="focus" placeholder="연락처를 입력하세요"></p>
+  </div>
+</body>
+</html>

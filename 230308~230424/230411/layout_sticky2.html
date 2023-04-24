@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>layout_sticky2</title>
+  <style>
+    body, h1, h2 {
+      margin: 0;
+      color:#fff
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    header, footer {
+      background-color: rgb(80, 80, 180);
+      height: 100px;
+      padding: 20px;
+    }
+    main {
+      border: 10px solid #000;
+    }
+    main article {
+      background-color: rgb(184, 124, 240);
+      height: 800px;
+      width: 70%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 30px;
+
+      position: relative;
+    }
+    main aside {
+      background-color: rgb(248, 175, 232);
+      height: 3000px;
+      width: 30%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+
+      position: sticky;
+      top: 0;
+    }
+
+    main article .relative {
+      background-color: #d44b4b;
+      float: left;
+      position: relative;/* relative와 float를 동시에 적용할 경우 float 인식 */
+      /* top: 20px; */
+    }
+    main article .fixed {/* fixed와 float를 동시에 적용할 경우 fixed 인식 */
+      background-color: #ffe347;
+      float: left;
+      position: fixed;
+      top: 170px; left: 150px;
+    }
+    main article .absolute {/* absolute와 float를 동시에 적용할 경우 absolute 인식 */
+      background-color: #4d8550;
+      float: left;
+      position: absolute;
+      top: 20px; left: 220px;
+    }
+    main article .sticky {
+      background-color: #595ab1;
+      float: left;
+      position: sticky;/* 부모 요소가 스크롤에 따라서 화면 밖으로 넘어가면 함께 넘어감 */
+      top: 20px; left: 360px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>position_sticky2</h1>
+    <h2>header</h2>
+  </header>
+  <main class="clearfix">
+    <article>
+      <div class="relative">relative</div>
+      <div class="fixed">fixed</div>
+      <div class="absolute">absolute</div>
+      <div class="sticky">sticky</div>
+    </article>
+    <aside>
+      <h2>aside</h2>
+    </aside>
+  </main>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>
