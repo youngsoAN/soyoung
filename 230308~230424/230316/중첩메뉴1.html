@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>중첩메뉴1</title>
+</head>
+
+<body>
+	<h1>중첩메뉴1</h1>
+	<h2>2-depth Menu</h2>
+	<!--
+	1. ol(ul)과 li는 뗄 수 없는 세트!
+	2.ol(ul)과 li 사이에 다른 태그x
+	3.li와 li 사이에도 다른 태그x
+	<ol>
+		x
+		<li>o</li>
+		x
+		<li>o</li>
+		x
+	</ol>
+	 -->
+
+	 <ol>
+	 	<li>
+	 		<h3>회사소개</h3>
+	 		<ul>
+	 			<li>회사개요</li>
+	 			<li>CEO인사말</li>
+	 			<li>CONTACT US</li>
+	 		</ul>
+	 	</li>
+	 	<!-- 문법적으로도, 의미적으로도 권장하지 않음 -->
+	 	<li>사업분야
+			 <ol>
+	 			<li>사업분야 01</li>
+	 			<li>사업분야 02</li>
+	 			<li>사업분야 03</li>
+			 </ol>
+	 	</li>
+
+	 	<li>
+	 		<strong>제품안내</strong>
+	 		<ul>
+	 			<li>제품안내 01</li>
+	 			<li>제품안내 02</li>
+	 		</ul>
+	 	</li>
+
+	 	<li>
+	 		커뮤니티
+	 		<ul>
+	 			<li>공지사항</li>
+	 			<li>채용안내</li>
+	 		</ul>
+	 	</li>
+	 	
+	 	<li>
+	 		고객지원
+	 		<ul>
+	 			<li>묻고답하기</li>
+	 			<li>1:1문의</li>
+	 			<li>FAQ</li>
+	 		</ul>
+	 	</li>
+
+	 </ol>
+</body>
+</html>
