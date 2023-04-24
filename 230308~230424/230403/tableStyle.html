@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>table style</title>
+  <style>
+    table {
+      font-weight: bold;
+      font-size: 26px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    table td {
+      border: 3px solid #777777;
+      width: 100px; height: 100px;
+    }
+    table.box1 {/* 띄어쓰기 없이 선택자 붙여서 사용할경우 하위선택자가 아닌 종속선택자로 적용시킴 우선순위가 높을때? 사용 */
+    /* 컨텐츠가 없는경우 셀 처리 방법 */
+    empty-cells: show;/* 셀 남김. 기본값 */
+    }
+    .box1 > tbody > tr > td {
+      border-color: #da1b1b;
+    }
+    table.box2 {
+      empty-cells: hide;/* 셀 숨김 */
+    }
+    .box2 > tbody > tr > td {
+      border-color: #9c2626;
+    }
+    table.box2 ~ table td{/* 일반 형제: .box2 뒤에 오는 모든 형제 관계의 table의 하위로 있는 td */
+      border-color: #174b99;
+    }
+    table.box3 {
+      /* 셀과 셀 사이의 간격. table 요소에만 해당 */
+      border-spacing: 50px;
+      border-spacing: 10px 50px;/* x y */
+    }
+    table.box4 {
+      border-spacing: 0;
+      border-collapse: separate;/* 기본값, 겹치는 셀 테두리 값 그대로 둠 */
+    }
+    table.box5 {
+      border-collapse: collapse;/* 겹치는 셀 테두리 값 제어 */
+    }
+  </style>
+</head>
+<body>
+  <h1>table style</h1>
+  <table class="box1">
+			<tr>
+				<td>1</td>
+        <td></td>
+			</tr>
+      <tr>
+        <td>3</td>
+      	<td>4</td>
+      </tr>
+  </table>
+  <table class="box2">
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+   <table class="box3">
+     <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td>4</td>
+       </tr>
+     </tbody>
+   <table class="box4">
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+       </tr>
+       <tr>
+          <td>3</td>
+         <td>4</td>
+      </tr>
+      </tbody>
+   <table class="box5">
+     <tbody>
+      <tr>
+       <td>1</td>
+       <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      </tbody>
+</table>
+</body>
+</html>

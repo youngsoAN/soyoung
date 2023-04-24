@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tableEx4</title>
+  <style>
+    body {
+      background-color: rgb(255, 246, 240);
+      text-align: center;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    table caption {
+      background-color: #ffd2c1;
+      color: #751b00;
+      font-weight: bold;
+      border-radius: 20px 20px 0 0;
+      padding: 6px 0;
+    }
+    table td {
+      border: 2px solid #ffffff;
+      width: 120px;
+      background-color: rgb(255, 238, 183);
+      height: 40px;
+    }
+    table .line {
+      display: block;/* 나는 이거 쓸 생각을 못해서 안썼었음 공부할때 참고 */
+      font-size: 14px;
+    }
+    table td a {
+      color: inherit;
+      text-decoration: none;
+      background-color: #ffc3b1;
+    }
+    table .blank {
+      background-color: transparent;/* 투명값 */
+    }
+    table .fooBg td {
+      height: 30px;
+      background-color: rgb(255, 215, 166);
+      border-radius: 0 0 16px 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>table 연습 4</h1>
+  <table>
+    <!-- 5행 5열 -->
+    <caption>소 부위</caption>
+    <tbody>
+      <tr><!-- 1행 -->
+        <td>소머리</td>
+        <td>목심</td>
+        <td>등심<span class="line">(살치살 &middot; <a href="#">꽃등심</a>)</span></td><!-- 난 바로 br 넣고 a 걸었었음 -->
+        <td>채끝살</td>
+        <td>우둔<span class="line">(홍두깨살)</span></td>
+      </tr>
+      <tr><!-- 2행 -->
+        <td rowspan="4" class="blank"></td>
+        <td rowspan="2">앞다리<span class="line">(부채살)</span></td>
+        <td>갈비<span class="line">(안창살 &middot; 제비추리)</span></td>
+        <td>안심</td>
+        <td rowspan="2">설도<span class="line">(도가니살)</span></td>
+      </tr>
+      <tr><!-- 3행 -->
+        <td colspan="2">양지<span class="line">(차돌박이 &middot; 우삼겹)</span></td>
+      </tr>
+      <tr><!-- 4행 -->
+        <td>사태</td>
+        <td class="blank" colspan="2" rowspan="2"></td>
+        <td>사태<span class="line">(아롱사태)</span></td>
+      </tr>
+      <tr class="fooBg"><!-- 5행 -->
+        <td>우족</td>
+        <td>우족</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

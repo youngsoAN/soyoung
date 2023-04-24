@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>테이블 스타일 연습 table style 2</title>
+  <style>
+    h2 {
+      text-align: center;
+      margin: 0 auto;
+    }
+    caption {
+      margin: 10px auto;
+    }
+    table {
+      margin: 0 auto;
+      width: 700px; height: 350px;
+      text-align: center;
+      background-color: rgb(154, 233, 101);
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+    table tr td {
+      border-collapse: collapse;
+      border: 1px solid #000;
+      width: 50px; height: 20px;
+    }
+    .box1 {
+      background-color: rgb(255, 255, 255);
+    }
+    .box2 {
+      background-color: rgb(255, 180, 67);
+    }
+  </style>
+</head>
+<body>
+  <h2>테이블 스타일 연습 2</h2>
+  <table>
+    <caption>소</caption>
+    <tr>
+      <td>소머리</td>
+      <td>목심</td>
+      <td>등심<br>(살치살 . <a href="#"_blank>꽃등심</a>)</td>
+      <td>채끝살</td>
+      <td>우둔<br>(홍두깨살)</td>
+    </tr>
+    <tr>
+      <td rowspan="4" class="box1"></td>
+      <td>앞다리<br>(부채살)</td>
+      <td>갈비<br>(안창살 . 제비추리)</td>
+      <td>안심</td>
+      <td>설도<br>(도가니살)</td>
+    </tr>
+    <tr>
+      <td>앞다리</td>
+      <td>갈비</td>
+      <td>양지<br>(차돌박이 . 우삼겹)</td><!-- 아니 다시 보는데 왜 중간에 셀 합치다 말았냐; -->
+      <td>설도<br>(도가니살)</td>
+    </tr>
+    <tr>
+      <td>사태</td>
+      <td class="box1" colspan="2" rowspan="2"></td>
+      <td>사태<br>(아롱사태)</td>
+    </tr>
+    <tr>
+      <td class="box2">우족</td>
+      <td class="box2">우족</td>
+    </tr>
+  </table>
+</body>
+</html>

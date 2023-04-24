@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>width, height</title>
+  <style>
+    /*
+    블록 요소: p, div, h1, header,main, article, form, ul...
+      ㄴ가로 값의 경우 부모 요소의 가로 값을 받음
+      ㄴ일반적인 흐름에서는 블록 요소 옆에 다른 요소가 올 수 없음
+      ㄴ자식으로 블록, 인라인 요소 등 대부분이 올 수 있음
+      ㄴ세로 값의 경우 자식 요소의 높이 값을 가져 옴
+      ㄴwidth, height로 제어 가능
+
+    인라인 요소 : span, img, a, em, input, strong...
+      ㄴ가로 값의 경우 자식(컨텐츠)의 값을 가져옴
+      ㄴ인라인 요소 옆에 다른 인라인 요소가 올 수 있음
+      ㄴ세로 값의 경우 자식 요소의 높이 값을 가져 옴
+      ㄴwidth, height로 제어 불가능
+    */
+
+    /* body > * { 전체 선택자 : html 문서 안의 모든 요소에 직접 적용 }*/
+    .container {
+      background-color: rgb(127, 255, 249);
+      /* 고정 너비 
+      width: 500px; height: 300px
+      */
+      /* 가변 너비 */
+      width: 70%;/* % 부모를 기준으로 100분의 70 */
+      height: 400px;/* 세로 %는 부모의 높이 값이 정의되어 있는 경우에만 적용 됨 */
+    }
+    .container .block1 {
+      background-color: rgb(255, 182, 122);
+      width: 70%; height: 70%;
+    }
+    .container .inline1 {
+      background-color: rgb(255, 143, 199);
+      width: 300px; height: 100px;
+    }
+
+    p.block2 {
+      background-color: rgb(92, 71, 168);
+      height: 50px;
+    }
+    span.inline2 {
+      background-color: rgb(143, 139, 172);
+      height: 50px;
+      /* 인라인은 width, height를 줄 수 없으며 자신으로 있는 컨텐츠가 없기 때문에 높이값은 0으로 화면에 보이지 않음 */
+    }
+  </style>
+</head>
+<body>
+  <h1>가로 세로 영역 제어 width, height</h1>
+  <div class="container deco_size">
+   <div class="block1">블록 요소</div>
+   <span class="inline1">인라인 요소</span>
+  </div>
+
+  <p class="block2 deco_size"></p>
+  <span class="inline2 deco_size"></span>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>요소의 실제 크기</title>
+  <style>
+    .box {
+      width: 500px; height: 300px;
+      font-weight: bold;
+    }
+    .box1 {
+      border: 10px solid orange;
+      padding: 10px;
+      margin: 10px;
+    }
+    .box2 {
+      outline: 30px solid pink;
+      margin: 30px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>요소의 실제 크기</h1>
+  <h2>width + margin-left + margin-right + padding-left + padding-right + border-left + border-right</h2>
+  <h2>height + margin-top + margin-bottom + padding-top +padding-bottom +border-top +border-bottom</h2>
+
+  <div class="box box1">
+    <h3></h3>
+    <p>.box1의 실제 너비: width500+m(10+10)+p(10+10)+b(10+10)=560px</p>
+    <p>.box1의 실제 높이: height300+m(10+10)+p(10+10)+b(10+10)=360px</p>
+  </div>
+  <div class="box box2">
+    <h3></h3>
+    <p>.box2의 실제 너비: w500 m(30+30) p(10+10) b(0) = 580px</p>
+    <p>.box2의 실제 높이: h300 m(30+30) p(10+10) b(0) = 380px</p>
+  </div>
+</body>
+</html>

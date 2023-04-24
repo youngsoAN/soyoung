@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>요소 그림자 box-shadow</title>
+  <style>
+    /* 혼자 해본거
+    body {
+      font-weight: bold;
+    }
+    ul {
+      width: 750px; height: 150px;
+      background-color: rgb(224, 224, 255);
+      margin: 20px 80px;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      width: 120px; height: 120px;
+      vertical-align: middle;
+      background-color: rgb(184, 184, 248);
+      text-align: left;
+      margin: 15px 10px ;
+      
+    }
+    */
+    .container {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: rgb(224, 224, 255);
+      width: 950px;/* 밑에 있는 width 150에 margin 20px을 *5 한 값 */
+      padding-left: 0;
+      margin: 50px auto; /* 탑이랑 바텀 50, 왼쪽 오른쪽은 오토로 둘 경우 화면 중앙으로 배치됨 */
+    }
+    .container li {
+      background-color: rgb(184, 184, 248);
+
+      display: inline-block;
+      width: 150px; height: 150px;
+      margin: 20px;
+      vertical-align: middle;
+    }
+    .container .box1 {
+      box-shadow: 5px 5px 5px #999;/* x축 y축 번짐 확장거리 색상 */
+    }
+    .container .box2 {
+      box-shadow: -10px -10px 10px #b30000;/* x축 y축 번짐 색상*/
+    }
+    .container .box3 {
+      box-shadow: 10px 10px #000;/* x축 y축 색상 */
+    }
+    .container .box4 {
+      /* 그림자 중첩, 쉼표로 구분 */
+      box-shadow:
+      10px 10px 30px #7cdb50,
+      -10px -10px 30px #6193ff,
+      0 0 30px #801e76;
+    }
+    .container .box5 {
+      box-shadow: 0 0 30px #447efa inset;/* x축 y축 번짐 확장거리 색상 내부 그림자 */
+    }
+  </style>
+</head>
+<body>
+  <h2>요소 그림자 box-shadow</h2>
+  <ul class="container">
+    <li class="box1">x축 y축 번짐 확장거리 색상</li><li class="box2">x축 y축 번짐 색상</li><li class="box3">x축 y축 색상</li><li class="box4">x축 y축 번짐 색상</li><li class="box5">x축 y축 번짐 확장거리 색상 내부 그림자</li>
+  </ul>
+</body>
+</html>

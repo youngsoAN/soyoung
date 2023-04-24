@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>선생님이랑 한 테이블스타일Ex</title>
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+    table {
+      margin: 0 auto;
+    }
+    table caption {
+      background-color: #2d2f94;
+      color: #fff;
+      border-radius: 17px 17px 0 0;
+      text-align: left;
+      padding: 4px 8px;
+    }
+
+    table td, table th {
+      width: 160px;
+      text-align: left;
+      padding: 4px 8px;
+    }
+    table thead th {
+      border-bottom: 2px solid #000;
+    }
+    table .bg {
+      background-color: #cbd9ff;
+      color: rgb(151, 41, 137);
+    }
+    table tbody tr:hover {
+      background-color: rgb(114, 208, 211);
+      color: #fff;
+    }
+    
+    /* :nth-child(n) 같은 부모를 가지고 있는 자식들중 n번째 요소에 적용 */
+    table tr > *:nth-child(3),
+    table tr > *:nth-child(4) {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>table style 연습 1</h1>
+  <table>
+    <table>
+      <caption>초판경매</caption>
+    <thead>
+      <tr>
+        <th>저자(AUTHOR)</th>
+        <th>제목(TITLE)</th>
+        <th>최저 경쟁 가격</th>
+        <th>현재 경매가</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E.E. Cummings</td>
+        <td>Tulips & chimneys</td>
+        <td>$2,000.00</td>
+        <td>$2,653.50</td>
+      </tr>
+      <tr class="bg">
+        <td>Charles d'Orleans</td>
+        <td>Poems</td>
+        <td></td>
+        <td>$5,866.00</td>
+      </tr>
+      <tr>
+        <td>T.S Elio</td>
+        <td>Poems 1909 - 1925</td>
+        <td>$1,250.00</td>
+        <td>$8,499.35</td>
+      </tr>
+      <tr class="bg">
+        <td>Sylvia Plath</td>
+        <td>The colossus</td>
+        <td></td>
+        <td>$1031.72</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

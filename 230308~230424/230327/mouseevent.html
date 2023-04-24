@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mouse event</title>
+  <style>
+    body {
+      /* 상속 inherit */
+      font-family: '나눔스퀘어라운드','맑은고딕',돋움, sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      color: black;
+    }
+
+    /*
+      ::selsection 드래그 했을때,
+       h1::selection {
+       background-color: darkmagenta; 이 컬러가 적용됨
+      }
+    */
+
+    /*
+    :, ::
+    가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성
+    :link, :visited, :hover, :focus, :checked ...
+    
+    }
+    a:link { 링크 상태일 때 (기본)
+      text-decoration: none;
+      color: orange;
+    }
+    a:visited { 마우스로 방문했을 때
+      color: rgb(35, 161, 163);
+    }
+    a:hover {마우스를 위에 올렸을 때 
+        color: magenta;
+        background-color: aquamarine;
+        text-decoration: line-through;
+    }
+    a:active { 마우스로 클릭했을 때
+      color: coral;
+      background-color: green;
+    }
+    */
+    a {/* 기본값은 밑줄, 글자 색상으로 변경을 하려면 직접 적용해야 함 */
+      color: #000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: violet;
+      color: #000;
+      /* 레이아웃이 무너질 수 있기 때문에 잘 사용하지 않음
+      font-weight: bold;
+      font-size: 30px;
+      */
+    }
+  </style>
+</head>
+<body>
+  <h1>마우스 이벤트 mouse event</h1>
+  <ul class="url">
+    <li><a href="https://naver.com" target="_blank">네이버</a></li>
+    <li><a href="https://daum.net" target="_blank">다음</a></li>
+    <li><a href="https://facebook" target="_blank">페이스북</a></li>
+    <li><a href="https://instagram.com" target="_blank">인스타그램</a></li>
+    <li><a href="https://google.com" target="_blank">구글</a></li>
+  </ul>
+
+</body>
+</html>

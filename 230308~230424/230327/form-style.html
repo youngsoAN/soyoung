@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>form style</title>
+  <style>
+    body {
+      font-family: '나눔스퀘어라운드','맑은 고딕',돋움,sans-serif;
+      font-size:26px ;
+      color: rgb(165, 17, 17);
+    }
+    /*
+    font 속성의 경우 폼 관련 요소에 직접 적용
+    */
+    form > fieldset {
+      background-color: #ffcece;
+      /* 인라인 요소의 중앙 정렬 */
+      text-align: center;
+    }
+    form > fieldset > legend {
+      background-color: rgb(255, 172, 172);
+      text-align: left;
+    }
+    form > fieldset > button {
+      color:#f6ae2d;
+      font-size: 26px;
+      cursor: pointer; /* 마우스 커서 모양 변경할 수 있는 값 */
+    }
+    form > fieldset > button:hover {
+      background-color: rgb(125, 229, 255);
+    }
+      /*
+    form > fieldset > input {
+      color:rgb(104, 104, 10);
+      font-size: 26px;
+    }
+    */
+    /* 요소[특성="값"] 특성 선택자: input요소들 중에 type의 값이 text인 선택자 */
+    form > fieldset > input[type="text"] {
+      color:rgb(17, 0, 170);
+      font-size: 26;
+    }
+    form > fieldset > input[type="text"]:hover {
+      background-color: rgb(198, 138, 255);
+    }
+    form > fieldset > input::placeholder {
+      color:rgb(52, 160, 67);
+    }
+    form > fieldset > input[name=box]:checked ~ label {/* :checked {  - 가상선택자 하나만 써야함 ,체크박스나 라디오버튼에 체크가 되면. 을 의미 */ /* + label 인접형제 선택자 : 기준 요소 바로 뒤에 오는 형제관계 선택자(하나만) */
+      background-color: lightblue;
+      color #fff;
+    }
+     /* ~ 일반 형제 선택자 : 기준 요소 뒤에 오는 모든 형제관계 선택자 */
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>form event</legend>
+        <input type="text" placeholder="힌트">
+        <input type="submit" value="전송">
+    </fieldset>
+
+    <fieldset>
+      <legend>:checkes</legend>
+      <input type="checkbox" name="box" id="box" value="체크">
+      <lebel for="box">체크1</lebel>
+      <label>체크2</label>
+      <label>체크3</label>
+    </fieldset>
+  </form>
+</body>
+</html>

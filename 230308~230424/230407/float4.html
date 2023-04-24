@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>float4</title>
+  <style>
+    ul {
+      padding: 0;
+      list-style: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    ul .bg {
+      padding: 20px;
+      margin: 10px 0;
+    }
+    
+    ul .bg1 {
+      background-color: rgb(174, 212, 206);
+    }
+    ul .bg2 {
+      background-color: rgb(175, 212, 174);
+    }
+    ul .bg3 {
+      background-color: rgb(211, 212, 174);
+    }
+    ul .bg4 {
+      background-color: rgb(192, 174, 212);
+    }
+    .box1 .bg {
+      float: left;/* 왼쪽을 기준으로 정렬 */
+      float: right;/* 오른쪽을 기준으로 정렬 */
+    }
+    .box1 .bg4 {
+      float: left;
+    }
+    .box2 {
+      clear: both; /* float의 값을 벗어나기 위해 사용 
+      기존의 float의 흐름에서 벗어나 새로운 흐름에서 시작 */
+
+      float: right;
+    }
+    .box2 .bg {
+      float: left;/* float는 상속되지 않음 */
+    }
+    .box3 {
+      clear: both;
+    }
+    .box3 .bg {
+      float: left;
+    }
+    .box3 .bg2 {
+      position: relative;
+      top: 100px; left: 50px;
+      /* float 와  position이 함께 적용된 경우 position이 우선 적용 */
+    }
+
+    /*
+      float
+        ㄴ상속되지 않음
+        ㄴ부유요소. 즉 떠 있는 요소로 기존의 흐름에서 벗어남
+        ㄴ원래의 흐름에서 벗어났기 때문에 float가 적용되지 않은 다른 요소들이 float가 적용된 요소를 제외하고 순차적으로 정렬
+        ㄴfloat가 적용된 요소는 떠 있기 때문에 부모의 가로값을 받지 못함. 컨텐츠가 가진 값을 기본으로 가짐
+
+        */
+  </style>
+</head>
+<body>
+  <ul class="box1">
+    <li class="bg bg1">box1-1</li>
+    <li class="bg bg2">box1-2</li>
+    <li class="bg bg3">box1-3</li>
+    <li class="bg bg4">box1-4</li>
+  </ul>
+  <ul class="box2">
+    <li class="bg bg1">box2-1</li>
+    <li class="bg bg2">box2-2</li>
+    <li class="bg bg3">box2-3</li>
+    <li class="bg bg4">box2-4</li>
+  </ul>
+  <ul class="box3">
+    <li class="bg bg1">box3-1 float</li>
+    <li class="bg bg2">box3-2 float, pos</li>
+  </ul>
+</body>
+</html>

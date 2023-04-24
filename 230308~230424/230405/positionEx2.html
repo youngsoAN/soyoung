@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>positionEx2</title>
+  <style>
+    html {
+      scroll-behavior: smooth;/* 부드러운 스크롤 */
+    }
+    ::selection {/* 문서를 드래그 했을때 */
+    background-color: #ffe1e1;
+    }
+    h2::selection {
+      background-color: #98dbf5;
+    }
+    body {
+      font-family: "땅스부대찌개","나눔 고딕",돋움,sans-serif;
+    }
+    .blank {
+      height: 300vh;
+    }
+    p {
+      line-height: 1.5;
+      width: 400px;
+    }
+    p em {
+      font-weight: bold;
+      font-size: 22px;
+      background-color: rgb(209, 109, 109);
+      padding: 2px 4px;
+      color: #000000;
+      font-style: normal;
+    }
+    .btn {
+      /* 인라인 요소도 다른 흐름을 가지게 되며 가로 세로 값 인식 */
+      position: fixed;
+      right: 30px; bottom: 30px;
+
+      text-decoration: none;
+      color: #ffffff;
+      
+      background-color: #64a6c0;
+      /* 투명도 - 잘 안쓰임 opacity: 0.7; */
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 50%;
+      width: 70px; height: 70px;
+      text-align: center;
+      line-height: 75px;
+    }
+    .btn:hover {
+      background-color: rgb(165, 219, 255);
+      bottom: 34px;
+    }
+  </style>
+</head>
+<body>
+  <h2>positionEx2</h2>
+  <p>fixed 값을 사용하는 요소 역시 absolute 값을 사용하는 요소처럼 문서 흐름과는 상관없이 좌표로 위치를 결정하지마, 기준이 되는 요소가 <em>부모 요소가 아니라 브라우저가 기준</em>이 된다.</p>
+  <p>한번 배치괴면 fiexd라는 이름처럼 브라우저 창을 스크롤 하더라도 계속 고정되어 표시된다.</p>
+  <div class="blank"></div>
+  <a href="#" class="btn">위로</a>
+  
+</body>
+</html>

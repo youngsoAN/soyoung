@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tableStyleEx2</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      border: 3px solid #0b5d72;
+      border-top: none;
+    }
+    table caption {
+      background-color: #babcff;
+      color: rgb(38, 54, 124);
+      font-weight: bold;
+      border-radius: 17px 17px 0 0 ;
+      border: 3px solid #0b5d72;
+      border-bottom: none;
+      height: 26px;/* height 값과 line-height 값을 동일하게 줘서 글이 중간에 위치하게 함 */
+      line-height: 26px;
+    }
+    
+    table th, td {
+      border: 1px solid#000;
+      width: 100px; padding: 10px;
+      min-width: 100px;
+    }  
+    table th {
+      background-color: #b3d5dd;
+    }
+    table .subhead {
+
+    }
+  </style>
+</head>
+<body>
+  <h1>table Style 연습 2</h1>
+  <table>
+    <caption>시간표</caption>
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>월요일</th>
+        <th>화요일</th>
+        <th>수요일</th>
+        <th>목요일</th>
+        <th>금요일</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="subhead">1교시</th>
+        <td rowspan="2">기초드로잉</td>
+        <td rowspan="2">색채학</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="subhead">2교시</th>
+        <td rowspan="3">html</td>
+        <td></td>
+        <td rowspan="2">포트폴리오 제작</td>
+      </tr>
+      <tr>
+        <th class="subhead">3교시</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="subhead">4교시</th>
+        <td rowspan="2">포토그래픽</td>
+        <td></td>
+        <td rowspan="2">구성요소제작</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="subhead">5교시</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

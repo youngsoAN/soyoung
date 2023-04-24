@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body {
+  font-family: '나눔스퀘어라운드','맑은 고딕',돋움,sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;/* body 전체에 센터값을 주면 부모요소라 다 적용됨 (단 우선순위에는 밀리므로 밑에 자식요소에서 수정 가능) */
+}
+h1 {
+  background-color: rgb(96, 116, 207);
+  color: #fff;
+  border-bottom: 8px solid #db8383;
+  width: 400px;
+  margin: 30px auto 20px;
+  text-align: center;
+  padding: 20px 10px;/* 20이 탑과 바텀 10이 레프트 라이트라는 뜻 */
+  border-radius: 30px 30px 0 0;
+}
+h2 {
+  text-decoration: line-through;
+  font-size: 25px;
+  /* text-align: center;을 줬을때, 센터값 주고 width도 주면 생기는 일 : h2는 블럭임 - width값을 주면 범위가 한정되어 블럭 안에 정렬은 되지만 화면의 중앙으로 가지는 못한다. */
+  /* width: 100px;
+  background-color: #db8383; */
+}
+ul li {
+  border: 1px solid #000000;
+  width: 400px;
+  text-align: left;/* body에서 상속된 센터값보다 자식요소가 우선순위를 가지게 되어서 레프트로 정렬됨 */
+  padding: 4px;/* 내부요소의 여백주기 */
+  margin: 2px auto;/* margin bottom과 margin top의 값중 큰 쪽을 따라감 */
+}
+.url {
+  background-color: rgb(255, 203, 229);
+  min-width: 300px;/* 300px 이하로는 작아지지 않음. 최소크기 300px 유지 */
+  max-width: 70%;/* 최대 크기가 70% 이상으로 커지지 않음 */
+  margin: 1px auto;
+  padding: 10px 0;
+}
+.url a,
+.wrapper .site a {
+  text-decoration: none;
+  color: #fff;
+  /* background-color: aliceblue; */
+}
+.url:hover {
+  background-color: rgb(158, 212, 212);
+}
+.wrapper {
+  min-width: 300px;
+  max-width: 70%;
+  margin: 50px auto;
+}
+.wrapper .site {
+  background-color: aquamarine;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+  /*
+  "한줄인 경우" 세로 중앙 정렬 방법
+  hegiht와 line-height의 값을 동일하게 적용
+  폰트 사이즈의 크기가 큰 경우는 잘 안됨.
+  (옛날부터 사용한 방식)
+  주의!! html에서 네이버 링크에 <br>을 사용해서 다음줄 글(아무거나)을 주면 밑에 올 구글 링크 글자랑 겹쳐버리는 현상이 일어남 (위에 "한줄인 경우" 예시)
+  */
+}

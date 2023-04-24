@@ -1,0 +1,49 @@
+@charset "utf-8"
+
+body {
+  font-family: '나눔바른고딕','맑은 고딕','나눔스퀘어라운드',돋움,sans-serif;
+  vertical-align: middle;
+  color: rgb(14, 14, 65);
+}
+/* table {
+   width: 1000px; 
+   각각의 셀들을 개별적으로 제어하지 못하며 셀 안의 컨텐츠 크기에 의해 크기가 정해짐
+   전체 사이즈는 1000을 넘기지 않음
+} */
+table caption {
+  background-color: rgb(134, 176, 218);
+  color:aliceblue;
+  font-size: 20px;
+  text-align: left;
+  text-indent: 5px;
+  line-height: 40px;/* 줄과 줄 사이의 여백, 인라인 요소의 위 아래 여백을 만들수 있으나 사실 그 목적으로는 잘 사용하지 않음*/
+  font-family: Georgia, 'Times New Roman', Times, '바탕체', serif;
+}
+table thead th {
+  color: chartreuse;
+  background-color: rgb(14, 14, 65);
+  height: 30px;
+  text-align: left;
+  text-indent: 10px;
+  line-height: 1.7;
+}
+table tbody td {/* type(1)  + type(1) + type(1) = 3 */
+  background-color: rgb(236, 236, 236);
+  vertical-align: top;
+
+  max-width: 200px;/* 최대 가로값이 200으로 이 값 이상 커지지 않음 */
+  min-width: 100px;/* 최소 가로값이 100으로 이 값 이하로 작아지지 않음 */
+}
+table tbody .txt {/* type(1)  + type(1) + class(3) = 5 (위 table tbody td 보다 값이 더 크므로 우선순위가 높음 */
+  max-width: 750px;/* 최대 가로값이 750으로 이 값 이상 커지지 않음 */
+  min-width: 400px;/* 최소 가로값이 400으로 이 이하로 작아지지 않음 */
+}
+
+/*
+  테이블 셀의 성격:
+    ㄴ 셀 안의 컨텐츠는 세로 중앙 정렬이 기본
+    ㄴ 셀 안의 컨텐츠의 경우 th는 가로 중앙 정렬, td는 가로 왼쪽 정렬이 기본
+    ㄴ table 요소에 width 값 적용시 각 셀의 제어가 어려움
+    ㄴ 셀 하나에 가로, 세로의 값을 주면 일반적으로 나머지 셀들도 따라감
+
+*/

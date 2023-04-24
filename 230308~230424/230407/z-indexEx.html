@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>z-indexEx</title>
+  <style>
+    .wrapper {
+      list-style: none;
+      padding: 0;
+      margin: 50px auto;
+      font-weight: bold;
+
+      width: 400px; height: 400px;
+      background-color: rgb(225, 243, 243);
+      font-size: 30px;
+
+      position: relative;
+    }
+    .wrapper .box {
+      width: 200px; height: 200px;
+      position: absolute;
+    }
+    .wrapper .box1 {
+      background-color: rgb(255, 127, 223);
+      
+      top: 10px; left: 10px;
+      z-index: 999;
+    }
+    .box2 {
+      background-color: rgb(255, 174, 127);
+      top: 10%; left: 10%;
+      z-index: 888;
+    }
+    .box3 {
+      background-color: rgb(255, 253, 127);
+      top: 20%; left: 20%;
+      z-index: 777;
+    }
+    .box4 {
+      background-color: aquamarine;
+      top: 30%; left: 30%;
+      z-index: 666;
+    }
+  </style>
+</head>
+<body>
+  <ul class="wrapper">
+    <li class="box box1">box1</li>
+    <li class="box box2">box2</li>
+    <li class="box box3">box3</li>
+    <li class="box box4">box4</li>
+  </ul>
+</body>
+</html>

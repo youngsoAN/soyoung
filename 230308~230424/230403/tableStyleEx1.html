@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tableStyleEx1</title>
+  <style>
+    body {
+      text-align: center;
+      width: 700px;
+    }
+    table {
+      width: 700px; height: 200px;
+    }
+    
+    .box1 {
+      color: aliceblue;
+      background-color: black;
+      text-align: left;
+    }
+    .box2 th {
+      border-bottom:solid 3px #000000;
+    }
+    .box4 {
+      color: rgb(182, 39, 139);
+      background-color: #d3d6e0;
+    }
+    .box6 {
+      color: rgb(182, 39, 139);
+      background-color: #d3d6e0;
+    }
+    table td:hover{
+      background-color: aqua;
+      color: brown;
+    }
+  </style>
+</head>
+<body>
+  <h1>table style 연습 1</h1>
+  <table>
+    <tr class="box1">
+      <caption>초판경매</caption>
+    </tr>
+    <tr class="box2">
+      <th>저자(AUTHOR)</th>
+      <th>제목(TITLE)</th>
+      <th>최저 경쟁 가격</th>
+      <th>현재 경매가</th>
+    </tr>
+    <tr class="box3">
+      <td>E.E. Cummings</td>
+      <td>Tulips & chimneys</td>
+      <td>$2,000.00</td>
+      <td>$2,653.50</td>
+    </tr>
+    <tr class="box4">
+      <td>Charles d'Orleans</td>
+      <td>Poems</td>
+      <td></td>
+      <td>$5,866.00</td>
+    </tr>
+    <tr class="box5">
+      <td>T.S Elio</td>
+      <td>Poems 1909 - 1925</td>
+      <td>$1,250.00</td>
+      <td>$8,499.35</td>
+    </tr>
+    <tr class="box6">
+      <td>Sylvia Plath</td>
+      <td>The colossus</td>
+      <td></td>
+      <td>$1031.72</td>
+    </tr>
+  </table>
+</body>
+</html>

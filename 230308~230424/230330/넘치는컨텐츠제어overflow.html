@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>넘치는 컨텐츠 제어 overflow</title>
+
+  <style>
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    table th, table td {
+      width: 200px;
+      background-color: rgb(235, 235, 173);
+    }
+    table td p {
+      background-color: rgb(213, 241, 214);
+      height: 140px;
+    }
+    table .box1 {
+      /* 상속은 현재 부모나 조상 요소에 overflow가 적용된게 없으면 상속 받지 못함 */
+      overflow: inherit;
+      overflow: scroll;
+    }
+    table .box2 {
+      overflow: visible;/* 기본값 */
+    }
+    table .box3 {
+      overflow: hidden;
+    }
+    table .box4 {
+      overflow: auto;
+    }
+    table .box5 {
+      overflow: scroll
+    }
+
+    h2 + p {/* 인접형제 선택자: 기준 요소 바로 뒤에 나오는 하나의 형제 요소 */
+      background-color: rgb(196, 230, 230);
+      width: 200px;
+      height: 100px;
+    }
+    .box6 {
+      overflow-x: scroll; /* 적용시 세로도 같이 생김 */
+      overflow-y: hidden; /* 이거 쓰면 세로 없어짐 단, 가로 스크롤의 움직이는 부분도 사라짐 */
+
+      /* 글자의 띄어쓰기 기준으로 줄바꿈 처리 */
+      white-space: wrap;/* 기본값 */
+      white-space: nowrap;/* br 요소로 줄바꿈 시키는것 외엔 자동으로 줄바꿈 되지 않음 (가로로 쭉 간다는 뜻) */
+    }
+    .box7 {
+      /* y축 스크롤 ,스크롤의 기본은 y축(세로)임 *//* 우선순위에 따라서 맨 밑에거만 적용됨 */
+      overflow-y: scroll;/* scroll은 무조건 생김 */
+      overflow-y: hidden;/* 넘치면 무조건 숨김 */
+      overflow-y: auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>넘치는 컨텐츠 제어 overflow</h1>
+  <p>고정된 크기를 가진 부모 요소에서 컨텐츠가 넘칠 때 스크롤바 표시 여부 결정</p>
+  <table>
+    <thead>
+      
+        <tr>
+          <th>inherit</th>
+          <th>visible</th>
+          <th>hidden</th>
+          <th>auto</th>
+          <th>scroll</th>
+        </tr>
+      
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p class="box1">한정된 영역에서 컨텐츠가 넘치지 않을때  한정된 영역에서 컨텐츠가 넘치지 않을때한정된 영역에서 컨텐츠가 넘치지 않을때한정된 영역에서 컨텐츠가 넘치지 않을때한정된 영역에서 컨텐츠가 넘치지 않을때한정된 영역에서 컨텐츠가 넘치지 않을때</p>
+        </td>
+        <td>
+          <p class="box2">한정된 영역에서 컨텐츠가 넘치면 무조건 보여짐.</p>
+        </td>
+        <td>
+          <p class="box3">한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.  한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.한정된 영역에서 컨텐츠가 넘치면 무조건 숨김.</p>
+        </td>
+        <td>
+          <p class="box4">한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음.  한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음.한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음.한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음.한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음.</p>
+        </td>
+        <td>
+          <p class="box5">한정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤 생김. 한정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤 생김.한정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤 생김.한정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤 생김.한정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤 생김.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>overflow-x</h2>
+  <p class="box6">가로 방향, x축으로 오버플로우 적용.  가로 방향,x축으로 오버플로우 적용.가로 방향, x축으로 오버플로우 적용.가로 방향, x축으로 오버플로우 적용.가로 방향, x축으로 오버플로우 적용.가로 방향, x축으로 오버플로우 적용.가로 방향, x축으로 오버플로우 적용.</p>
+  <h2>overflow-y</h2>
+  <p class="box7">세로 방향, y축으로 오버플로우 적용. 세로 방향, y축으로 오버플로우 적용.세로 방향, y축으로 오버플로우 적용.세로 방향, y축으로 오버플로우 적용.세로 방향, y축으로 오버플로우 적용.세로 방향, y축으로 오버플로우 적용.세로 방향, y축으로 오버플로우 적용.</p>
+</body>
+</html>

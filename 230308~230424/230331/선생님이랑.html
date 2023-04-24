@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>display 연습 1</title>
+   <style>
+    .gnb {
+      /* background-color: rgb(223, 162, 82); */
+      padding-left: 0;
+      text-align: center;
+    }
+    .gnb li {
+      display:inline-block;
+    }
+    .gnb li a {
+      text-decoration: none;
+      background-color: aqua;
+      color: inherit;/* inherit = 상속 (부모가 가지고 있는 컬러를 상속받음, 검정색 글자가 되었다.) */
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+
+      border: 3px solid #000000;
+      padding: 4px 12px; /* 안쪽 여백 */
+      margin: 0 5px;/* 바깥 여백 */
+
+      display: block;
+    }
+    .gnb li a:hover {
+      background-color: #000000;
+      color: aliceblue;
+    }
+   </style>
+</head>
+<body>
+  <h1>display 연습 1</h1>
+  <ul>
+    <li>마우스를 올리면 글자색과 배경색 변경</li>
+    <li>중앙 정렬</li>
+
+    <ul class="gnb">
+      <li><a href="#"_blank>menu1</a></li>
+      <li><a href="#"_blank>menu2</a></li>
+      <li><a href="#"_blank>menu3</a></li>
+      <li><a href="#"_blank>menu4</a></li>
+    </ul>
+  </ul>
+</body>
+</html>
