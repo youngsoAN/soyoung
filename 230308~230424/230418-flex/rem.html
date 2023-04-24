@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>rem</title>
+  <style>
+    html {
+      /* rem 기준 최상위 root */
+      font-size: 24px;
+    }
+    body {
+      /* 이곳에 작성한 font-size는 rem에 영향을 주지 못함 */
+      font-size: 30px;
+    }
+    .wrapper * {  border: 3px solid #000; margin: 20px; padding: 20px; display: block;  }
+    .wrapper {
+      border: 3px solid #000;
+      font-size: 1.5em;
+    }
+    .wrapper > .box {
+      /* 부모인 .wrapper 1em => 16px
+      최상위 root, 즉 html을 기준으로 1rem = 16px */
+      font-size: 1.5em;/* 24px*/
+      font-size: 1.5rem;/* 24px */
+      
+    }
+    .wrapper > .box > p {
+      /* 부모인 .box 1em == 24px
+      최상위 root, 즉 html을 기준으로 1rem = 16px */
+      font-size: 1.5em;/* 36px */
+      font-size: 1.5rem;/* 24px */
+    }
+    .wrapper > .box > p >span {
+      /* 부모인 .box 1em ==36px
+        최상위 root, 즉 html을 기준으로 1rem = 16px */
+      font-size: 1.5em;/* 54px */
+      font-size: 1.5rem;/* 24px */
+    }
+  </style>
+</head>
+<body>
+  <h1>rem</h1>
+  <p>root, 즉 최상위 요소(html)의 font-size를 기준으로 설정</p>
+  <div class="wrapper">.wrapper 1rem <br>.wrapper 1em ==
+    <div class="box">.box 1.5rem == <br>.box 1.5em == 
+      <p>p 1.5rem == <br>p 1.5em ==
+        <span>
+          span 1.5rem == <br>span 1.5em ==
+        </span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

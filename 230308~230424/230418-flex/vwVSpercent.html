@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>vwVSpercent</title>
+  <style>
+    .box1 { width: 60vw; height: 300px; background-color: rgb(255, 231, 18);}
+    .box2 { width: 60vw; height: 300px; background-color: rgb(255, 23, 23);}
+    .box1 h2 { width: 80%; height: 200px; background-color: rgba(155, 37, 184, 0.753);}
+    .box2 h2 { width: 80vw; height: 200px; background-color: rgba(53, 119, 218, 0.664);}
+  </style>
+</head>
+<body>
+  <h1>vw와 % 차이</h1>
+  <div class="box1">
+    <h2>80%: 부모를 기준으로 두기 때문에 부모 요소를 넘지 않음</h2>
+  </div>
+  <div class="box2">
+    <h2>80vw: 뷰포트를 기준으로 두기 때문에 부모 요소를 넘김</h2>
+  </div>
+</body>
+</html>

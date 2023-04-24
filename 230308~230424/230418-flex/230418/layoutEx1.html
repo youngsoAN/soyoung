@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>layoutEx1</title>
+  <style>
+    .container {
+      width: 1040px;
+      height: 704px;
+
+      margin: 0px auto;
+      border: 2px solid #000;
+
+      margin: 10px auto;
+      overflow: hidden;
+
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .head {
+      border: 2px solid #000;
+      margin: 20px;
+      height: 80px;
+      padding: 20px;
+    }
+    .main {
+      border: 2px solid #000;
+      margin: 20px 20px 0;
+      margin-top: 0;
+
+      float: left;
+      padding: 20px;
+      width: 570px;
+      height: 320px;
+    }
+    .under {
+      border: 2px solid #000;
+      margin: 20px;
+
+      width: 958px;
+      float: left;
+      padding: 20px;
+      margin-left: 20px;
+    }
+    .side {
+      border: 2px solid #000;
+
+      background-color: #000;
+      color: #fff;
+      float: right;
+
+      width: 320px;
+      padding: 20px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>2열 레이아웃</h1>
+    </div>
+    <div class="main">
+      <h2>본문</h2>
+      <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일 전까지 국회에 제출하고, 국회는 회계연도 개시 30일 전까지 이를 의결하여야 한다.</p>
+      <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론&#183;출판에 대한 허가나 검열과 집회&#183;결사에 대한 허가는 인정되지 아니한다.</p>
+    </div>
+    <div class="side">
+      <h2>사이드 바</h2>
+      <ul>
+        <li>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의 원칙에 따라 법률로 정한다.</li>
+      </ul>
+    </div>
+    <div class="under">
+      <h2>바닥글</h2>
+      <p>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+    </div>
+    <!-- 요소 실제 크기 값 구하기가 헷갈려서 이것저것 값 바꿔서 넣어봤습니다ㅠ. -->
+  </div>
+</body>
+</html>

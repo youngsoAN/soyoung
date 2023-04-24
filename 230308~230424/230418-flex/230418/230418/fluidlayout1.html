@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fluidLayout1</title>
+  <style>
+    /*body {
+      margin: 0; font-size: 20px; font-weight: bold;
+    }
+    .box {
+      width: 33.33333%;
+      height: 40vh;
+      float: left;
+    }
+    .box1 {
+      background-color: rgb(255, 62, 104);
+    }
+    .box2 {
+      background-color: rgb(255, 145, 169);
+    }
+    .box3 {
+      background-color: rgb(217, 242, 243);
+    }
+    .box4 {
+      background-color: rgb(255, 253, 237);
+      width: 100%;
+    }
+    .box5 {
+      background-color: rgb(223, 203, 140);
+      width: 25%; height:40vh;
+    }
+    .box6 {
+      background-color: rgb(140, 223, 144);
+      width: 25%; height:40vh;
+    }
+    .box7 {
+      background-color: rgb(140, 179, 223);
+      width: 25%; height:40vh;
+    }
+    .box8 {
+      background-color: rgb(140, 142, 223);
+      width: 25%; height:40vh;
+    }*/
+    .container {
+      border: 6px solid #000; width: 90vw; margin: 0 auto; font-weight: bold; font-size: 23px;
+    }
+    .container::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .container .box {
+      float: left; height: 30vh;
+    }
+    .container .item1 {
+      background-color: rgb(255, 62, 104); width: 33.333333%;
+    }
+    .container .item2 {
+      background-color: rgb(255, 145, 169); width: 33.333333%;
+    }
+    .container .item3 {
+      background-color: rgb(217, 242, 243); width: 33.333333%;
+    }
+    .container .item4 {
+      background-color: rgb(255, 253, 237); width: 100%;
+    }
+    .container .item5 {
+      background-color: rgb(168, 255, 204); width: 25%;
+    }
+    .container .item6 {
+      background-color: rgb(128, 196, 255); width: 25%;
+    }
+    .container .item7 {
+      background-color: rgb(240, 129, 255); width: 25%;
+    }
+    .container .item8 {
+      background-color: rgb(171, 135, 255); width: 25%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box item1">item1</div>
+    <div class="box item2">item2</div>
+    <div class="box item3">item3</div>
+    <div class="box item4">item4</div>
+    <div class="box item5">item5</div>
+    <div class="box item6">item6</div>
+    <div class="box item7">item7</div>
+    <div class="box item8">item8</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>em1</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .wrapper * {  border: 3px solid #000; margin: 20px; padding: 20px; display: block;  }
+    .wrapper {
+      border: 3px solid #000;
+
+      font-size: 1em;
+      /*
+        브라우저 기본 폰트 사이즈 16px
+        1em => 16px
+        부모인 body 폰트 사이즈 22px
+        1em => 22px 가변의 값을 가지고 있다.
+      */
+    }
+    .wrapper > h2 {
+      font-size: 1em;
+      font-size: 1.5em;
+      /*
+        부모인 .wrapper 폰트 사이즈 16px
+        1em => 16px
+        부모인 .wrapper 폰트 사이즈 22px
+        1em => 22px
+        1.5em => 33px
+      */
+    }
+    .wrapper > h2 > span {
+      font-size: 1em;
+      /*
+        부모인 h2의 폰트 사이즈 16px
+        1em => 16px
+        부모인 h2의 폰트 사이즈 22px
+        1em => 22px
+        부모인 h2 폰트 사이즈 33px
+        1em => 33px h2의 1.5em은 span 1em의 기준이 됨
+        em은 바로 위의 부모 요소가 가지는 font-size값을 1em으로 설정해서 계산
+      */
+    }
+    .wrapper > p {
+      font-size: 1em;
+      /* pxtoem사이트 사용함
+        부모인 wrapper 폰트 사이즈 22px
+        1em => 22px
+      */
+    }
+    .wrapper > .box {
+      font-size: 0.8em;
+      /*
+        부모인 wrapper 폰트 사이즈 22px
+        1em => 22px
+        0.8em => 17px
+      */
+    }
+    .wrapper > .box > p {
+      font-size: 1.1em;
+      /*
+        1em => 17px
+        1.1em => 18px
+      */
+    }
+    .wrapper > .box > p > span {
+      font-size: 2em;
+      /*
+        부모인 p의 폰트사이즈 18px
+        1em => 18px
+        2em => 36px
+      */
+    }
+  </style>
+</head>
+<body>
+  <h1>em 단위 1</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위</li>
+    <li>부모의 "폰트 사이즈"를 기준으로 값 설정</li>
+    <li>브라우저의 기본 폰트 사이즈: 16px</li>
+  </ul>
+
+  <div class="wrapper">.wrapper 1em == 16px
+    <h2>h2 1em ==
+      <span>span 1em ==</span>
+    </h2>
+    <p>p 1em == </p>
+    <div class="box">.box 1em ==
+      <p>p 1em ==
+      <span>span 1em == </span>
+    </p>
+  </div>
+</div>
+</body>
+</html>

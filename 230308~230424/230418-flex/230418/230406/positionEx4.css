@@ -1,0 +1,90 @@
+@charset "utf-8"
+
+/* 'Lobster Two', cursive 'Noto Sans KR' sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Dongle&family=Lobster&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+main {
+  height: 3000px;
+  padding-top: 100px;
+  font-weight: bold;
+  font-size: 100px;
+}
+a {
+  text-decoration: none;
+}
+menu {
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
+
+/**** header ****/
+header {
+  background-color: rgb(191, 191, 248);
+  font-family: 'Noto sans KR','맑은 고딕', 돋움, sans-serif;
+  font-weight: 400;
+  text-align: center;
+
+  max-width: 700px; min-width: 500px;
+  height: 100px;
+  position: fixed;/* 해더 밑에 있는 (해더 h1) 앱솔루트의 부모 요소에 기준이 될 수 있게 미리 넣어둔것 */
+  top: 0;
+  left: 0; right: 0;
+  margin: auto;
+}
+/* 로고 */
+header h1 {
+  background-color: rgb(147, 138, 226);
+  font-weight: 700;
+  font-size: 30px;
+  width: 100px; height: 50px;
+  line-height: 50px;/* height 값과 같이 하면 중앙정렬 됨 */
+
+  position: absolute;
+  left: 10px; bottom: 10px;
+}
+header h1 a {
+  color:#2f277a
+}
+
+/* 유틸리티 */
+header .utill {
+  background-color: rgb(210, 182, 214);
+  position: absolute;
+  right: 10px; top: 0;
+  padding: 2px 4px;
+}
+header .utill li {
+  color: #fff;
+  font-size: 10px;
+  vertical-align: middle;
+  padding: 0 2px;
+}
+header .utill a {
+  color: #fff;
+  font-size: 16px;
+}
+header .utill a:hover {
+  color: black;
+}
+/* 메뉴 */
+header .gnb {
+  font-family: 'Lobster Two', 'Times New Roman', Times, serif;
+  background-color: rgb(168, 145, 206);
+  padding: 0;margin: 10px;
+
+  position: absolute;
+  right: 0; bottom: 0;
+}
+header .gnb li a {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 20px;
+
+  display: block;/* */
+  padding: 10px 28px;
+}
+header .gnb li a:hover {
+  background-color: rgb(201, 167, 226);
+}
