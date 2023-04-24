@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/*  css 주석 처리 방식 */
+/*
+  선택자selector {
+    속성property: 값value;
+  }
+*/
+
+li {/*타입 선택자: html 요소를 그대로 가져와 사용 */
+  color:orange;
+}
+

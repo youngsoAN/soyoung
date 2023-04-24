@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>폼 그룹화fieldset</title>
+</head>
+<body>
+	<h1>폼 그룹화fieldset</h1>
+	<p>같은 주제를 가지고 있는 폼 관련 요소를 구분지을 때 사용</p>
+
+	<h2>fieldset 요소의 제목: legend</h2>
+	<p>fieldset 요소 안에 작성되어야 하며 하나의 fieldset 안에 한번만 사용</p>
+
+	<form>
+		<fieldset>
+			<legend>회원가입</legend><!--필드셋 없이는 쓸 수 없음(요소이기 때문에) -->
+			<p>
+				<label for="userName">이름: <input type="text" name="userName" placeholder="이름을 작성해 주세요"></label>
+			</p>
+			<p>
+				<label for="userEmail">이메일: </label>
+				<input type="email" name="userEmail" placeholder="메일을 작성해 주세요">
+			</p>
+			<p>
+				<label for="userTel">연락처: </label>
+				<input type="tel" name="userTel" placeholder="-없이 입력해 주세요">
+			</p>
+		
+			<button type="submit">가입</button>
+			<button type="reset">취소</button>
+		</fieldset>
+		<hr>
+
+		<fieldset>
+			<legend>약관</legend>
+			<textarea>이 안의 내용은 약관을 설명한 글입니다...</textarea>
+			<br>
+			<textarea>사용자에게 힌트를 줍니다.</textarea>
+		</fieldset>
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 우선 순위</title>
+  <!-- 외부 선언 -->
+  <link rel="stylesheet" href="./style1.css">
+  <link rel="stylesheet" href="./style2.css">
+  <!-- 내부 선언 -->
+  <style>
+    .color {
+      color: indigo;
+    }
+  </style>
+</head>
+<body>
+  <h1>css 우선 순위</h1>
+  <section id="box1" class="box" style="background-color: brown;">
+    <h2 id="title1">같은 이름이나 종류의 선택자인 경우</h2>
+    <p>위에서 아래로 순차적으로 적용되고 마지막에 선언된 스타일이 우선 순위를 갖는다.</p>
+  </section>
+
+  <!-- 
+    html에서,
+    class="box bg1"은
+    여러개의 클래스 선택자 적용시 띄어쓰기로 구분.
+    class속성만 해당되며 id속성은 안됨
+   -->
+  <section id="box2" class="box bg1 bg2">
+    <h2 id="title2">같은 선택자가 아닌 다른 종류 선택자인 경우</h2>
+    <p>!important &gt; (직접, inline &gt;) #id(5) &gt; .class(3) &gt; type(1) 순으로 우선 순위를 갖는다.</p>
+  </section>
+  <section id="box3" class="color">
+    <h2>다른 종류의 선언문이며 같은 선택자인 경우</h2>
+    <p>(직접, iniline &gt; ) 내부선언 &gt; 외부선언 순으로 우선 순위를 갖는다.</p>
+  </section>
+</body>
+</html>

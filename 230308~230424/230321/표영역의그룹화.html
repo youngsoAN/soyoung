@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>표 영역의 그룹화</title>
+</head>
+<body>
+	<h1>표 영역의 그룹화</h1>
+
+	<table border="1">
+		<!--
+			<h2></h2> 테이블 태그와 관련 없는 태그는 쓸 수 없음
+		 	table 태그 하위 요소로 반드시 table 태그와 함께 작성
+		 	caption만 단독으로 사용 할 수 없음
+		 	표의 목저게 대해 명확하고 상세한 설명을 제공
+		 -->
+		<caption>table 전용 캡션</caption>
+
+		<thead> <!-- 표 머릿말 -->
+			<tr>
+				<th></th>
+				<th>가정용 호스팅</th>
+				<th>기업용 호스팅</th>
+			</tr>
+		</thead>
+		
+		<tbody> <!-- 표 본문 -->
+			<tr>
+				<th>디스크 공간</th>
+				<td>1GB</td>
+				<td>100GB</td>
+			</tr>
+			<tr>
+				<th>대역폭</th>
+				<td>5GB / 월</td>
+				<td>50GB / 월</td>
+			</tr>
+			<tr>
+				<th>이메일 계정</th>
+				<td>5</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<th>서버</th>
+				<td>공유</td>
+				<td>가상서버호스팅(vps)</td>
+			</tr>
+			<tr>
+				<th>지원방법</th>
+				<td>이메일</td>
+				<td>전화와 이메일</td>
+			</tr>
+		</tbody>
+
+		<tfoot> <!-- 표 바닥글 -->
+			<tr>
+				<td colspan="3">지금 가입하면 10% 할인!</td>
+			</tr>
+		</tfoot>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+첫페이지(홈)기준
+1.common.css이동 : ./common/css/common.css
+2.common.js 이동 : ./common/scripts/scommon.js
+3.logo.png 이동 : ./pf01/images/logo.png
+4.index.css 이동 : ./pf01/css/index.css
+5.pf01 안의 index.html 이동 : ./pf01/index.html
+
+----------------------
+
+pf01 안의 index.html 기준
+
+1. pf01 안의 index.html 이동 : ./intro.html
+2. 첫페이지 (홈) 이동 : ../index.html
+3. index.css 이동 : ./css/index.css
+4. reset.css 이동 : ../common/css/reset.css
+5. common.js이동 : ../common/scripts/common.js
+6. slider.js 이동 : ./script/slider.js
+

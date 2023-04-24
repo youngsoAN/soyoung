@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>form 연습 1</title>
+</head>
+<body>
+	<h1>form 연습 1</h1>
+	<form>
+		<fieldset>
+			<legend>상세정보 : </legend>
+			<label for="userName">이름: <input type="text" name="userName" required></label><br>
+			<label for="userEmail">이메일: <input type="email" name="userEmail"></label>
+		</fieldset>
+
+		<fieldset>
+			<legend>리뷰</legend>
+			<label for="site">사이트를 알게 된 경위는?</label>
+			<br>
+			<select name="userSite" id="site">
+				<option value="직접검색" selected>직접검색</option>
+				<option value="신문광고">신문광고</option>
+				<option value="인터넷검색">인터넷검색</option>
+				<option value="방송">방송</option>
+			</select>
+			<hr>
+			
+			<p>다시 방문하시겠습니까?</p>
+			<input type="radio" name="visit" id="yes" value="네">
+			<label for="yes">네</label>
+			<input type="radio" name="visit" id="no" value="아니요">
+			<label for="no">아니요</label>
+			<input type="radio" name="visit" id="dontKnow" value="모름">
+			<label for="dontKnow">모름</label>
+			<hr>
+
+			<label for="txtbox">의견: </label>
+			<br>
+			<textarea placeholder="여러 줄의 텍스트 박스" id="txtbox"></textarea>
+			<hr>
+
+			<input type="checkbox" name="update" id="update" value="이메일 업데이트" checked>
+			<label for="update">이메일 업데이트에 가입</label>
+			<hr>
+			<button type="submit">리뷰전송</button>
+			<button type="reset">전송취소</button>
+		</fieldset>
+	</form>
+
+</body>
+</html>
