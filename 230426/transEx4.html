@@ -14,15 +14,15 @@
     h2,p { margin: 0;}
     .box1 {
       background-color: #ffcbcb;
-      width: 300px; height: 400px;
+      width: 300px; height: 400px;transition: 0.7s;
     }
     .box2 { background-color: #adf5ff; width: 500px; height: 200px; transition: 0.7s;}
 
     input[type=checkbox]:checked ~ .box1 {
-      transform: scale(1, 0);
+      height: 100px;
     }
     input[type=checkbox]:checked ~ .box2 {
-      transform: translate(0, -400px)
+      transform: translateY(-100px)
     }
   </style>
 </head>
@@ -37,5 +37,6 @@
     <p>block</p>
   </div>
   <!-- 엉망이지만 이게 최선이었습니다 ⁽˙³˙⁾◟( ˘•ㅇ•˘ )◞⁽˙³˙⁾ -->
+  <!-- 김평우 : 체크시 box1에 scale값이 아니라 height값을주고 box1에도 트랜지션값을줘서 자연스럽게 상자가 사라지도록 해봤습니다!  -->
 </body>
 </html>
