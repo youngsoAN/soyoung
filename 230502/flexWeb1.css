@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&family=Foldit:wght@300&family=Pacifico&family=Satisfy&display=swap');
+
+body {
+  background-color: rgb(255, 249, 231);
+}
+h1 {
+  font-family: "Bruno Ace",Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  color: rgb(87, 87, 87);
+}
+p {
+  color: rgb(128, 128, 128);
+}
+a {
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+}
+header {
+  height: 600px;
+  padding: 200px;
+  max-width: 800px;
+  min-width: 400px;
+}
+.mini {
+  font-family: "Pacifico", 'Times New Roman', Times, serif;
+}
+a {
+  
+}
+article {
+  width: 100%; height: 600px;
+  display: flex;
+  position: relative;
+}
+img {
+  width: 700px; height: 600px;
+  object-fit: cover;
+  position: absolute;
+}
+main article:nth-child(1) {
+  background-color: blanchedalmond;
+}
+main article:nth-child(1) img {
+  top: 0; right: 0;
+}
+main article:nth-child(4) {
+  background-color: blanchedalmond;
+}
+main article:nth-child(4) {
+  top: 0; left: 0;
+}
