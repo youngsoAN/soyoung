@@ -6,6 +6,7 @@ body {
 }
 h2 {
   font-weight: bold;
+  font-size: 3rem;
 }
 p {
   color: #5a5a5a;
@@ -81,7 +82,6 @@ main .main-number2 {
   font-weight: 700;
 }
 .main-number1 .box h2 {
-  font-size: 60px;
   padding-left: 40px;
   text-shadow: 1px 1px 1px #000;
 }
@@ -98,12 +98,50 @@ main .main-number2 {
 .main-number2 h2 {
   font-size: 40px;
 }
+.main-number2 p {
+  padding: 20px 0;
+}
+.main-number2::before {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 25px; height: 1px;
+  border: 2px solid #ff9216;
+  transform: rotate(-65deg);
+}
 main article ul {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  padding: 70px 0;
 }
 main article li {
   padding: 50px;
+}
+article {
+  background-color: #a0a0a0;
+}
+main article ul li strong {
+  font-size: 3rem;
+}
+main article ul li img {
+  padding-bottom: 30px;
+}
+main article ul li span::after {
+  content: "";
+  display: flex;
+  margin: 15px auto;
+  transform: rotate(180deg);
+  width: 25px;
+  border-bottom: 1px solid #000;
+}
+main article .atc-bd li {
+  border-right: 1px solid #e2e2e2;
+}
+main article .atc-bd li:last-child {
+  border: none;
+}
+main .number2 {
+  padding: 50px 0;
 }
