@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>flexWeb2</title>
   <!-- reset -->
-  <link rel="stylesheet" href="../../common/reset.css">
+  <!--<link rel="stylesheet" href="../../common/reset.css">-->
+  <link rel="stylesheet" href="../common/minireset.min.css">
   <!-- style -->
   <link rel="stylesheet" href="./flexWeb2.css">
 </head>
+<body>
 <header>
   <menu>
     <h1>
@@ -117,12 +119,22 @@
 </header>
 <main>
   <section class="main-number1">
-    <video src="https://www.panstar.co.kr/src/video/visual.mp4" autoplay muted loop>이 브라우저에서 지원하지 않습니다.</video>
+    <video src="https://www.panstar.co.kr/src/video/visual.mp4" autoplay muted loop></video>
     <div class="box">
       <h2>OVER THE NETWORK
         <br><strong>CREATE NEW VALUES</strong>
       </h2>
       <p>고객을 위한 새로운 가치를 만들어 가기 위해<br>팬스타는 먼저 생각하고 먼저 움직입니다</p>
+    </div>
+    <div class="button">
+      <a href="#">
+        <i><img src="./images/main_reserve_icon1_2108.png" alt="img"></i>
+        <p>국제특송<br>예약/조회</p>
+      </a>
+      <a href="#">
+        <i><img src="./images/main_reserve_icon2_2108.png" alt="img"></i>
+        <p>팬스타크루즈<br>예약/조회</p>
+      </a>
     </div>
 
   </section>
@@ -175,51 +187,54 @@
     <h2>Business Area</h2>
     <p>팬스타는 무한한 가능성의 바다에서 최초의 길을 만들어 왔습니다.<br>그리고 이제 고객을 위한 최고를 만들어 갑니다.
     </p>
-    <ul>
-      <li><a href="#">고속화물페리</a></li>
-      <li><a href="#">크루즈 여객</a></li>
-      <li><a href="#">국제특송</a></li>
-      <li><a href="#">자동차정비기기</a></li>
-      <li><a href="#">친환경 선박기술</a></li>
-      <li><a href="#">창고보관</a></li>
-    </ul>
-    <div>
+    <ul class="ul-after">
+        <li><a href="#">고속화물페리</a></li>
+        <li><a href="#">크루즈 여객</a></li>
+        <li><a href="#">국제특송</a></li>
+        <li><a href="#">자동차정비기기</a></li>
+        <li><a href="#">친환경 선박기술</a></li>
+        <li><a href="#">창고보관</a></li>
+      </ul>
+    <div class="left">
       <h3>고속화물페리</h3>
       <p>팬스타는 고속 Ro-Ro 페리를 이용한 해상운송으로 신속한 선적 및 하역, 내륙운송,<br>현지 통관면허를 보유하고 있는 일본 현지법인을 통해 일관해상운송체계를 구축<br>해상화물의 리드타임을
         항공화물에 준하도록 단축시키면서 운송비용은 대폭 절감시켜 드립니다.<br>컨테이너 화물은 물론 다양한 형태의 벌크화물, 건설장비/자재, 자동차 등 어떤 종류의 화물이라도<br>컨테이너 없이 바로 선내에
         선적하여
         빠르고 안전한 운송을 보장합니다.<br>더 빠르게, 더 안전하게, 더 편리하게 팬스타 고속화물페리가 책임집니다.</p>
       <ul>
-        <li><img src="" alt=""></li>
-        <li><img src="" alt=""></li>
-        <li><img src="" alt=""></li>
-      </ul>
+        <li><img src="./images/mb_cargo_01.png" alt="img"></li>
+        <li><img src="./images/mb_cargo_02.png" alt="img"></li>
+        <li><img src="./images/mb_cargo_03.png" alt="img"></li>
+      </ul>  
     </div>
-    <div>
-      <img src="" alt="">
-      <a href="https://www.panstar.co.kr/"><button>More Detail</button></a>
-    </div>
+    <div class="right">
+        <img src="./images/mb_cargo.png" alt="main-img">
+        <button><a href="#">More Detail</a></button>  
+      </div>
+
   </article>
   <article class="number3">
     <h2>/</h2>
     <h2>Schedule</h2>
     <p>팬스타고속화물페리는 빠르고 안전함은 물론, 뛰어난 정시성을 자랑합니다.<br>주요 선박의 운항일정을 간편하게 확인해 보세요.</p>
     <ul>
-      <li><a href="https://www.panstar.co.kr/">SANSTAR DREAM<< /a>/li>
+      <li><a href="https://www.panstar.co.kr/">SANSTAR DREAM</a></li>
       <li><a href="https://www.panstar.co.kr/">PANSTAR GENIE</a></li>
       <li><a href="https://www.panstar.co.kr/">PANSTAR GENIE No.2</a></li>
       <li><a href="https://www.panstar.co.kr/">PANSTAR DREAM</a></li>
     </ul>
+    <img src="./images/화면 캡처 2023-05-07 234442.png" alt="img">
     <div><a href="https://www.panstar.co.kr/"><button>More Detail</button></a></div>
   </article>
   <article class="number4">
     <h2>/</h2>
     <h2>Contact Us</h2>
     <p>오늘보다 내일이 더 새로운 팬스타의 최신 정보를 제공해 드립니다.</p>
-    <div class="box1">
+    <div class="box">
+      <div class="box1">
       <a href="https://www.panstar.co.kr/">
         <h3>보도자료</h3>
-        <h4>29일부터 대마도행 여객선 승객수 제한 해제...팬스...</h4>
+        <h4>29일부터 대마도행 여객선 승객수 제한 해제...팬스타 425명까지 승선 가능</h4>
         <p>2023.04.28</p>
         <span><button>자세히보기</button></span>
       </a>
@@ -231,31 +246,32 @@
       </header>
       <ul>
         <li>
-          <link rel="stylesheet" href="">
+          [안내]팬스타 크루즈 예약 시스템 점검
           <time datetime="2022-07-10" class="date">
             <i class="icon xi-time-o"></i> 2022-07-10 </time>
         </li>
         <li>
-          <link rel="stylesheet" href="">
+          [입찰공고] 시스템 데이터 재구성 및 빅데이터 분석용
           <time datetime="2021-08-24" class="date">
             <i class="icon xi-time-o"></i> 2021-08-24 </time>
         </li>
         <li>
-          <link rel="stylesheet" href="">
+          디지털 전환 프로젝트 기반 작업 설계 전략 컨설팅-입찰 공고
           <time datetime="2021-07-27" class="date">
             <i class="icon xi-time-o"></i> 2021-07-27 </time>
         </li>
         <li>
-          <link rel="stylesheet" href="">
+          2021년 선박 정기 점검으로 인한 휴항 안내(4/30~5/09)
           <time datetime="2021-04-29" class="date">
             <i class="icon xi-time-o"></i> 2021-04-29 </time>
         </li>
         <li>
-          <link rel="stylesheet" href="">
+          팬스타 크루즈 고객센터 주말 및 공휴일 영업시간 안내
           <time datetime="2020-12-29" class="date">
             <i class="icon xi-time-o"></i> 2020-12-29 </time>
         </li>
       </ul>
+    </div>
       <div class="box3">
         <a href="https://www.panstar.co.kr/">
           <h3>Resruit</h3>
@@ -263,42 +279,41 @@
           <span>채용공고확인</span>
         </a>
       </div>
-    </div>
-    <ul>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-      <li>
-        <a href="https://www.panstar.co.kr/">
-          <img src="" alt=""></a>
-      </li>
-    </ul>
   </article>
 </main>
+<ul class="footer">
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-enterprise (1).png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-enterprise.png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-line.png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-star.png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-tech.png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-trading.png" alt="img"></a>
+  </li>
+  <li>
+    <a href="https://www.panstar.co.kr/">
+      <img src="./images/logo-tree.png" alt="img"></a>
+  </li>
+</ul>
 <footer>
   <header>
-    <img src="" alt="팬스타 회색 이미지">
+    <img src="./images/ft_logo (1).png" alt="팬스타 회색 이미지">
     <ul>
       <li>
         <a href="https://www.panstar.co.kr/">법적고지</a>
@@ -317,7 +332,5 @@
   </div>
 </footer>
 
-<body>
 </body>
-
 </html>

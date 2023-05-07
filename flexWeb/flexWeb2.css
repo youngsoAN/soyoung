@@ -10,6 +10,20 @@ h2 {
 }
 p {
   color: #5a5a5a;
+  padding-top: 20px;
+}
+a {
+  text-decoration: none;
+  color: #5c5c5c;
+}
+button {
+  background-color: #ff8c21;
+  border: none;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+button:hover {
+  border-radius: 20px;
 }
 header {
   position: fixed;
@@ -25,7 +39,7 @@ header menu {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 30px; margin: 0;
 }
 header menu h1 img {
   width: 200px;
@@ -57,6 +71,7 @@ header menu .header-quick {
   border: none;
   border-radius: 30px;
   padding: 7px 13px;
+  color: #fff;
 }
 .header-quick a button img {
   width: 20px;
@@ -95,6 +110,26 @@ main .main-number2 {
   padding: 20px 40px;
   color: #fff;
 }
+.main-number1 .button {
+  position: absolute;
+  top: 40vh; right: 10vw;
+}
+.main-number1 .button a {
+  display: block;
+  background-color: #53535375;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  padding-top: 10px;
+}
+.main-number1 .button a:hover {
+  background-image: url(./images/main_reserve_ov_bg.png);
+  background-repeat: no-repeat;
+}
+.main-number1 .button p {
+  color: #fff;
+  top: 20px;
+}
 .main-number2 h2 {
   font-size: 40px;
 }
@@ -119,23 +154,67 @@ main article ul {
 main article li {
   padding: 50px;
 }
-article {
-  background-color: #a0a0a0;
-}
 main article ul li strong {
   font-size: 3rem;
 }
 main article ul li img {
   padding-bottom: 30px;
 }
-main article ul li span::after {
+main .number2 {
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+main .number2 .ul-after li:nth-child(1):before {
   content: "";
   display: flex;
-  margin: 15px auto;
-  transform: rotate(180deg);
-  width: 25px;
-  border-bottom: 1px solid #000;
+  margin: 0 auto;
+  width: 120px;
+  border-bottom: 4px solid #ff8c21;
 }
+main .number2 .ul-after li:nth-child(1) {
+  color: #ff8c21;
+}
+main .number2 .ul-after li:nth-child(n+2):hover li:nth-child(1)::before {
+  content: "";
+  border: none;
+}
+main .number2 .left {
+  background-color: #e0e0e0;
+  width: 50vw;
+  position: absolute;
+  padding-top: 50px;
+}
+main .number2 .right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 350px;
+  left: 25vw;
+}
+main .number2 .right img {
+  width: 50%;
+  height: 70%;
+  object-fit: cover;
+}
+main .number2 .right button {
+  position: absolute;
+  top: 20vw; left: 50vh;
+}
+main .number2 .left ul img {
+  padding-top: 20px;
+  width: 300px;
+}
+main .number2 h2:nth-child(1) {
+  color: #ff8c21;
+}
+main .number2 ul {
+  padding: 40px;
+}
+main .number2 .left h3 {
+  font-size: 3rem;
+}
+
 main article .atc-bd li {
   border-right: 1px solid #e2e2e2;
 }
@@ -144,4 +223,96 @@ main article .atc-bd li:last-child {
 }
 main .number2 {
   padding: 50px 0;
+}
+main .number2 ul li {
+  padding: 15px;
+  color: #5c5c5c;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: 0.4s;
+  position: relative;
+}
+main .number2 ul li a:hover {
+  color: #ff8c21;
+}
+.number3 h2:nth-child(1) {
+  color: #ff8c21;
+  margin: 40px;
+}
+.number3 ul li a {
+  font-weight: bold;
+  font-family: "Play",sans-serif;
+  font-size: 1.5rem;
+}
+.number3 ul li a:hover {
+  color: #ff8c21;
+}
+.number3 img {
+  width: 90%; height: 70%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.number4 {
+  margin: 50px 0;
+}
+.number4 h2:nth-child(1) {
+  color: #ff8c21;
+  margin: 40px;
+}
+.number4 .box {
+  display: flex;
+  padding-top: 50px;
+}
+.number4 .box1 img{
+  width: 400px;
+}
+.number4 .box1 {
+  background-image: url(./images/mb_bngd.png);
+  width: 900px; height: 300px;
+  font-weight: bold;
+}
+.number4 .box1 h3 {
+  background-color: #ff8c21;
+  width: 100px; height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.number4 .box1 h4 {
+  color: #5c5c5c;
+  margin: 20px;
+}
+.number4 .box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.number4 .box2 ul {
+  flex-wrap: wrap;
+  padding: 0;
+}
+.number4 .box2 ul li {
+  padding: 10px;
+  text-align: left;
+}
+.number4 .box3 {
+  width: 700px;
+  background-image: url(./images/bg_main_recruit.png);
+}
+footer {
+  color: #fff;
+  width: 100%; height: 30vh;
+  background-color: #5c5c5c;
+}
+.footer {
+  height: 70px;
+  line-height: 70px;
+  background-color: #e0ded6;
+  display: flex;
+  align-content: flex-start; flex-direction: row; flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer header img {
+  background-color: #e0e0e0;
 }
