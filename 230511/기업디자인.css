@@ -1,3 +1,189 @@
 @charset "utf-8";
 
-/* 가로사이즈 1400px~ */
+/* 가로사이즈 1400px~ 어디든 적용 가능하게 디자인 */
+
+body {
+  text-align: center;
+}
+img {
+  width: 40px;
+  height: 40px;
+}
+button {
+  width: 120px;
+  height: 40px;
+  border: #fff solid 1px;
+  background: #fff;
+  transition: 0.3s;
+}
+button a {
+  background: none;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding: 10px;
+}
+button:hover {
+  background: none;
+}
+button:hover a {
+  color: #fff;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+/**** header ****/
+header {
+  /* 원래는 스크롤 내리면 메뉴바가 위로 올라가면서 사라짐, 스크롤을 위로 올리면 다시 나타나는 효과 적용되어있음 */
+  width: 100vw;
+  position: fixed;
+  z-index: 999; /* position으로 메뉴가 뒤로 밀림, 이걸 해결하기 위해 최상위 값으로 z-index 999 줬음 */
+}
+header nav {
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 2vh;
+}
+header .header-logo img {
+  width: 80%;
+  height: 80%;
+}
+header .header-menu {
+  display: flex;
+  width: 50%;
+  list-style: none;
+  justify-content: space-around;
+}
+header .header-menu li {
+}
+header .header-menu li a {
+  width: 17%;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+header .header-icon {
+  filter: invert(93%) sepia(94%) saturate(25%) hue-rotate(22deg)
+    brightness(107%) contrast(106%);
+}
+
+/**** main ****/
+/*** main background img ***/
+main .main-img {
+  background: url(./images/main-photo.png) no-repeat 50% / cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+main .yellow-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 950px;
+  height: 450px;
+  background: rgba(255, 187, 0, 0.801);
+  color: #fff;
+  padding: 80px;
+}
+main .yellow-box h1 {
+  font-size: 70px;
+}
+main .yellow-box a img {
+  position: sticky;
+  bottom: 20px;
+  right: 50px;
+  transform: rotate(-90deg);
+  filter: invert(93%) sepia(94%) saturate(25%) hue-rotate(22deg)
+    brightness(107%) contrast(106%);
+  background: #ffffff9a 50%;
+  border-radius: 50%;
+}
+/*** main section ***/
+main .business-information1 {
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 130px;
+}
+main .business-information1 .business-icon-box {
+  display: flex;
+}
+main .business-information1 .business-icon-box .text-box {
+}
+main .business-information1 .box1 {
+  background: url(./images/Group\ 69.png) no-repeat 50%;
+  padding-top: 120px;
+}
+main .business-information1 .box2 {
+  background: url(./images/파손유리잔.png) no-repeat 50%;
+  padding-top: 120px;
+}
+main .business-information1 .box3 {
+  background: url(./images/트럭아이콘.png) no-repeat 50%;
+  padding-top: 120px;
+}
+/* video */
+main .video {
+  width: 100vw;
+  height: 60vh;
+  background: url(./images/main-video.png) no-repeat 30% 20%;
+}
+main .box {
+  /* margin: 50px 20px; */
+}
+main .box .text-box {
+  width: 100%;
+  height: 100%;
+  background: url(./images/text-box.png) no-repeat;
+}
+/** 사진 8개 넣는 자리 **/
+.product-photo {
+  max-width: 100vw;
+  padding: 20px;
+}
+.product-photo .text-box {
+  margin: 0 auto;
+  width: 1000px;
+  /* text-align: center; */
+}
+.product-photo .photo-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product-photo .photo-box .photo {
+  width: 20%;
+  margin: 40px 20px;
+}
+.product-photo .photo-box img {
+  width: 100%;
+  height: 100%;
+}
+/* 이거 밑에가 말풍선 있는 구간임 */
+.business-information2 {
+}
+.business-information2 .icon {
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.business-information2 .icon img {
+  width: 100%;
+  height: 100%;
+}
+.business-information2 .icon .icon-number {
+}
+/**** footer ****/
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  text-align: left;
+  padding: 70px;
+}
+.last {
+  background-color: #141414;
+  color: #fff;
+}
