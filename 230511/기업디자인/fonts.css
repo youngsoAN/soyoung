@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* Roboto,Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400&display=swap');
+
+body {
+    font-family: "Montserrat","Roboto","나눔 스퀘어 라운드",Arial, Helvetica, sans-serif;
+}
+main .main-img .yellow-box h1 {
+    font-weight: 600;
+    font-size: 70px;
+}
+main .main-img .yellow-box h2,p {
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
