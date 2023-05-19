@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx9</title>
+  <style>
+    .box {
+      border: 1px solid #000;
+      box-shadow: 3px 3px 10px;
+      width: 80%;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .box .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      border-bottom: #9b9b9b solid 2px;
+    }
+
+    .box .header p span {
+      background-color: #ffcc41cb;
+    }
+
+    .box .main {
+      background-color: #e3f0f8;
+      margin: 0 auto;
+      margin: 20px 0;
+      gap: 2vw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      padding: 2vw;
+    }
+
+    .box .main .item {
+      color: #fff;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .box .main .item:nth-child(odd) {
+      background-color: rgb(93, 148, 134);
+    }
+
+    .box .main .item:nth-child(even) {
+      background-color: #597588;
+    }
+
+    /**** ↑ 내가한것 ****/
+
+    .container {
+      border: #000 solid 1px;
+      width: 80%;
+      margin: 20px auto;
+      box-shadow: #ff0 0 3px 10px, #ff8000 0 10px 20px, 0px -13px 24px -12px rgba(0, 0, 0, 0);
+      padding: 2%;
+      box-sizing: border-box;
+    }
+
+    .container .layout-top {
+      border-bottom: 1px solid #000;
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      /* align-items: end;
+      justify-items: center; 이 밑에것 처럼 한줄로 쓸 수 있음 */
+      place-items: end center;
+      padding-bottom: 2vw;
+    }
+
+    .container .layout-top ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container .layout-top address {
+      text-align: right;
+      /* align-self: end; */
+    }
+
+    .container .layout-bottom {
+      background-color: #fff4cd;
+      list-style: none;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
+
+    .container .layout-bottom .item {
+      margin: 1vw;
+      border-radius: 50%;
+      width: calc(100% - 2vw);
+
+      aspect-ratio: 1;
+      text-align: center;
+      /* display: grid;
+      place-items: center; = 라인높이 값 아닌 그리드 플레이스 아이템을 줘서 중앙 정렬함(높이값이 얼마인지 모를때 씀) */
+      display: grid;
+      place-items: center;
+    }
+
+    .container .layout-bottom li:nth-child(odd) {
+      background-color: #ffbebe;
+    }
+
+    .container .layout-bottom li:nth-child(even) {
+      background-color: #cf99c8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="header">
+      <ul>
+        <li>list1-1</li>
+        <li>list1-2</li>
+        <li>list1-3</li>
+        <li>list1-4</li>
+      </ul>
+      <ul>
+        <li>list2-1</li>
+        <li>list2-2</li>
+        <li>list2-3</li>
+        <li>list2-4</li>
+      </ul>
+      <p>경기도 수원시 팔달구 <span>더조은컴퓨터 아카데미</span></p>
+    </div>
+    <div class="main">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+      <div class="item">item5</div>
+      <div class="item">item6</div>
+    </div>
+  </div>
+  <!-- ↑ 내가한것 -->
+
+
+  <div class="container">
+    <div class="layout-top">
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <address>경기도 수원시 팔달구 <span>더조은컴퓨터 아카데미</span></address>
+    </div>
+    <ul class="layout-bottom">
+      <li class="item">item1</li>
+      <li class="item">item2</li>
+      <li class="item">item3</li>
+      <li class="item">item4</li>
+      <li class="item">item5</li>
+      <li class="item">item6</li>
+    </ul>
+  </div>
+</body>
+
+</html>
