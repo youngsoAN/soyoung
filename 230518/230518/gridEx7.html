@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx7</title>
+  <style>
+    /* body {
+      width: 100%;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .box {
+      gap: 1px;
+      display: grid;
+      grid-auto-rows: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      text-align: center;
+    }
+
+    .item {
+      color: #550404;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .box .item:nth-child(1) {
+      background-color: #531010;
+      color: #fff;
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+
+    .item:nth-child(even) {
+      background-color: #ffabab;
+    }
+
+    .item:nth-child(odd) {
+      background-color: #feffb5;
+    } */
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .box {
+      display: grid;
+      gap: 0.5vw;
+      grid-auto-rows: 10vw;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .box .item {
+      display: grid;
+      place-items: center;
+    }
+
+    .box .item:nth-child(odd) {
+      background-color: #ffabab;
+    }
+
+    .box .item:nth-child(even) {
+      background-color: #feffb5;
+    }
+
+    .box .item:first-child {
+      background-color: #e26262;
+      grid-column: 1 / 3;
+      grid-row: 1 / span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="item">item01</div>
+    <div class="item">item02</div>
+    <div class="item">item03</div>
+    <div class="item">item04</div>
+    <div class="item">item05</div>
+    <div class="item">item06</div>
+    <div class="item">item07</div>
+    <div class="item">item08</div>
+    <div class="item">item09</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+    <div class="item">item13</div>
+    <div class="item">item14</div>
+    <div class="item">item15</div>
+    <div class="item">item16</div>
+    <div class="item">item17</div>
+    <div class="item">item18</div>
+    <div class="item">item19</div>
+    <div class="item">item20</div>
+    <div class="item">item21</div>
+    <div class="item">item22</div>
+    <div class="item">item23</div>
+    <div class="item">item24</div>
+    <div class="item">item25</div>
+    <div class="item">item26</div>
+    <div class="item">item27</div>
+    <div class="item">item28</div>
+    <div class="item">item29</div>
+    <div class="item">item30</div>
+  </div>
+</body>
+
+</html>
