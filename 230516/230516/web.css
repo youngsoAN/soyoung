@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+body {
+  font-family: "Montserrat", "Roboto", /*sans-serif,*/ "NanumSquareR";
+}
+.flex {
+  display: flex;
+}
+header {
+  position: fixed;
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 1700px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+header .header-menu ul {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+}
+header .header-menu ul li {
+}
+header .header-menu .hidden {
+  display: none;
+}
+button {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+}
+header header-menu:hover .hidden {
+  display: block;
+}
+header .menu-btn {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(206deg)
+    brightness(105%) contrast(101%);
+}
+main {
+  background: url(./images/main-photo.png) no-repeat 0 0 / cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+main .yellow-box {
+  width: 50vw;
+  height: 40vh;
+  background-color: #ffc400c5;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 40px;
+  padding-left: 80px;
+}
+main .yellow-box::after {
+  content: "";
+  width: 180px;
+  height: 1px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 110px;
+  left: -110px;
+}
+main .yellow-box h1 {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 20px 40px;
+}
+main .yellow-box h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+main .yellow-box p {
+  margin-left: 40px;
+  padding-top: 20px;
+}
+main .yellow-box button {
+  background-color: #fff;
+  width: 140px;
+  height: 40px;
+  margin: 40px;
+  transition: 0.4s;
+}
+main .yellow-box button a {
+  text-decoration: none;
+  color: black;
+}
+main .yellow-box button:hover {
+  background-color: #00000070;
+  color: #fff;
+}
+main .yellow-box button:hover a {
+  color: #fff;
+}
+main .yellow-box a img {
+  transform: rotate(-90deg);
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(206deg)
+    brightness(105%) contrast(101%);
+  background-color: #4747479c;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+main .yellow-box a img:hover {
+  background-color: #fff;
+}
