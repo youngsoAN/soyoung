@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridBasic4</title>
+  <style>
+    .box {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid rgb(186, 207, 233);
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #c47979;
+      display: grid;
+    }
+
+    .box .item {
+      background-color: #ffe0e0;
+    }
+
+    .box1 {
+      gap: 1ch;
+      /* 2행 7열 */
+      grid-template: 100px 100px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template: 100px 100px / repeat(7, 1fr);
+    }
+
+    .box2 {
+      gap: 0.7vw;
+      /* 3행 6열 */
+      grid-template: repeat(3, 70px) /repeat(6, 1fr);
+      grid-template: repeat(3, 70px) /200px repeat(5, 1fr);
+      /* ↑첫 행은 200px의 값, 나머지 5개는 1fr의 값을 줌 */
+      grid-template: repeat(3, 70px) /200px repeat(4, 1fr) minmax(auto, 150px);
+      /* ↑마지막은 오토값 */
+      grid-template: repeat(3, 70px) /200px repeat(4, 1fr) 5rem minmax(auto, 150px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>gird 기본4</h1>
+  <h2>repeat(반복횟수); 행과 열의 값 반복</h2>
+  <div class="box box1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+  </div>
+  <div class="box box2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+    <div class="item">item13</div>
+    <div class="item">item14</div>
+    <div class="item">item15</div>
+  </div>
+</body>
+
+
+</html>
