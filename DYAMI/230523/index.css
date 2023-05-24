@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+body {
+  font-family: "Montserrat", "Noto Sans Korean", sans-serif;
+}
+img {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+@media (max-width: 768px) {
+  /***** header *****/
+  menu .header .header-top {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13vw;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #fff;
+  }
+  menu .header .header-top img:first-child {
+    width: 80px;
+  }
+  menu .header .header-top .btn {
+    width: 20px;
+    height: 100%;
+  }
+  menu .header .header-bottom a {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+  /***** main *****/
+  main .number1 {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    background-color: #f3d6d6;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  main .number1 .txt {
+    letter-spacing: 2px;
+    font-size: 55px;
+    font-weight: 00;
+    line-height: 1.5;
+  }
+  main .number1 span {
+    color: #696969;
+    text-transform: uppercase;
+    font-family: "Noto Sans Korean", sans-serif;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+main .number1 img {
+  width: 70%;
+  margin: 0 auto;
+}
+main .number1 .number1-btn button {
+  border: none;
+  background: none;
+  font-size: 17px;
+  color: #777777;
+}
+main .number1 .number1-btn button:last-child {
+  color: #000;
+  position: relative;
+  font-weight: 500;
+}
+main .number1 .number1-btn button:last-child:after {
+  content: "";
+  border: 1px solid #000;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  top: 40%;
+  left: 30px;
+}
+main .number2 {
+  margin: 50px 0;
+}
+main .number2 .txt {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 500;
+}
+main .number2 .txt h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 30px 0;
+  color: #333;
+}
+main .number2 .txt-after {
+  padding-bottom: 20px;
+  border-bottom: #ddd solid 1px;
+}
+main .number2 .txt-after:last-child {
+  border: none;
+}
+
+main .number3 {
+  width: 100%;
+}
+main .number3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+main .number4 {
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+main .number4 .txt {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.8;
+  margin-bottom: 90px;
+}
+main .number4 .txt h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+}
+main .number4 .txt h2::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  border: #222 1px solid;
+  display: block;
+  margin: 30px auto;
+}
+main .number4 .number4-img-box {
+  margin: 0 auto;
+  width: 70%;
+}
+main .number4 .number4-img-box figcaption {
+  margin: 40px 0;
+  text-align: center;
+  font-weight: 500;
+}
+main .number4 .number4-img-box figcaption h2 {
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+main .number5 {
+  background-color: #dddddd54;
+  padding-bottom: 80px;
+}
+main .number5 .txt {
+  width: 90%;
+  margin: 50px auto;
+  line-height: 1.5;
+}
+main .number5 .txt h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  padding: 40px 0;
+}
+main .number5 .video {
+  width: 80%;
+}
+
+main .number6 {
+  margin: 50px auto;
+}
+main .number6 h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  padding: 40px 0;
+  text-align: center;
+}
+main .number6 h2::after {
+  content: "";
+  width: 50px;
+  height: 0.5px;
+  border: #222 2px solid;
+  display: block;
+  margin: 30px auto;
+}
+main .number6 .container {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+main .number6 .container .side-img {
+  width: 27%;
+}
+main .number6 .container .main-img {
+  width: 30%;
+  box-shadow: 0px 5px 10px 0px rgba(53, 53, 53, 0.171);
+}
+main .number6 .container figcaption {
+  line-height: 1.7;
+  width: 80%;
+  margin: 20px 10px;
+}
+main .number6 .container figcaption h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+main .number6 .button {
+  width: 100px;
+  margin: 50px auto;
+  justify-content: space-around;
+}
+main .number6 .button a {
+  background-color: #aed5df;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  transition: 0.3s;
+}
+main .number6 .button a:hover {
+  background-color: #497ac5;
+}
+
+main .number7 {
+  background-color: #dddddd54;
+  padding: 90px 0;
+}
+main .number7 .container {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 7vw;
+}
+main .number7 .container img {
+}
+
+main .number8 {
+  margin: 50px 0;
+}
+main .number8 h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  padding: 40px 0;
+  text-align: center;
+}
+main .number8 .flex {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+}
+main .number8 .flex li {
+  width: 45%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 20px 0;
+}
+main .number8 .flex li:hover {
+  border-bottom: 3px solid #ddd;
+}
+main .number8 .flex li:first-child {
+  border-bottom: 3px solid #000000;
+}
+main .number8 .flex a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  padding: 20px 30%;
+}
+main .number8 .address h3 {
+  font-weight: bold;
+  color: #222;
+  font-size: 18px;
+}
+main .number8 .address li {
+  margin: 50px auto;
+  width: 80%;
+  line-height: 1.5;
+  font-weight: 500;
+}
+main .number8 .address li p {
+  padding-bottom: 20px;
+  border-bottom: #ddd solid 1px;
+}
+main .number8 .address li:last-child p {
+  border-bottom: #000 solid 1px;
+}
+main .number8 figure {
+  background: url(./images/DYAMI_images/20220127000688_0.jpg) no-repeat 50% /
+    cover;
+}
+main .number8 .img-box {
+  background-color: #558fb6c2;
+  color: #eee;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: 200;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+main .number8 .img-box p {
+  padding-bottom: 50px;
+  width: 70%;
+  margin: 0 auto;
+}
+main .number8 .img-box h2 {
+  color: #eee;
+}
+main .number8 .img-box button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 20px;
+}
+main .number8 .img-box button a {
+  color: #fff;
+  padding: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/***** footer *****/
+footer .footer-header {
+  width: 130px;
+  margin-left: 20px;
+}
+footer .footer-txt {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+footer .footer-txt h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+}

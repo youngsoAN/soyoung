@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* Wix Madefor Display */
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@600&display=swap");
+
+/* 기본 (모바일) 작은거부터 시작함 */
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background: url(./images/49fcd543822a7923220c54e3efb146f5.jpg) no-repeat fixed
+    50% / cover;
+  color: #fff;
+}
+nav .global-nav {
+  display: flex;
+  flex-flow: column wrap; /* flex-wrap flex-direction */
+  display: none;
+}
+nav .global-nav.active {
+  display: flex;
+}
+nav a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  /* text-indent: 10px; -> 텍스트의 성격이라 레이아웃에 영향을 주지 않음 */
+  padding-left: 10px; /* 얘는 레이아웃에 영향을 줄 수 있음 */
+
+  display: flex;
+  align-items: center;
+}
+nav .mobile-btn {
+  background-color: #a1326f63;
+  position: relative;
+}
+nav .mobile-btn::after {
+  content: "";
+  background: url(./images/ellipsis.svg) no-repeat 50% / contain;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

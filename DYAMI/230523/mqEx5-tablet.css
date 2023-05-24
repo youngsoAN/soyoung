@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* tablet */
+@media (width >= 768px) {
+  nav .mobile-btn {
+    display: none;
+  }
+  nav .global-nav {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 3px rgba(255, 255, 255, 1);
+  }
+  nav .global-nav li {
+    width: 50%;
+  }
+  nav .global-nav li:nth-child(odd) a {
+    border-right: 1px solid #fff;
+  }
+  nav .global-nav li:last-child a {
+    border-bottom: none;
+  }
+}
