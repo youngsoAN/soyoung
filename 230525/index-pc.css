@@ -22,14 +22,19 @@ menu .header .header-top {
   box-shadow: 0 1px 7px 0.1px rgba(0, 0, 0, 0.21);
 }
 menu .header .header-top ul {
-  width: 50%;
+  width: 60%;
   justify-content: space-around;
   align-items: center;
 }
 menu .header .header-top ul li {
-  margin: 10px;
+  padding: 30px;
   font-weight: 600;
   color: #444;
+  display: block;
+}
+
+menu .header .header-top ul li:hover {
+  background-color: #ffb1b1;
 }
 menu .header .header-bottom {
   position: fixed;
@@ -125,6 +130,27 @@ main .number3 {
     "main1 main1 item3 item3"
     "item4 item4 item5 item6";
 }
+.number3 div {
+  position: relative;
+}
+.number3 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  background-color: #00000049;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: white;
+  transition: 0.4;
+}
+.number3 span:hover {
+  opacity: 1;
+}
 main .number3 .box1 {
 }
 main .number3 img:nth-child(1) {
@@ -212,6 +238,23 @@ main .number7 .container img {
   width: 90%;
 }
 
+main .number8 .img-box h2 {
+  font-size: 3rem;
+}
+main .number8 .img-box p {
+  font-size: 1.7rem;
+}
+
+main .number8 .img-box button {
+  transition: 0.4s;
+}
+main .number8 .img-box button:hover {
+  border-radius: 20px;
+  background-color: #fff;
+}
+main .number8 .img-box button:hover a {
+  color: #375c94;
+}
 /* main .number8 #daumRoughmapContainer1684973839255 {
   width: 100%;
   height: 100%;
