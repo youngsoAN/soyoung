@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+body {
+  width: 100%;
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+menu .header {
+  z-index: 9999;
+}
+menu .header img {
+  width: 100px;
+  position: relative;
+}
+menu .header .header-top {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 7px 0.1px rgba(0, 0, 0, 0.21);
+}
+menu .header .header-top ul {
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+menu .header .header-top ul li {
+  margin: 10px;
+  font-weight: 600;
+  color: #444;
+}
+menu .header .header-bottom {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+menu .header .arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/**** main ****/
+main .number1 {
+  background: url(./images/DYAMI_images/hero-bg.png) no-repeat 50% / cover;
+  background-color: #e3f3e7;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+main .number1 .box {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .number1 .txt {
+  width: 800px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #686868;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin: 0 100px;
+}
+main .number1 .txt h2 {
+  margin-top: 40px;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 4rem;
+  color: #444;
+  position: relative;
+}
+main .number1 .txt svg {
+  position: absolute;
+  bottom: 20%;
+}
+main .number1 img {
+  width: 900px;
+}
+main .number1 figure {
+  width: 100%;
+  text-align: center;
+}
+
+main .number2 {
+  width: 100%;
+  margin: 50px 0;
+}
+main .number2 .txt h3 {
+  font-size: 1.9rem;
+  color: #111;
+  padding: 10px 0;
+}
+main .number2 .txt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.2rem;
+  color: #333;
+  padding: 20px 0;
+}
+main .number2 .txt .txt-after {
+  width: 100%;
+  padding: 50px;
+}
+main .number2 .txt .txt-after:nth-child(3) {
+  border: none;
+}
+main .number2 .txt .txt-after:nth-child(2) {
+  border-left: 1px solid #ddd;
+}
+main .number2 .txt .txt-after:nth-child(4) {
+  border-left: 1px solid #ddd;
+}
+
+main .number3 {
+  display: grid;
+  grid-template-areas:
+    "main1 main1 item1 item2"
+    "main1 main1 item3 item3"
+    "item4 item4 item5 item6";
+}
+main .number3 .box1 {
+}
+main .number3 img:nth-child(1) {
+  grid-area: main1;
+}
+main .number3 img:nth-child(2) {
+  grid-area: item1;
+}
+main .number3 img:nth-child(3) {
+  grid-area: item2;
+}
+main .number3 img:nth-child(4) {
+  grid-area: item3;
+}
+main .number3 img:nth-child(5) {
+  grid-area: item4;
+}
+main .number3 img:nth-child(6) {
+  grid-area: item5;
+}
+main .number3 img:nth-child(7) {
+  grid-area: item6;
+}
+
+main .number3 img {
+  margin: 0;
+  width: 100%;
+}
+
+main .number4 {
+  padding: 50px 0;
+}
+main .number4 .grid-img {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
+}
+main .number4 .number4-img-box {
+  width: 100%;
+}
+
+main .number5 .txt {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+main .number5 .txt .video-header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+main .number5 .txt .video-header h2 {
+  font-size: 3.5rem;
+}
+main .number5 .txt .video-header p {
+  width: 50%;
+  font-size: 1.5rem;
+}
+main .number5 .txt .video {
+  margin: 50px 0;
+  width: 90%;
+  height: 700px;
+}
+
+main .number6 {
+  padding: 80px 0;
+}
+.number6 .container .img {
+  margin: 10px;
+}
+main .number7 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  gap: 0;
+}
+main .number7 .container li {
+  width: 16%;
+}
+main .number7 .container img {
+  width: 90%;
+}
+
+/* main .number8 #daumRoughmapContainer1684973839255 {
+  width: 100%;
+  height: 100%;
+} */
+
+footer {
+  width: 100%;
+}
+footer .footer-header {
+  padding: 80px 0;
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+footer .footer-header .footer-txt {
+  display: flex;
+}
+footer .footer-header .footer-txt .box {
+  padding: 10px;
+}
+footer .footer-header img {
+  width: 120px;
+  height: 100%;
+}
+footer .footer-header .footer-icon img {
+  width: 15px;
+  height: 15px;
+}
+footer .footer-bottom .copyright {
+  display: flex;
+}
