@@ -90,7 +90,7 @@ main .number1 img {
   width: 900px;
 }
 main .number1 figure {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -111,7 +111,7 @@ main .number2 .txt {
   padding: 20px 0;
 }
 main .number2 .txt .txt-after {
-  width: 100%;
+  width: 90%;
   padding: 50px;
 }
 main .number2 .txt .txt-after:nth-child(3) {
@@ -264,10 +264,9 @@ main .number8 .img-box button:hover {
 main .number8 .img-box button:hover a {
   color: #375c94;
 }
-/* main .number8 #daumRoughmapContainer1684973839255 {
-  width: 100%;
-  height: 100%;
-} */
+main .number8 .root_daum_roughmap_landing {
+  margin: 40px auto;
+}
 
 footer {
   width: 100%;
