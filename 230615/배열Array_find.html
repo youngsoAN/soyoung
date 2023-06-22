@@ -1,0 +1,43 @@
+<script>
+  /*
+    배열Array_find
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+
+    Array.prototype.find()
+    주어진 함수를 만족하는 첫 번째 요소의 값을 반환
+    없으면 undefined를 반환
+
+    array(배열).find(callback);
+    배열.find((현재요소[, 현재요소 인덱스, 호출한 배열]) => {});
+      callback(반환값) : 함수를 만족하는 첫번째 요소의 값. 그 외에는 undefined 
+  */
+
+  const arr = [10, '20', 20, 30, 40, 50];
+  const data = [
+    { id: 1, coffee: '아메리카노' },
+    { id: 2, coffee: '카페라떼' },
+    { id: 3, coffee: '바닐라라떼' },
+    { id: 4, coffee: '카페모카' },
+    { id: 4, coffee: '아이스 카페모카' },
+    { id: 5, coffee: '에스프레소' },
+  ];
+
+  const output1 = arr.find(function (num) {
+    return num === 20;
+  });
+  console.log(typeof output1, output1);// number 20
+  const output2 = arr.find(num => num === '20');
+  console.log(typeof output2, output2);
+  const output3 = arr.find(num => num === 5);
+  console.log(output3);// 5가 없기 때문에 undefined
+
+  // 매개변수 num은 배열 안의 객체를 요소로 받고 있음
+  const output4 = data.find(num => num.id === 3);
+  console.log(output4);// {id: 3, coffee: '바닐라라떼'}
+
+  const output5 = data.find(num => num.id === 4);
+  console.log(output5);// 첫번째로 찾은 값만 반환
+
+  const output6 = data.find(num => num.id !== 4);
+  console.log(output6);// {id: 1, coffee: '아메리카노'} 부정연산자 !== 4 -> id값이 4가 아닌것중 첫번째로 나오는 하나의 값만 반환
+</script>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>event4-removeEventListener</title>
+  <style>
+    .flex_btn {
+      display: flex;
+    }
+
+    .flex_btn a {
+      text-decoration: none;
+      color: inherit;
+      border: 3px solid #000;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 0 20px;
+    }
+
+    .flex_btn a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    EventTarget.removeEventListener()
+    https://developer.mozilla.org/ko/docs/Web/API/EventTarget/removeEventListener
+    이벤트 대상에 등록한 리스너 제거
+
+removeEventListener(type, listener);
+removeEventListener('이벤트명', 함수);
+   -->
+  <h1>removeEventListener</h1>
+  <h2>클릭 수 : <span class="count">0</span></h2>
+  <div class="flex_btn">
+    <a href="#" class="btn_style" id="btn1">+</a>
+    <a href="#" class="btn_style" id="btn2">초기화</a>
+    <a href="#" class="btn_style" id="btn3">이벤트리스너 제거</a>
+    <a href="#" class="btn_style" id="btn4">이벤트리스너 연결</a>
+  </div>
+  <script>
+    // h1 탐색 변수 대입
+    const title = document.querySelector('h1');
+
+    /*내가
+        document.querySelector('h1').addEventListener('click', () => {
+          document.querySelector('h1').style.backgroundColor = 'pink';
+        });
+    */
+
+    // h2 탐색 변수 대입
+    const h2 = document.querySelector('h2');
+
+    /*내가
+        const num = document.querySelector('h2').addEventListener('click', () => {
+          document.querySelector('h2').style.color = 'red';
+        })
+    */
+
+    // count 탐색 변수 대입
+    const count = document.querySelector('.count');
+
+    // a 탐색 변수 대입
+    const links = document.querySelectorAll('a');// 유사 배열
+
+    // h1의 color
+    title.style.color = 'blue';
+    // + 클릭시 h2의 컬러 변경
+    console.log(links);
+    /*
+    
+    links[0].addEventListener('click', () => {
+      //내가한거 document.querySelector('h2').style.color = 'pink';
+      h2.style.color = 'orange';
+    });
+    */
+
+
+    /*
+     + 클릭시 .count안 내용 (문자열)을 변경 0 ->???
+    */
+    // links.document.querySelector('a');
+
+
+    /*
+    console.log(links[0]);
+    links[0].addEventListener('click', () => {
+      count.textContent = '영';
+    });
+    */
+
+
+    /* + 클릭시 count 안의 숫자가 1씩 증가 */
+    const listener = () => count.textContent = ++sum;
+
+    let sum = 0;
+    /*
+    links[0].addEventListener('click', () => {
+      // count.textContent++;
+      count.textContent = ++sum;
+    });
+    */
+    links[0].addEventListener('click', listener);
+
+    // 초기화 버튼을 클릭하면 숫자가 다시 0으로 연산의 시작도 0으로
+    // document.querySelectorAll('.flex_btn > a');
+    console.log(links[1]);
+    links[1].addEventListener('click', () => {
+      console.log(sum);
+      sum = 0;
+      count.textContent = sum;
+    });
+
+
+    /* 내가한거 지우
+     links[1].addEventListener('click', () => {
+       count.textContent = sum = 0;
+     });
+     */
+    /*
+        links[2].addEventListener('click', () => {
+          count.remove('sum');// 이건 제거??처럼 요소조차 사라짐
+        });
+        */
+    //  removeEvent
+
+    links[2].addEventListener('click', () => {// 버튼을 클릭하면
+      count.textContent = '이벤트 리스너 제거';
+      links[0].removeEventListener('click', listener);// 카운트 버튼이 가진 이벤트 리스너가 제거되어 카운트 버튼을 클릭해도 작동 x
+    });
+
+    // addEvent
+    links[3].addEventListener('click', () => {
+      count.textContent = '이벤트 리스너 연결';
+      links[0].addEventListener('click', listener);
+      sum = 0;
+    });
+  </script>
+</body>
+
+</html>

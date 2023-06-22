@@ -1,0 +1,75 @@
+<script>
+  /*
+    현재 년 월 일 요일 시간: 분: 초: AM PM
+    24시간제 x -> 12시간제
+    1초에 한번씩 실행
+
+    2023년 6월 14일 수요일 PM 02 : 52 : 14 <- 1초에 한번씩 업데이트
+
+    setTimeout(function(){}, 시간); 지정 시간 후 한번만 실행
+    setInterval(콜백함수, 시간); 지정 시간마다 실행
+  */
+
+  /*
+  let day = ['일', '월', '화', '수', '목', '금', '토'];
+  let num = now.getDay();
+  day = day[num];
+  
+ 즉시실행 함수
+    ()();
+  (());
+
+  */
+  (function time() {
+    const now = new Date();
+
+    const day = ['일', '월', '화', '수', '목', '금', '토'][now.getDay()];
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    let hour = now.getHours();
+    let min = now.getMinutes();
+    let sec = now.getSeconds();
+
+    // AM PM 오전, 오후
+    /*
+    let ampm = '';
+    if (hour >= 12) {
+      ampm = '오후'
+    } else {
+      ampm = '오전'
+    }
+    */
+    const ampm = hour >= 12 ? '오후' : '오전';
+
+    // 두자리 숫자로 시간 변경
+    // if (hour < 10) {
+    //   hour = '0' + hour;
+    // } else {
+    //   hour
+    // }
+
+    hour = hour < 10 ? '0' + hour : hour;
+    // min = min < 10 ? '0' + min : min;
+    // .padStart(문자열길이, '채워넣을 문자');
+    min = min.toString().padStart(2, '0');
+    sec = sec < 10 ? '0' + sec : sec;
+
+    const output = `${year}년 ${month}월 ${date}일 ${day}요일 ${ampm} ${hour} : ${min}:${sec}`;
+
+    console.log(output);
+
+    /*
+      제귀 함수 : 함수 내부에서 자기 자신을 호출하는 함수
+      재귀 함수 사용시 종료 조건을 반드시 설정해야 하며 그렇지 않으면 무한 호출
+    */
+
+    setTimeout(time, 1000)
+  })();
+
+  /*
+    time();
+    setInterval(time, 1000)
+    */
+
+</script>

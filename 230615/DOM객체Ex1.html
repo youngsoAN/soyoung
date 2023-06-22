@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM객체Ex1</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="" alt="img1" class="pic" loading="lazy">
+    <img src="" alt="img2" class="pic" loading="lazy">
+    <img src="" alt="img3" class="pic" loading="lazy">
+    <img src="" alt="img4" class="pic" loading="lazy">
+  </div>
+
+  <script>
+    // https://via.placeholder.com/200/f61/000?text=img1
+    const imgUrl = [
+      'https://via.placeholder.com/200/f61/000?text=img1',
+      'https://via.placeholder.com/200/f41/000?text=img2',
+      'https://via.placeholder.com/200/f69/000?text=img3',
+      'https://via.placeholder.com/200/e61/000?text=img4',
+    ];
+
+    const pics = document.querySelectorAll('.pic');
+
+    pics.forEach((pic, idx) => {
+      pic.src = imgUrl[idx];
+    });
+  </script>
+</body>
+
+</html>

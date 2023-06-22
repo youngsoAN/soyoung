@@ -1,0 +1,48 @@
+<script>
+  /*
+    배열Array_filter
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+    Array.prototype.filter()
+    주어진 함수의 모든 요소를 모아 새로운 배열로 반환
+
+    배열.filter(callback(element[, index[,array]]));
+    배열.filter(콜백함수);
+    배열.filter((현재 요소, 현재 요소 인덱스, 호출한 배열) => {});
+
+    반환 값 : 새로운 배열. false인 경우 빈 배열 반환
+  */
+
+  const arr = [10, '20', 20, 30, 40, 50];
+  const data = [
+    { id: 1, coffee: '아메리카노' },
+    { id: 2, coffee: '카페라떼' },
+    { id: 3, coffee: '바닐라라떼' },
+    { id: 4, coffee: '카페모카' },
+    { id: 4, coffee: '아이스 카페모카' },
+    { id: 5, coffee: '에스프레소' },
+  ];
+
+  // 배열.filter(현재값 => { return 조건 })
+  const output1 = arr.filter(function (item) {
+    return item > 30;
+  });
+  console.log(output1);// (2) [40, 50]
+
+  const output2 = arr.filter(num => num > 60);
+  console.log(output2);// [] 없는 값은 빈 배열로 반환
+
+  const output3 = data.filter(item => item.id === 4);
+  console.log(output3);// [{id: 4, coffee: '카페모카'}, {id: 4, coffee: '아이스 카페모카'}]
+
+  const output4 = data.filter(item => item.id !== 2);
+  console.log(output4);
+  /*
+    원하는 데이터만 빼고 배열로 반환하기 때문에 주로 데이터 삭제시 사용
+    {id: 1, coffee: '아메리카노'},
+    {id: 3, coffee: '바닐라라떼'}, 
+    {id: 4, coffee: '카페모카'},
+    {id: 4, coffee: '아이스 카페모카'},
+    {id: 5, coffee: '에스프레소'}
+  */
+</script>

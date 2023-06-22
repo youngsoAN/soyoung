@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM객체1_탐색</title>
+</head>
+
+<body>
+  <h1 id="title"></h1>
+  <h2>Document Object Model</h2>
+  <h3>문서의 구조화 된 표현으로 스크립트 및 프로그래밍 언어와 페이지를 연결</h3>
+  <p>문서의 구조, 스타일, 콘텐츠를 변경</p>
+  <p><a href="https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction" target="_blank">DOM
+      소개</a></p>
+  <p><a href="https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model" target="_blank">문서 객체 모델(DOM)</a></p>
+  <p><a href="https://ko.javascript.info/browser-environment#ref-921" target="_blank">javascript.info</a></p>
+
+  <ul class="gnb">
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+    <li class="list"></li>
+  </ul>
+
+  <script>
+    /*
+      css 방식 vs js 스타일 방식(.style.css속성) : 카멜 표기법
+      border vs border
+      font-size vs fontSize
+      background-color vs backgroundColor
+      margin-top vs marginTop
+    */
+
+    // id 속성 노드 탐색 document.getElementById('id');
+    document.getElementById('title').textContent = 'DOM 객체';
+
+    /*
+     class 속성 노드 document.getElementsByClassName('class');,
+     tag 노드 탐색 .getElementsByTagName('tag');
+     유사 배열 형태로 반환
+
+     NodeList로 반환
+      배열은 아니지만 배열처럼 터리할 수 있는 객체로 숫자로 된 key와 length 프로퍼티(속성)가 있음
+      NodeList는 .forEach()는 사용 가능
+      .map(), .filter()등의 배열 메서드는 사용 불가능 <- 배열이 아니기 때문
+      spread 연산자를 이용하여 배열로 변환 후 사용 가능
+     */
+    document.getElementsByClassName('gnb')[0].style.border = '3px solid #000';
+
+    const p = document.getElementsByTagName('p');
+    console.log(p);
+
+    // p[0].style.fontStyle = 'italic';
+    p[0].style.fontSize = '1.1rem';
+    p[1].firstElementChild.style.textDecoration = 'none';
+
+    // document.querySelector('#id'); 표준 탐색 메서드
+    // document.querySelectorAll('.class'); 여러 노드를 탐색하지만 하나의 노드만 유사 배열 형태로 만듦
+    const a = document.querySelectorAll('a');
+    /*
+      a[0].style.color = 'tomato';
+      a[1].style.color = 'tomato';
+      a[1].style.textDecoration = 'none';
+    */
+    a.forEach((item) => {// 매개변수가 하나인 경우 유사 배열의 각각의 요소
+      item.style.color = 'orange';
+      item.style.textDecoration = 'none';
+      item.style.borderBottom = '2px solid pink';
+    });
+
+    // lis.forEach(() => { }); 탐색된 a의 수 만큼 함수 반복
+    const lis = document.querySelectorAll('li');
+    lis.forEach((item, idx) => {
+      item.textContent = `list${idx + 1}`;
+      item.style.lineHeight = 1.6;
+      item.style.color = 'tomato';
+    });
+  </script>
+</body>
+
+</html>

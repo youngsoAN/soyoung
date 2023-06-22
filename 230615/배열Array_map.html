@@ -1,0 +1,39 @@
+<script>
+  /*
+   배열Array_map
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+   Array.prototype.map()
+    배열의 각 요소에 콜백함수 실행 결과를 새로운 배열로 반환
+    기존 배열은 수정하지 않음
+
+    배열.map(callback(currentVlaue[, index[,aarray]]))
+    배열.map((현재 요소[, 인덱스번호, 호출 배열]) => {})
+
+    반환값 : 콜백함수의 결과를 모은 새로운 배열
+  */
+
+  const arr1 = [1, 4, 9];
+  arr1.map((item, idx, arr) => {
+    console.log(item);
+    console.log(idx);
+    console.log(arr);
+    console.log(item * item);
+    console.log('---------');
+  });
+
+  const data = [
+    { id: 1, coffee: '아메리카노' },
+    { id: 2, coffee: '카페라떼' },
+    { id: 3, coffee: '바닐라라떼' },
+    { id: 4, coffee: '카페모카' },
+    { id: 4, coffee: '아이스 카페모카' },
+    { id: 5, coffee: '에스프레소' },
+  ];
+
+  data.map((item, idx) => {
+    // console.log(`배열 요소: ${item}, 인덱스 번호: ${idx}`); item 객체 자체를 반환함 (내부 문서의 내용은 알 수 없다)
+    console.log(`번호: ${item.id}, 종류: ${item.coffee}`);// 내용 확인이 가능함
+  });
+
+</script>

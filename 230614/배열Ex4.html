@@ -1,0 +1,33 @@
+<script>
+  // 점수를 배열로 만들고 점수의 최대점수, 최저점수, 평균을 출력
+
+  const score = [33, 30, 50, 90, 57];
+  let max = score[0];
+  for (let i = 0; i < score.length; i++) {
+    if (score[i] > max) {
+      max = score[i];
+    }
+  }
+
+  console.log(...score);// 33 30 50 90 57
+  const min = Math.min(...score);
+
+  /*
+  https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+    https://ko.javascript.info/rest-parameters-spread#spread-syntax
+    전개 구문 spread 연산자
+    배열, 문자열, 개체 등을 복사해 반환 혹은 갱신
+    작성한 위치에 추가(객체나 배열 등의 경우 뒤에서 작성시 뒤쪽에 추가, 앞쪽에 작성시 앞에 추가)
+  
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr2 = [...arr1, '아메리카노'];
+  console.log(arr2);
+  console.log(arr1);// 원본은 수정되지 않음
+*/
+  const sum = score.reduce((total, current) => total + current, 0);
+  const avg = sum / score.length;
+
+  console.log(`최고 점수 : ${max}`);
+  console.log(`최저 점수 : ${min}`);
+  console.log(`평균 점수 : ${avg}`);
+</script>

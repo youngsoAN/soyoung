@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>event2-이벤트전달</title>
+  <style>
+    body * {
+      border: 3px solid #000;
+      margin: 30px;
+    }
+
+    .box1 {
+      background-color: #ffc6c6;
+    }
+
+    .box2 {
+      background-color: #fbffc8;
+    }
+
+    .box3 {
+      background-color: #ceffc4;
+    }
+
+    h2 {
+      background-color: #bfbeff;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>이벤트 전달</h1>
+  <!-- 
+    이벤트 버블링 bubbling : 자식 -> 부모 순으로 이벤트가 전달. 주로 지원
+    이벤트 캡쳐링 capturing : 부모 -> 자식 순으로 이벤트가 전달
+   -->
+
+
+  <div class="box1" onclick="alert('box1')">
+    <div class="box2" onclick="alert('box2')">
+      <div class="box3" onclick="alert('box3')">
+        <h2 onclick="alert('h2')">클릭</h2>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
