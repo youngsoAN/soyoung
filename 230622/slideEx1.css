@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+body {
+  text-align: center;
+  font-size: 1.2rem;
+}
+header {
+  height: 400px;
+  background-color: #b6deff;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 100px 0 0;
+}
+
+/* nav */
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: #75b5ff;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/* 대메뉴 */
+nav .global_nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+nav .global_nav > li > a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 150px;
+  /* max-width: 300px; */
+  line-height: 60px;
+}
+nav .global_nav > li > a:hover {
+  background-color: #e2fffd;
+  color: #003a7c;
+}
+
+/* 소메뉴 */
+nav .global_nav .sub_nav {
+  background-color: #fff;
+  height: 200px;
+  display: none;
+}
+nav .global_nav .sub_nav a {
+  line-height: 40px;
+}
+nav .global_nav .sub_nav a:hover {
+  background-color: #b6ffed;
+  color: rgb(76, 100, 165);
+}

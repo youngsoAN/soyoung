@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>attrEx2</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="../common/reset.css">
+  <style>
+    .container {
+      border: 1px solid #000;
+      width: 482px;
+      margin: 20px auto;
+    }
+
+    .container .main-img img {
+      width: 480px;
+    }
+
+    .container .btn_wrapper {
+      display: flex;
+    }
+
+    .container .btn_wrapper img {
+      width: 120px;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $('main-img')
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-img">
+      <img src="./images/KakaoTalk_20230621_121150648.png" alt="bg1">
+    </div>
+    <ul class="btn_wrapper">
+      <li><img src="./images/KakaoTalk_20230622_084052564.jpg" alt="bg1"></li>
+      <li><img src="./images/KakaoTalk_20230622_083823244.jpg" alt="bg2"></li>
+      <li><img src="./images/KakaoTalk_20230621_121150648.png" alt="bg3"></li>
+      <li><img src="./images/KakaoTalk_20230620_112724324.png" alt="bg4"></li>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>width+height</title>
+  <style>
+    .box {
+      width: 40px;
+      height: 40px;
+      margin: 50px auto;
+      background-color: orange;
+      transition: 0.4s;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      // $('.box').width('400'); 단위값 생략시 px
+      $('.box').width('50vw');
+      // $('.box').height('50vw');
+      // $('.box').width('50vw').height('50vw');
+
+      // 박스를 클릭하면 가로값을 가져와 세로에 적용
+      $('.box').on('click', (e) => {
+        const target = $(e.target);
+        const wt = $(e.target).width();// 변수에 클릭한 박스의 가로값을 가져와 대입
+        $(e.target).height(wt);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="box">박스</div>
+</body>
+
+</html>

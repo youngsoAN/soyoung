@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>html</title>
+  <style>
+    .btn_group {
+      display: flex;
+
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $('#btn1').on('click', () => {
+        const txt = $('ul').text();// 기준 요소의 텍스트 노드만 반환
+        console.log(`text()는 ${txt}`);
+      });
+      $('#btn2').on('click', () => {
+        const ht = $('ul').html();// 기준 요소의 자식노드 모두 리턴
+        console.log(`html()는 ${ht}`);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.html()</h1>
+  <p>html 구조를 가져오거나 반환</p>
+  <div class="btn_group">
+    <div class="btn" id="btn1">text()</div>
+    <div class="btn" id="btn2">html()</div>
+  </div>
+
+  <ul>
+    <li><strong><em>메뉴1</em></strong></li>
+    <li><em>메뉴2</em></li>
+    <li>메뉴3</li>
+    <li><a href="#">메뉴4</a></li>
+    <li>메뉴5</li>
+  </ul>
+</body>
+
+</html>

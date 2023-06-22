@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>attrEx1</title>
+  <style>
+    .btn_group {
+      display: flex;
+
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    p {
+      border: 3px solid #000;
+      padding: 6px;
+      font-weight: bold;
+      width: 80vw;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      $('#btn1').on('click', () => {
+        const src = $('img').attr('src');
+        $('p').text(src).css({ backgroundColor: 'orange' });
+      });
+
+      $('#btn2').on('click', () => {
+        const alt = $('img').attr('alt');
+        $('p').text(alt).css({ backgroundColor: 'blue', color: '#fff' });
+      });
+
+      $('#btn3').on('click', () => {
+        // img가 가진 속성 중 width 속성이 존재하지 않기 때문에 불러오지 못함
+        const wt1 = $('img').attr('width');
+        const wt2 = $('img').css('width');
+        $('p').text(wt2);
+      });
+
+    })
+  </script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn1">경로 확인</div>
+    <div class="btn" id="btn2">대체 텍스트</div>
+    <div class="btn" id="btn3">가로 값</div>
+  </div>
+  <img src="./images/KakaoTalk_20230620_112342135.png" alt="이미지">
+  <p>이곳에 출력됩니다.</p>
+</body>
+
+</html>

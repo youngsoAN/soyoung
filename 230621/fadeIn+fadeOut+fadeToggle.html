@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fadeIn+fadeOut+fadeToggle</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <style>
+    .btn_group {
+      display: flex;
+
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 10px;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .box li {
+      width: 150px;
+      height: 150px;
+      list-style: none;
+      text-align: center;
+    }
+
+    .box li:nth-child(1) {
+      background-color: #95dd5a;
+    }
+
+    .box li:nth-child(2) {
+      background-color: hsl(106, 63%, 73%);
+    }
+
+    .box li:nth-child(3) {
+      background-color: #dbffa1;
+    }
+
+    .box li:nth-child(4) {
+      background-color: #97ffc6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>.fadeIn(); 서서히 사라짐 .fadeOut(); 서서히 나타남 .fadeToggle();</h1>
+  <div class="btn_group">
+    <div class="btn" id="btn1">서서히 사라짐</div>
+    <div class="btn" id="btn2">서서히 나타남</div>
+    <div class="btn" id="btn3">In, Out 순차 반복</div>
+  </div>
+  <ul class="box">
+    <li>box1</li>
+    <li>box2</li>
+    <li>box3</li>
+    <li>box4</li>
+  </ul>
+
+  <script>
+    $('#btn1').on('click', () => {
+      // == display:none
+      $('li').eq(0).fadeOut();
+      $('li').eq(1).fadeOut(500);
+      $('li').eq(2).fadeOut('slow');
+      $('li').eq(3).fadeOut(2500);
+    });
+    $('#btn2').on('click', () => {
+      // == display:block
+      $('li').eq(0).fadeIn();
+      $('li').eq(1).fadeIn('slow');
+      $('li').eq(2).fadeIn('fast');
+      $('li').eq(3).fadeIn(3000);
+    })
+    $('#btn3').on('click', () => {
+      $('li').eq(0).fadeToggle();
+      $('li').eq(1).fadeToggle(600);
+      $('li').eq(2).fadeToggle(1200);
+      $('li').eq(3).fadeToggle(1800);
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>title</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      const txt1 = $('#txt1').text();// #txt1의 문자만 반환. <em>은 반환하지 않음
+      console.log(txt1);
+
+      $('#txt2').text('문자');// 작성한 값으로 반환
+
+      $('li').eq(2).text('text3');
+
+      const color = $('.color').text();// 자바스크립트는 탐색을 모두 하지만 반환은 제일 처음 노드만 반환. 제이쿼리의 경우 모두 탐색해서 모두 반환
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.text()</h1>
+  <h2>기준 요소의 문자를 가져오거나 반환</h2>
+
+  <ul>
+    <li id="txt1" class="color"><em>텍스트1</em></li>
+    <li id="txt2" class="color">텍스트2</li>
+    <li id="txt3" class="color">텍스트3</li>
+    <li id="txt4">텍스트4</li>
+    <li id="txt5">텍스트5</li>
+  </ul>
+</body>
+
+</html>

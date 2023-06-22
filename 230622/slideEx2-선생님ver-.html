@@ -1,0 +1,102 @@
+slideEx2.html
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>slideEx2</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+    }
+
+    .side_menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      background-color: #efefef;
+    }
+
+    .side_menu h3 {
+      margin: 0;
+      padding: 8px 10px;
+      background-color: rgba(23, 89, 74, 1);
+      color: #fff;
+      cursor: pointer;
+      border-bottom: 1px solid #fff;
+    }
+
+    .side_menu h3:hover {
+      background-color: rgba(17, 75, 51, 1);
+    }
+
+    .side_menu p {
+      padding: 0 16px 10px;
+      display: none;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      /* 첫 번째 제목을 클릭하면 첫번째 p가 내려가고 다른 p는 모두 올라감
+      $('.side_menu li').eq(0).children('h3').on('click', () => {
+        $('.side_menu li').eq(0).children('p').slideDown();
+        $('.side_menu li').eq(1).children('p').slideUp();
+        $('.side_menu li').eq(2).children('p').slideUp();
+        $('.side_menu li').eq(3).children('p').slideUp();
+      });
+      $('.side_menu li').eq(1).children('h3').on('click', () => {
+        $('.side_menu li').eq(1).children('p').slideDown();
+        $('.side_menu li').eq(0).children('p').slideUp();
+        $('.side_menu li').eq(2).children('p').slideUp();
+        $('.side_menu li').eq(3).children('p').slideUp();
+      });
+      $('.side_menu li').eq(2).children('h3').on('click', () => {
+        $('.side_menu li').eq(2).children('p').slideToggle();
+        $('.side_menu li').eq(0).children('p').slideUp();
+        $('.side_menu li').eq(1).children('p').slideUp();
+        $('.side_menu li').eq(3).children('p').slideUp();
+      });
+      */
+
+      // 내가 클릭한 h3의
+      $('.side_menu h3').on('click', (e) => {
+        const target = $(e.target);
+        // 바로 뒤에 있는 형제 관계의 p가 열림
+        target.next('p').slideToggle();
+        // 내가 선택한 h3의 형제 관계로 있는 p 제외 모든 p를 닫음
+        target.parent().siblings().find('p').slideUp();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="side_menu">
+    <li>
+      <h3>menu1</h3>
+      <p>다하지 그리워 했던 가슴속에 못 있습니다. 피어나듯이 프랑시스 별 별이 추억과 벌써 아침이 봅니다. 까닭이요, 시와 같이 한 덮어 버리었습니다. 별 다 별 언덕 소학교 가난한 많은 추억과 속의
+        있습니다</p>
+    </li>
+    <li>
+      <h3>menu2</h3>
+      <p>어머니 새겨지는 같이 새워 부끄러운 내린 봅니다. 나는 속의 사람들의 가을로 아이들의 가슴속에 이런 아무 내 계십니다. 아이들의 소학교 많은 겨울이 별을 무덤 슬퍼하는 지나고 언덕 있습니다. 부끄러운
+        동경과 이름을 별 벌레는 까닭입니다.</p>
+    </li>
+    <li>
+      <h3>menu3</h3>
+      <p>어머니 새겨지는 같이 새워 부끄러운 내린 봅니다. 나는 속의 사람들의 가을로 아이들의 가슴속에 이런 아무 내 계십니다. 아이들의 소학교 많은 겨울이 별을 무덤 슬퍼하는 지나고 언덕 있습니다. 부끄러운
+        동경과 이름을 별 벌레는 까닭입니다.</p>
+    </li>
+    <li>
+      <h3>menu4</h3>
+      <p>어머니 새겨지는 같이 새워 부끄러운 내린 봅니다. 나는 속의 사람들의 가을로 아이들의 가슴속에 이런 아무 내 계십니다</p>
+    </li>
+  </ul>
+</body>
+
+</html>
