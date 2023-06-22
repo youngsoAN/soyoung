@@ -1,0 +1,27 @@
+<script>
+  //  문자열 타입 변환
+
+  // String 생성자 함수를 이용한 변환
+  let num = 1;// number
+  num = String(1);// string '1' 숫자형 문자열
+  // num += 1; num(1) + 1 -> num(2) 숫자가 아니기 때문에 1,1나열해서 11로 보임
+  num -= 1;// 0 number 바로 위 변수값이 숫자형 문자열이었으나 더하기 연산자를 제외한 다른 연산자에서는 자동으로 형 변환이 일어나 숫자로 연산됨
+  num = NaN;// number
+  num = String(NaN);// string
+  num = true;// boolean
+  num = String(true);// boolean
+  console.log(num, typeof num);
+
+  // Object.prototype.toString(); 메서드 이용
+  let obj = (1).toString();// 숫자형 문자열
+  // obj += 1; -> 11 string
+  obj = (NaN).toString();// NaN string
+  obj = (false).toString();// false string
+  console.log(obj, typeof obj)
+
+  // 더하기 연산자 이용
+  let str = 1 + '';// 빈문자열 이용. 숫자형 문자열
+  str = NaN + '';
+  str = true + '';
+  console.log(str, typeof str)
+</script>

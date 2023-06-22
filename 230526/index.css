@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+/***** contents *****/
+.layout-wrapper {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.title {
+  text-align: center;
+  font-family: var(--en-font);
+  font-weight: 700;
+  font-size: 2.45rem;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+.title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: var(--main-color);
+  display: block;
+  margin: 30px auto;
+}
+
+.title + p {
+  text-align: center;
+  width: 90%;
+  margin: 50px auto;
+  font-size: 1.1rem;
+}
+
+/*** main-slide ***/
+.main-slide {
+  border-bottom: 1px solid var(--main-color);
+  height: 90vh;
+  text-align: center;
+}
+
+.main-slide .main-img {
+  height: 90vh;
+  font-size: bold;
+  font-size: 2rem;
+  background-color: orange;
+  display: grid;
+  place-items: center;
+}
+
+/*** mian-intro ***/
+.main-intro {
+  display: grid;
+  grid-auto-rows: 200px;
+}
+
+.main-intro section {
+  border-bottom: 1px solid var(--gray-color);
+  padding: 10px;
+}
+
+.main-intro section:last-child {
+  border-bottom: none;
+}
+
+.main-intro section h3 {
+  font-family: var(--en-font);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 20px 0 10px;
+}
+
+/*** mian-grid ***/
+.main-grid {
+  display: grid;
+  gap: 1vw;
+}
+
+.main-grid section {
+  background: no-repeat 50% / cover;
+  transition: 0.4s;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.main-grid .grid-bg1 {
+  background-image: url(./DYAMI_images/1.jpg);
+}
+
+.main-grid .grid-bg2 {
+  background-image: url(./DYAMI_images/2.jpg);
+}
+
+.main-grid .grid-bg3 {
+  background-image: url(./DYAMI_images/3.jpg);
+}
+
+.main-grid .grid-bg4 {
+  background-image: url(./DYAMI_images/4.jpg);
+  height: 20vh;
+}
+
+.main-grid .grid-bg5 {
+  background-image: url(./DYAMI_images/5.jpg);
+  height: 20vh;
+}
+
+.main-grid .grid-bg6 {
+  background-image: url(./DYAMI_images/6.jpg);
+}
+
+.main-grid .grid-bg7 {
+  background-image: url(./DYAMI_images/7.jpg);
+}
+
+.main-grid section h3 {
+  font-family: var(--en-font);
+  font-weight: 700;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  transition: 0.4s;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.main-grid section:hover h3 {
+  transform: translateY(0);
+  opacity: 1;
+  color: #068da9;
+  /* background-color: rgba(200, 20, 20, 0.4); */
+  /* 
+  해당 요소에 필터 적용 
+    https://developer.mozilla.org/ko/docs/Web/CSS/filter
+  filter: blur(10px);
+  */
+  /* https://developer.mozilla.org/ko/docs/Web/CSS/backdrop-filter */
+  backdrop-filter: grayscale(70%) blur(5px);
+}
+
+/*** main-business ***/
+.main-business .main-business-list {
+  display: grid;
+  gap: 6vw;
+  text-align: center;
+}
+
+.main-business .main-business-list strong {
+  display: block;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+/*** main-youtube ***/
+.main-youtube {
+  background-color: var(--bg-gray13-color);
+  margin-top: 100px;
+  padding: 30px 0;
+}
+
+.main-youtube .main-youtube-txt {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-youtube .main-youtube-txt h2 {
+  font-family: var(--en-font);
+  font-weight: 700;
+  font-size: 2.45rem;
+  letter-spacing: 1px;
+}
+
+.main-youtube .main-youtube-video iframe {
+  width: 100%;
+  aspect-ratio: 16 /9;
+}
+
+/*** mian-service ***/
+
+.main-service {
+}
+.main-service .service-gallery {
+  display: flex;
+  overflow: hidden;
+  margin: 50px 0 100px;
+}
+.main-service .service-gallery li {
+  flex-shrink: 0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.404);
+  transition: 0.4s;
+}
+.main-service .service-gallery li .service-gallery-txt {
+  padding: 20px;
+}
+.main-service .service-gallery li .service-gallery-txt h4 {
+  font-weight: 700;
+}
+
+/*** main-location ***/
+.main-location {
+}
+.main-location .title::after {
+  content: none;
+}
+.main-location .location-menu {
+  position: relative;
+}
+.main-location .location-menu li h3 {
+  text-transform: uppercase;
+  font-family: var(--en-font);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--gray-color);
+  padding: 6px 0;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  top: 0;
+}
+.main-location .location-menu .location-factory h3 {
+  left: 50%;
+}
+.main-location .location-menu .location-office .location-map .kakao-map {
+  border: var(--main-color) 1px solid;
+  width: 100%;
+  height: 400px;
+}
+.main-location .location-menu .location-office .location-map .location-info {
+  margin: 50px 0 100px;
+}
+.main-location .location-menu .location-office .location-map .location-info li {
+  border-bottom: 1px solid var(--gray-color);
+  padding: 10px;
+}
+.main-location
+  .location-menu
+  .location-office
+  .location-map
+  .location-info
+  li:last-child {
+  border-bottom: 1px solid var(--main-color);
+}
+.main-location
+  .location-menu
+  .location-office
+  .location-map
+  .location-info
+  li
+  strong {
+  display: block;
+  font-weight: bold;
+}
+.main-location .location-menu li .tab-box {
+  display: none;
+  padding-top: 100px;
+}
+.main-location .location-menu li.active h3 {
+  border-bottom: 3px solid var(--main-color);
+}
+.main-location .location-menu li.active .tab-box {
+  display: block;
+}
+
+/*** main-talk ***/
+.main-talk {
+  background: url(./DYAMI_images/img-bg.jpg) no-repeat fixed 50% / cover;
+  text-align: center;
+  color: #ffffff;
+}
+.main-talk .color-layer {
+  background-color: #6dbdff86;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-talk .color-layer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 30px 0;
+}
+.main-talk .color-layer h2 + p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.main-talk .color-layer .ghost-btn {
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin: 50px;
+}

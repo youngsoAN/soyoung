@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>javaScriptBasic</title>
+  <style>
+    body {
+      background-color: #ddd;
+    }
+  </style>
+  <!-- 내부 선언 -->
+  <script type="text/javascript">
+    // 스크립트 한 줄 주석
+    // type 값은 xml, xhtml 방식일때 필수 작성이나 html5에선 없는게 기본
+    // react 프레임워크에서는 type 값 필수 작성
+  </script>
+  <script>
+    /*
+    여러 줄 주석 처리
+    
+    js 작성시 주의 사항
+    head 영역 등 DOM을 불러오기 전에 작성시 문서 준비 이벤트 필요
+    */
+  </script>
+
+  <!-- 외부 선언 -->
+  <!-- <script src="script.js"></script> -->
+
+  <!-- defer 속성 작성시 스크립트 내부에 문서 준비 이벤트 불필요 -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <!-- DOM을 다 불러온 다음 js가 실행
+  </body> 위에 스크립트 작성시 DOM을 불러 온 다음 실행되기 때문에 문서 준비 이벤트 불필요
+  -->
+  <script>
+    // document.querySelector("body").innerHTML = "Hello JavaScript";
+  </script>
+</body>
+
+</html>

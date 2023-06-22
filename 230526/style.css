@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap");
+
+/* 변수 설정 */
+:root {
+  --main-font: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --en-font: "Instrument Sans", Arial, Helvetica, sans-serif;
+  --main-color: #222;
+  --gray-color: #c1c1c1;
+  --bg-gray13-color: #ddd;
+}
+
+/* 드래그 */
+::selection {
+  background-color: #068da9;
+  color: #fff;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecf8f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #068da9;
+  border-radius: 10px;
+}
+
+html {
+  /* 부드러운 스크롤 */
+  scroll-behavior: smooth;
+}
+
+.upTo {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: url(./DYAMI_images/arrow_upward_FILL0_wght400_GRAD0_opsz48.svg)
+    rgb(46, 46, 46) no-repeat 50% / 80%;
+  width: 40px;
+  height: 40px;
+  text-indent: -999px;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: 0.1s;
+  z-index: 999;
+}
+
+.upTo:hover {
+  opacity: 1;
+  background-color: #84b4be;
+  bottom: 22px;
+}
+
+body {
+  font-family: var(--main-font);
+  line-height: 1.5;
+  color: var(--main-color);
+  text-transform: capitalize;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/***** header *****/
+header {
+  border-bottom: 1px solid var(--gray-color);
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header .header-wrapper {
+  width: 93%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightskyblue; */
+}
+
+header h1 {
+  width: 75px;
+  /* height: 60px; */
+}
+
+header a {
+  display: block;
+}
+
+header nav .global-nav {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding: 2% 3%;
+}
+
+header nav .global-nav a {
+  font-family: var(--en-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gray-color);
+  padding: 14px 5px 10px;
+}
+
+header nav .global-nav li:last-child a {
+  border-bottom: none;
+}
+
+header nav .mobile-btn {
+  position: absolute;
+  top: 50%;
+  right: 3.5%;
+  transform: translateY(-50%);
+}
+
+header nav .mobile-btn span {
+  display: block;
+  text-indent: -9999px;
+  width: 32px;
+  height: 4px;
+  top: 50%;
+  left: 0;
+  transition: 0.4s;
+  background-color: #222;
+  border-radius: 16px;
+  position: relative;
+}
+
+header nav .mobile-btn span::before,
+header nav .mobile-btn span::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 32px;
+  height: 4px;
+  transition: 0.4s;
+  background-color: #222;
+  border-radius: 16px;
+}
+
+header nav .mobile-btn span::after {
+  top: 10px;
+}
+
+header nav .mobile-btn.close span {
+  background-color: transparent;
+}
+
+header nav .mobile-btn.close span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+header nav .mobile-btn.close span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/***** footer *****/
+
+footer {
+  /* padding: 50px 20px; */
+}
+footer .footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 20px;
+}
+footer .footer-info h2 {
+  text-indent: -999px;
+  background: url(./DYAMI_images/logo.png) no-repeat 50% / contain;
+  width: 126px;
+  height: 100px;
+}
+footer .footer-info .footer-info-list {
+  margin: 20px 0;
+}
+footer .footer-info .footer-info-list h3 {
+  font-weight: 700;
+  font-family: var(--en-font);
+}
+footer .footer-info .footer-info-list .footer-social-icon {
+  display: flex;
+  align-items: center;
+}
+footer .footer-info .footer-info-list .footer-social-icon li {
+  margin: 10px 20px 10px 0;
+}
+footer .footer-info .footer-info-list .footer-social-icon svg {
+  width: 20px;
+  fill: #555;
+}
+
+footer .copyrights {
+  background-color: #dadada;
+  text-align: center;
+  padding: 50px;
+}
+footer .copyrights ul {
+  display: flex;
+  justify-content: center;
+}
+footer .copyrights ul li:first-child::after {
+  content: " / ";
+  margin-right: 5px;
+}
