@@ -1,0 +1,24 @@
+<script>
+  /*
+    while 반복문: 조건이 참인 동안 반복
+
+    let 식별자 = 초기값;
+    while(조건) {
+      <- 반드시 종료될 수 있는 조건 필요
+      조건이 만족될때까지의 실행문;
+
+      증감식; 이 값이 없으면 초기값으로 무한반복
+    }
+  */
+  let i = 1;// 초기값
+  while (i <= 10) {// 조건식
+    console.log(`*${i}`);
+    i++;// 증감의 값. 이 값이 없으면 초기값 무한반복
+  }
+  let count = 0;
+  while (count < 6) {
+    console.log('전 count: ${count}');
+    count++;//증감의 값을 어디에 두느냐에 따라 값이 달라짐
+    console.log('후 count++: ${count}')
+  }
+</script>

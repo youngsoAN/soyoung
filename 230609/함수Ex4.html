@@ -1,0 +1,25 @@
+<script>
+  // 입력한 과일의 종류와 숫자에 따라 과일 이름 반복 출력
+
+  let num = 0;
+  const 과일 = (obj, num = 1) => {
+    let msg = '과일';
+
+    if (obj === '수박') {
+      msg = '맛있다';
+    } else if (obj === '참외') {
+      msg = '달다';
+    } else if (obj === '체리') {
+      msg = '비싸다';
+    }
+
+    // for (let i = 1; i <= num; i++) {
+    //   console.log(msg);
+    // }
+    console.log(msg.repeat(num))
+  };
+
+  과일('수박', 2);// 수박 수박
+  과일('참외', 3);// 참외 참외 참외
+  과일('메론', 2);
+</script>

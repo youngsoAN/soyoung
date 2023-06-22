@@ -1,0 +1,51 @@
+<script>
+  /*
+    변수 scope
+  
+    function level scope : 함수 내에서만 유효한 범위. var
+    block level scope : {} 안에서만 유효한 범위 function, if, for, switch문 등. let
+  */
+
+  //  전역 변수 선언
+  var x = 100, y = 200, z = 300;
+
+  // 함수 선언
+  function num() {
+    var x = '지역변수';
+    y = '전역변수';// var 키워드 생략시 전역 변수3
+
+    console.log(`함수 내의 x: ${x}, ${y}, z:${z}`);
+  }
+
+  console.log(`x: ${x}, y: ${y}, z: ${z}`);// x: 100, y: 200, z: 300
+  num();// 함수 호출. 함수 내의 x: 지역변수, 전역변수, z:300
+  console.log(`----- 함수 호출 후 -----`)
+  console.log(`x: ${x}, y: ${y}, z: ${z}`);// x: 100, y: 전역변수, z: 300
+
+  var a = 100;
+  {
+    var a = 200;
+  }
+  console.log(`a: ${a}`);// 200 var 키워드는 함수 범위만 인식하기 때문
+
+  console.log(`-------`);
+
+  let b = 200, c = 300;
+  {
+    let b = '지역변수';
+    c = 500;
+    console.log(`{} 안의 b는 ${b}`);// {} 안의 b는 지역변수
+  }
+  console.log(`{} 밖의 b는 ${b}`);// {} 밖의 b는 200. let 키워드는 {} 범위를 인식
+  console.log(`{} 안의 c는 ${c}`);// {} 안의 c는 500
+
+  /*
+    var a =10;
+    var a =20; 같은 키워드, 같은 이름으로 재선언 허용됨
+    a = 30; 허용됨
+
+    let b = 10;
+    let b =20; 같은 키워드, 같은 이름으로 재선언 허용 안됨
+    b = 30; 허용됨
+  */
+</script>

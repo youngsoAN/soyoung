@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>전역 객체</title>
+</head>
+
+<body>
+  <h1>전역 객체</h1>
+  <p>모든 객체의 유일한 최상위 객체를 의미</p>
+  <ul>
+    <li>window 객체(브라우저 쪽)</li>
+    <li>global 객체(node.js 쪽)</li>
+  </ul>
+
+  <script>
+    // 브라우저
+    console.log(this === window);// true
+
+    // 터미널 node
+    // this === global;
+
+
+    /*
+        전역 객체의 자식 객체(document 객체)를 사용할 때는 전역 객체인 window 생략가능
+        window.document.getElementById('id'); 아이디 탐색
+        document.getElementByClassName('class'); 클래스 선택자 탐색. 제일 처음 탐색한 클래스만 배열로 반환
+
+        wibdow.alert();
+        alert();
+    */
+    function naver(url) {
+      const location = {// 객체 생성
+        href: '이동할 사이트는',
+      }
+
+      alert(location.href + url);
+      location.href = url;
+      console.log(location);
+      window.location.href = url;// window 객체 안에 있는 location 객체가 가지고 있는 href 속성이 적용되어 해당 페이지로 이동
+    }
+    naver('https://naver.com');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+
+<body>
+  <!-- 2~9단 구구단 출력 -->
+  <script>
+    let result = '';
+
+    for (let i = 2; i <= 9; i++) {// 2~9 반복
+      result += `<h3>---- ${i}단 ----</h3>`;
+
+      for (let k = 1; k <= 9; k++) {// 각 단의 1~9까지 반복
+        result += `<p>${i} * ${k} = ${i * k}</p>`;
+      }
+    }
+    document.body.innerHTML = result;
+  </script>
+</body>
+
+</html>

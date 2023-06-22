@@ -1,0 +1,25 @@
+<script>
+  // 사용자가 입력한 구구단 출력
+
+  const num = prompt('구구단 중에서 원하는 숫자를 입력하세요');
+
+  if (num >= 2 && num <= 9) {
+    let i = 1;
+    while (i <= 9) {
+      console.log(`${num} * ${i} = ${num * i}`);
+      i++;
+    }
+  } else {
+    console.log('2~9사이의 숫자만 입력해 주세요')
+  }
+
+
+
+  // for (let i = 2; i <= 9; i++) {// 2~9 반복
+  //   result += `<h3>---- ${i}단 ----</h3>`;
+
+  //   for (let k = 1; k <= 9; k++) {// 각 단의 1~9까지 반복
+  //     result += `<p>${i} * ${k} = ${i * k}</p>`;
+  //   }
+  // }
+</script>

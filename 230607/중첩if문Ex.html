@@ -1,0 +1,44 @@
+<script>
+  const defaultId = 'web';
+  const defaultPw = 1234;
+
+  // === 엄격한 비교 사용
+  // 1. 아이디를 입력 받아 참이면
+  // 2. 비밀번호 입력을 받아 '로그인 되었습니다', '비밀번호가 일치하지 않습니다' 출력
+  // 3. 아이디가 일치하지 않으면 '아이디가 일치하지 않습니다' 출력
+
+  /*  let userId = prompt('아이디를 입력하세요');
+  
+    if (userId === defaultId) {
+      let userPw = prompt('비밀번호를 입력하세요');
+      if (Number(userPw) === defaultPw) {
+        alert('로그인 되었습니다');
+      } else {
+        alert('비밀번호가 일치하지 않습니다');
+      }
+    }
+  
+    else {
+      alert('아이디가 일치하지 않습니다');
+    }
+    */
+
+  let userId = prompt('아이디를 입력하세요');
+
+  if (userId === defaultId) {
+    alert('아이디가 일치합니다');
+
+    let userPw = prompt('비밀번호를 입력하세요');// 입력받은 값은 문자열
+    userPw = +userPw;// 데이터 변환
+    console.log(typeof userPw);
+
+    if (userPw === defaultPw) {
+      alert('로그인 되었습니다');
+    } else {
+      alert('비밀번호가 일치하지 않습니다');
+    }
+  } else {
+    alert('아이디가 일치하지 않습니다');
+  }
+
+</script>

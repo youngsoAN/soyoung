@@ -1,0 +1,58 @@
+<html>
+
+<body>
+  <!-- 
+      1~4 사이의 숫자를 입력하면 해당 번호의 이미지를 출력
+     -->
+
+  <script>
+    // document.body.innerHTML = '<img>';
+    // prompt로 받는 값은 문자열
+    let num = prompt('1~4 사이의 숫자를 입력하세요');
+    console.log(typeof num);// string
+
+    /*
+    === 데이터 타입까지 비교하는 엄격한 비교값
+      비교되는 대입값을 문자열로 작성
+      if (num === '1') {// 이 조건이 참이면
+        document.body.innerHTML = '<img src="./images/배고파짤.png" alt="img1">';// 실행되어라
+      }
+      else if (num === '2') {
+        document.body.innerHTML = '<img src="./images/왜안돼짤.png" alt="img2">';
+      }
+      else if (num === '3') {
+        document.body.innerHTML = '<img src="./images/제목없음.png" alt="img3">';
+      }
+      else if (num === '4') {
+        document.body.innerHTML = '<img src="./images/주말언제와.png" alt="img4">';
+      }
+      else {
+        document.body.textContent = '<h2>해당 번호만 입력해 주세요</h2>';
+      }
+      */
+
+
+    // 숫자형 변환
+    // num = Number(num);
+    // num = +num;
+    num = num * 1;
+    console.log(typeof num);
+    if (num === 1) {// 이 조건이 참이면
+      document.body.innerHTML = '<img src="./images/배고파짤.png" alt="img1">';// 실행되어라
+    }
+    else if (num === 2) {
+      document.body.innerHTML = '<img src="./images/왜안돼짤.png" alt="img2">';
+    }
+    else if (num === 3) {
+      document.body.innerHTML = '<img src="./images/제목없음.png" alt="img3">';
+    }
+    else if (num === 4) {
+      document.body.innerHTML = '<img src="./images/주말언제와.png" alt="img4">';
+    }
+    else {
+      document.body.textContent = '<h2>해당 번호만 입력해 주세요</h2>';
+    }
+  </script>
+</body>
+
+</html>

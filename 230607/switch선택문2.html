@@ -1,0 +1,29 @@
+<script>
+  // 사이트명 입력시 해당 사이트로 이동
+  let site = prompt('네이버, 다음, 구글 중 원하는 사이트를 입력하세요');
+
+  // window.location.href = 'https://~'; 현재 탭에서 이동
+  // window.open().location.href = 'https://~'; 새 탭에서 이동
+
+  switch (site) {
+    case '네이버':
+      // window.open('about:blank').location.href = "https://naver.com";
+      url = "https://naver.com";
+      break;
+    case '다음':
+      // window.open('about:blank').location.href = "https://daum.net";
+      url = "https://daum.net"
+      break;
+    case '구글':
+      // window.open('about:blank').location.href = "https://google.com";
+      url = "https://google.com"
+      break;
+
+    default:
+      alert('제시된 사이트만 입력해주세요');
+  }
+
+  if (url) {
+    window.open('about:blank').location.href = url;
+  }
+</script>

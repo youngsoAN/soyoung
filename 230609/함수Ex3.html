@@ -1,0 +1,31 @@
+<script>
+  // 매개변수 없이 함수 호출시 내용이 순차적으로 출력
+
+  let num = 0;// 숫자로 초기화
+  const 과일 = () => {
+    num++;// 증감 연산자
+
+    switch (num) {
+      case 1:
+        console.log('수박');
+        break;
+      case 2:
+        console.log('참외');
+        break;
+      case 3:
+        console.log('체리');
+        break;
+      case 4:
+        console.log('초당옥수수');
+        break;
+      default:
+        console.log('더이상 없음');
+    }
+  };
+
+
+  과일();// 수박
+  과일();// 참외
+  과일();// 체리
+  과일();// 초당옥수수
+</script>

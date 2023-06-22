@@ -1,0 +1,20 @@
+<script>
+  // 1~10까지의 합 계산
+  // 1+2+3+4+5+6+7+8+9+10 = ??
+
+  let total = 0;
+  for (let i = 1; i <= 10; i++) {
+    total = total + i;
+    /*
+    total(0) +i (1) -> total(1)
+    total(1) +i (2) -> total(3)
+    total(3) +i (3) -> total(6)
+    total(6) +i (4) -> total(10)
+    ...
+    total(45) i+ (10) -> total(55)
+    total(55) i+ (11) -> 변수 i 가 10보다 작거나 같다는 조건을 달성 못해서 구문 실행 x
+    */
+    total += i;
+  }
+  console.log(total);
+</script>

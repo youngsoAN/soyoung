@@ -1,0 +1,17 @@
+<script>
+  /*
+    1. 빈 객체 생성 후 객체표현식(리터럴) 방식으로 프로퍼티 추가
+    2. 객체 속성: 커피이름, 가격, 사이즈, 메서드(콘솔에 주문하신 커피는 xxx 이며 가격은 xxx입니다.)
+    3. 콘솔에 메서드 출력
+  */
+  const obj = {};
+
+  obj["커피 이름"] = '아메리카노';// 띄어쓰기가 있는 경우 프로퍼티 추가
+  obj.price = 4000;
+  obj.size = 'tall';
+  obj.output = function () {
+    console.log(`주문하신 음료는 ${obj["커피 이름"]}이며 가격은 ${this.price}원 입니다.`);
+  }
+  console.log(obj);
+  obj.output();
+</script>

@@ -1,0 +1,25 @@
+<script>
+  /*
+    콜백함수 callback function
+      함수의 매개변수parameter로 함수를 넘기는 것
+  */
+
+  function addFn(num1, num2) {
+    // num1 : () => console.log('fn1 함수');
+    // num1 : () => function () { console.log('fn1 함수') };
+
+    num1();// 받은 매개변수 호출
+    num2();
+  }
+
+  const fn1 = () => console.log('fn1 함수');// 함수 표현식
+  const fn2 = function () {// 익명 함수 표현식
+    console.log('fn2 함수');
+  };
+  function fn3() {// 이름있는 함수 표현식
+    console.log('fn3 함수')
+  }
+
+  addFn(fn1, fn2);
+  addFn(fn2, fn3);
+</script>

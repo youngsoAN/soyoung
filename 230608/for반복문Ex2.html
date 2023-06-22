@@ -1,0 +1,33 @@
+<html>
+
+<body>
+  <!-- 구구단 2단 출력
+    2*1=2;
+    2*2=4;
+    2*3=6;
+    2*4=8;
+    2*5=10;
+    2*6=12;
+    2*7=14;
+    ...
+    -->
+  <script>
+    // let total = 0;
+    // let i;
+
+    /*
+    for (i = 1; i <= 9; i++) {
+      let total = 2 * i;
+      document.write(`<p>2 * ${i} = ${total}입니다.</p>`);
+    }
+    */
+    let sum = '';
+    for (let i = 1; i <= 9; i++) {
+      let num = 2 * i;
+      sum += `<p>2 * ${i} = ${num}</p>`;
+    }
+    document.body.innerHTML = sum;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+<style>
+  img {
+    width: 300px;
+  }
+</style>
+
+<body>
+  <script>
+    /* ****이미지 출력이 안됐음***
+    const num = prompt('1~4까지의 숫자중 하나만 입력해 주세요');
+    let msg = '';
+    switch (num) {
+      case "1":
+      document.body.innerHTML = '<img src="https://i1.sndcdn.com/artworks-l2lCmUXC61XR2HM5-gwB8Vg-t500x500.jpg" alt="img1" >';
+
+      case "2":
+      document.body.innerHTML = '<img src="https://www.myhawaii.kr/wp-content/uploads/2014/01/Doraemon.jpg" alt="img2" >';
+
+      case "3":
+      document.body.innerHTML = '<img src="https://www.myhawaii.kr/wp-content/uploads/2014/01/Doraemon.jpg" alt="img3" >';
+
+      case "4":
+      document.body.innerHTML = '<img src="https://www.myhawaii.kr/wp-content/uploads/2014/01/Doraemon.jpg" alt="img4" >';
+
+        msg = `<h2>입력한 숫자는 ${num}입니다</h2>`
+        break;
+        default:
+          msg = `<h2>해당 번호만 입력해주세요</h2>`
+          break;
+    }
+    document.body.innerHTML = msg;
+    */
+    let num = prompt('1~4까지의 숫자를입력해 주세요');
+    let img = '';
+
+    switch (num) {
+      case null:
+        img = '<h2>취소했습니다</h2>';
+        break;
+      case '1':
+        img = '<img src="https://i1.sndcdn.com/artworks-l2lCmUXC61XR2HM5-gwB8Vg-t500x500.jpg" alt="img1" >';
+        break;
+      case '2':
+        img = '<img src="https://www.myhawaii.kr/wp-content/uploads/2014/01/Doraemon.jpg" alt="img2" >';
+        break;
+      case '3':
+        img = '<img src="https://image.ytn.co.kr/general/jpg/2017/0823/201708231145061443_d.jpg" alt="img3" >';
+        break;
+      case '4':
+        img = '<img src="https://w7.pngwing.com/pngs/945/78/png-transparent-doraemon-manga-drawing-nobita-nobi-fujiko-fujio-doraemon-doraemon-manga-drawing.png" alt="img4" >';
+        break;
+      default:
+        img = '<h2>해당 번호만 입력해주세요</h2>';
+    }
+
+    document.body.innerHTML = img;
+  </script>
+</body>
+
+</html>

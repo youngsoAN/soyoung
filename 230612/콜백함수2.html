@@ -1,0 +1,22 @@
+<script>
+  /*
+    setTimeout(콜백함수, 시간);
+      일정 시간 후 한번만 실행하는 자바스크립트 내장 함수
+      가장 대표적인 비동기 함수
+  */
+
+  const study = () => {
+    let lang = '자바스크립트';
+
+    /*
+    setTimeout(function () {// 5초 뒤에 한번만 실행하는 함수
+      console.log(`재미있는 ${lang}`);
+    }, 5000);// css: 1초 == 1s, 1000ms js: 1초 ==1000
+  */
+    setTimeout(() => {
+      console.log(`재미있는 ${lang}`);
+    }, 5000);
+  }
+
+  study();
+</script>

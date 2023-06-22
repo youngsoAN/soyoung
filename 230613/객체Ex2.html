@@ -1,0 +1,38 @@
+<script>
+  // 객체 생성과 동시에 프로퍼티 대입. 커피명, 가격, 사이즈, 콘솔 출력 메서드
+  // 주문한 커피는 xxx이고 가격은 xxx원이고 사이즈는 xxx입니다 콘솔에 출력
+
+  /*
+  const menu = {
+    coffee: '아메리카노',
+    price: 5500,
+    size: 'tall',
+    order: function () {
+      console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원 이며 사이즈는 ${this.size}입니다.`);
+    };
+  }
+  menu.order();
+  */
+
+  let coffee = '카페라떼', price = 6000, size = 'tall';
+
+  /*
+  const menu = {
+    coffee: '아메리카노',
+    price: 5500,
+    size: 'tall',
+    order: function () {
+      console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원 이며 사이즈는 ${this.size}입니다.`);
+    }
+  }
+  */
+  const menu = {
+    coffee,
+    price,
+    size,
+    order: function () {
+      console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원 이며 사이즈는 ${this.size}입니다.`);
+    }
+  }
+  menu.order();
+</script>

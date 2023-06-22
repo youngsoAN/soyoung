@@ -1,0 +1,42 @@
+<html>
+
+<body>
+  <!-- 
+      입력 받은 값이 짝수인 경우 xx은 짝수입니다 출력
+      입력 받은 값이 홀수인 경우 xx은 홀수입니다 출력
+     -->
+  <script>
+    let num = Number(prompt('숫자를 입력해주세요'));
+    console.log(typeof num);
+    // num = Number(num);
+    let msg = '';
+
+    /*    switch (num % 2) {
+          case 0:
+            document.body.innerHTML = `<h2>${num}은/는 짝수입니다.</h2>`;
+            break;
+          case 1:
+            document.body.innerHTML = `<h2>${num}은/는 홀수입니다.</h2>`;
+            break;
+          default:
+            document.body.innerHTML = '<h2>숫자만 입력하세요.</h2>';
+        }
+        */
+    switch (num % 2) {
+      case 0:
+        msg = '짝수';
+        break;
+      case 1: msg = '홀수';
+        break;
+      default:
+        document.body.innerHTML = '<h2>숫자만 입력해 주세요</h2>';
+    }
+    if (msg) document.body.innerHTML = `<h2>${num}은/는 ${msg}입니다</h2>`;
+
+    // isNaN; NaN인지 아닌지 판단하는 값으로NaN인 \ 경우는 true, 아니면 false
+    // console.log(NaN == NaN); false
+    // console.log(NaN === NaN); false
+  </script>
+</body>
+
+</html>

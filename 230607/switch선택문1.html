@@ -1,0 +1,61 @@
+<html>
+
+<body>
+  <script>
+    /*
+      switch 선택문: 특정 값과 비교하여 참인 경우 실행
+  
+      switch(비교값) {
+       case 비교할 값:
+        실행문;
+        brask;
+  
+        case 비교할 값: 이 값과 비교하여 참인 경우 실행문 실행. 비교시 엄격한 비교 ===
+          실행문;
+          brask; 비교값이 참인경우 다음으로 넘어가지 않고 구문을 벗어나게 하는 키워드
+  
+        default: 위의 비교값과 일치하는 값이 없는 경우 실행. else와 같은 역할을 하며 생략 가능
+          실행문;
+          break; 제일 마지막이기 때문에 생략 가능
+      }
+  */
+
+    const num = prompt('1~4까지의 숫자 중 하나만 입력해 주세요');
+
+    /*
+    switch (num) {// '1'숫자형 문자열
+      case "1":// case 값으로는 문자열, 숫자, 논리, null, undefined 등등 데이터 타입
+        document.body.innerHTML = `<h2>입력한 숫자는 ${num}입니다.</h2>`;
+        break;
+      case "2":
+        document.body.innerHTML = `<h2>입력한 숫자는 ${num}입니다.</h2>`;
+        break;
+      case "3":
+        document.body.innerHTML = `<h2>입력한 숫자는 ${num}입니다.</h2>`;
+        break;
+      case "4":
+        document.body.innerHTML = `<h2>입력한 숫자는 ${num}입니다.</h2>`;
+        break;
+      default:
+        document.body.innerHTML = `<h2>1~4까지의 숫자만 입력해 주세요.</h2>`;
+        break;
+    }
+    */
+
+    let msg = '';
+    switch (num) {
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+        msg = `<h2>입력한 숫자는 ${num}입니다.</h2>`;
+        break;
+      default:
+        msg = `<h2>1~4까지의 숫자만 입력해 주세요.</h2>`;
+        break;
+    }
+    document.body.innerHTML = msg;
+  </script>
+</body>
+
+</html>

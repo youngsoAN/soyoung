@@ -1,0 +1,50 @@
+<script>
+  /*
+    즉시 실행 함수
+      함수 선언과 동시에 실행되는 함수. 호출x
+      한번만 호출되기 때문에 주로 초기화 값으로도 많이 사용
+      전역으로 선언되는 것을 방지
+  */
+
+  // 선언 즉시 실행 함수
+  // (function 이름() {})();
+  // (function 이름() {} ());
+
+  (function fn1() {
+    let a = 5, b = 10;
+    console.log(a * b);
+  })();
+
+  (function fn2() {
+    let a = 10, b = 20;
+    console.log(a * b + a);
+  }());
+
+  // 익명 즉시 실행 함수
+  // (function (){})();
+  // (function (){}());
+  (function () {
+    let a = 2;
+    console.log(a ** a);
+  })();
+
+  // 함수 표현식(변수 대입)
+  (myFn = function (a, b) {
+    console.log(a + b);
+  })('재미있는', '자바스크립트!!!!!');
+
+  myFn('ㅠㅠㅠㅠ', '!!!!');// 즉시 실행 함수도 변수에 저장해 재사용 가능
+
+  // 매개변수 대입
+  const fn3 = x => console.log(`매개변수 x의 값은 ${x}이다`);
+  fn3(10);
+
+  (function (x) {
+    console.log(`매개변수 x의 값은 ${x}이다`);
+  })(30);
+
+  let num = 1;
+  (function () {
+    let num = 1;
+  })();
+</script>
