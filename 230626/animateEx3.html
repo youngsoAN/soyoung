@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>animateEx3</title>
+    <style>
+      body {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      nav {
+        /* background-color: #ddd; */
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        left: -200px;
+      }
+
+      nav .global_nav {
+        background-color: orange;
+        margin: 0;
+        padding: 100px 0 0 0;
+        list-style: none;
+        width: 200px;
+        height: 100%;
+        text-align: center;
+        line-height: 2;
+        box-sizing: border-box;
+      }
+
+      nav .btn {
+        background-color: orange;
+        width: 50px;
+        height: 100px;
+        position: absolute;
+        top: 5px;
+        left: 200px;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+
+      nav .btn span {
+        /* display: block; */
+        /* transform: rotate(-90deg); */
+        writing-mode: vertical-rl;
+        /* text-orientation: upright; */
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul class="global_nav">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+      </ul>
+      <div class="btn" id="close"><span>close</span></div>
+      <div class="btn" id="open"><span>open</span></div>
+    </nav>
+
+    <script>
+      $("#open").on("click", () => {
+        $("nav").animate({ left: 0 }, 300);
+        $("#open").hide();
+      });
+      $("#close").on("click", () => {
+        $("nav").animate({ left: -200 }, 300);
+        $("#open").show();
+      });
+    </script>
+  </body>
+</html>

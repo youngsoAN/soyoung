@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>addClass+removeClass+toggleClass</title>
+    <style>
+.btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 5px 20px;
+      cursor: pointer;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    #box {
+        border: 1px solid #999;
+        margin: 20px;
+        padding: 0 20px;
+    }
+    #box.style1{
+        background-color: #63a574;
+        width: 500px;
+        margin: 50px auto;
+    }
+    #box.style2{
+        background-color: tomato;
+        font-style: italic;
+        border: 3px dotted deeppink;
+    }
+    #box.style3{
+        background-color: lightseagreen;
+        color: #fff;
+        font-weight: normal;
+    }
+    </style>
+    <script src="../../common/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="btn_group">
+        <div class="btn" id="btn1">클래스1 적용</div>
+        <div class="btn" id="btn2">클래스1 제거</div>
+        <div class="btn" id="btn3">클래스2 적용</div>
+        <div class="btn" id="btn4">클래스2 제거</div>
+        <div class="btn" id="btn5">클래스 제거(매개변수 x)</div>
+        <div class="btn" id="btn6">토글</div>
+    </div>
+    <div id="box">
+        <h2>.addClass(); 클래스 선택자 적용</h2>
+        <h2>.removeClass(); 클래스 선택자 제거</h2>
+        <h2>.toggleClass(); on/off</h2>
+    </div>
+
+    <script>
+        $('#btn1').on('click',() => {
+            $('#box').addClass('style1');
+        });
+        $('#btn2').on('click',() => {
+            $('#box').removeClass('style1');
+        });
+        $('#btn3').on('click', () => {// style1 과 style2가 동시에 적용되면 우선순위에 따라서 중첩적용됨
+            $('#box').addClass('style2');
+        });
+        $('#btn4').on('click',() => {
+            $('#box').removeClass('style2');
+        });
+        $('#btn5').on('click',() => {
+            $('#box').removeClass();// 매개변수 값을  넣지 않으면 클래스값 전부 제거
+        });
+        $('#btn6').on('click',() => {
+            $('#box').toggleClass('style3');
+        });
+    </script>
+</body>
+</html>

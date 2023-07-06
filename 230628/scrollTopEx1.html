@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>scrollTopEx1</title>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+      }
+
+      header {
+        width: 100%;
+        font-size: 1.2rem;
+        background-color: lightblue;
+      }
+
+      header .global_nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 80px;
+        gap: 10px;
+      }
+
+      header .global_nav a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      header.change_header {
+        font-size: 1rem;
+        background-color: orange;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #000;
+        transition: 0.5s;
+      }
+
+      header.change_header .global_nav {
+        height: 50px;
+        transition: 0.3s;
+      }
+
+      main {
+        height: 300vh;
+      }
+
+      .btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <ul class="global_nav">
+        <li><a href="./menu1.html">menu1</a></li>
+        <li><a href="./menu2.html">menu2</a></li>
+        <li><a href="./menu3.html">menu3</a></li>
+        <li><a href="./menu4.html">menu4</a></li>
+      </ul>
+    </header>
+    <main>
+      main
+      <a href="#" class="btn">맨 위로</a>
+    </main>
+
+    <script>
+      //   a의 기본 성격 제거
+      $("a[href='#']").on("click", (evt) => {
+        evt.preventDefault();
+      });
+
+      $(".btn").on("click", (evt) => {
+        $("html, body").animate({ scrollTop: 0 }, 300);
+      });
+
+      let scroll = 0;
+      $(window).on("scroll", (e) => {
+        let pos = $(e.target).scrollTop();
+        console.log(pos);
+        if (pos > scroll) {
+          $("header").addClass("change_header");
+        } else {
+          $("header").removeClass("change_header");
+        }
+      });
+    </script>
+  </body>
+</html>

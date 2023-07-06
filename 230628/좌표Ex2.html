@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>좌표Ex2</title>
+    <style>
+      /*
+      .container {
+        position: relative;
+      }
+      .bg-img {
+        position: absolute;
+        top: 50px;
+        left: 30%;
+      }
+      .bg-img img {
+        width: 200px;
+      }
+      .mov-img img {
+        position: absolute;
+        top: 20px;
+        left: 10%;
+        width: 500px;
+      }
+      */
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      .container {
+        height: 100%;
+        background: url(./images/bg2.png) no-repeat 50% /40%,
+          linear-gradient(#00394f, #01374d);
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        position: absolute;
+      }
+      .img1 {
+        top: -10px;
+        left: 0;
+      }
+      .img2 {
+        bottom: -20px;
+        right: 10px;
+      }
+      .img3 {
+        top: 0;
+        right: -20px;
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <!--  
+    <div class="container">
+      <div class="bg-img">
+        <img src="./images/꽃3.png" alt="img1" />
+        <img src="./images/꽃4.png" alt="img1" />
+      </div>
+      <div class="mov-img">
+        <img src="./images/꿀벌.png" alt="꿀벌이미지입니다" />
+      </div>
+    </div>
+-->
+
+    <div class="container">
+      <img src="./images/quinoa.png" alt="img1" class="img1" />
+      <img src="./images/speculoos-left.png" alt="img2" class="img2" />
+      <img src="./images/speculoos-right.png" alt="img3" class="img3" />
+    </div>
+
+    <script>
+      /*
+      const moving = (e) => {
+        $(".mov-img").css({
+          left: e.clientX - 60,
+          top: e.clientY - 55,
+        });
+      };
+
+      $(document).on("mousedown", () => {
+        $(document).on("mousemove", moving);
+        $(document).on("mouseup", () => {
+          //   $(document).off("mousemove", moving);
+        });
+      });
+      */
+
+      const img1 = document.querySelector(".img1");
+      const img2 = document.querySelector(".img2");
+      const img3 = document.querySelector(".img3");
+
+      addEventListener("mousemove", (event) => {
+        let x = event.clientX,
+          y = event.clientY;
+        console.log(x, y);
+
+        img1.style.transform = `translate(${x / 60}px, ${-y / 50}px)`;
+        img2.style.transform = `translate(${x / -50}px, ${y / 50}px)`;
+        img3.style.transform = `translate(${x / 60}px, ${y / 50}px)`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>addClassEx1</title>
+    <style>
+        /* 내가한것
+        .tab_menu {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            width: 700px;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        .tab_menu li {
+            text-align: center;
+            background-color: #ffcfcf;
+            border-radius: 20px 20px 0 0;
+            margin: 3px;
+        }
+        .tab_menu li h2 {
+            width: 200px;
+            margin: 20px;
+        }
+        .tab_menu li p {
+            padding: 20px;
+            text-align: left;
+            /* display: none;
+        }
+        .tab_menu li:nth-child(2) p {
+            /* display: none;
+        }
+        .tab_menu li:nth-child(3) p {
+            /* display: none;
+        }
+        .tab_menu li p strong {
+            display: block;  
+        }
+        #tab1.style {
+            background-color: #d68484;
+        }
+        #tab2.style {
+            background-color: #d68484;
+        }
+        #tab3.style {
+            background-color: #d68484;
+        }
+        */
+        .tab_menu {
+            list-style: none;
+            padding: 0;
+            margin: 50px auto;
+            width: 599px;
+            position: relative;
+            padding-top: 50px;
+        }
+        /* 각 영역의 제목 */
+        .tab_menu .tab_btn {
+            text-transform: uppercase;
+            margin: 0;
+            background-color: #ffcfcf;
+            padding: 10px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            box-sizing: border-box;
+            width: 199px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .tab_menu #tab2 .tab_btn {
+            left: 200px;
+        }
+        .tab_menu #tab3 .tab_btn {
+            left: 400px;
+        }
+
+        /* 각 영역의 문단 */
+        /* .tab_menu li {
+            overflow: hidden;
+        } */
+        .tab_menu p {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            display: none;
+            /* margin-top: 50px; */
+        }
+        .tab_menu p strong {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .tab_menu li.active h2,
+        .tab_menu li.active p {
+            background-color: #ff8b8b;
+            display: block;
+        }
+    </style>
+    <script src="../../common/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <ul class="tab_menu">
+        <li id="tab1" class="active">
+            <h2 class="tab_btn">html</h2>
+            <p>
+                <strong>html Tutoral</strong>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam consectetur laudantium, necessitatibus asperiores delectus officia hic harum aliquam dolorum, magnam, deleniti aliquid perferendis quo provident eius nisi atque possimus.</span></p></li>
+        <li id="tab2">
+            <h2 class="tab_btn">css</h2>
+            <p>
+                <strong>css Tutoral</strong>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam consectetur laudantium, necessitatibus asperiores delectus officia hic harum aliquam dolorum, magnam, deleniti aliquid perferendis quo provident eius nisi atque possimus.</span></p></li>
+        <li id="tab3">
+            <h2 class="tab_btn">javascript</h2>
+                <p><strong>js Tutoral</strong>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam consectetur laudantium, necessitatibus asperiores delectus officia hic harum aliquam dolorum, magnam, deleniti aliquid perferendis quo provident eius nisi atque possimus.</span></p></li>
+    </ul>
+
+    <script>
+        /* 내가한것
+        $('.tab_menu #tab1').on('click',()=>{
+            $('#tab1').addClass('style');
+            $('#tab2').removeClass('style');
+            $('#tab3').removeClass('style');
+            
+        });
+        $('.tab_menu #tab2').on('click',()=>{
+            $('#tab2').addClass('style');
+            $('#tab1').removeClass('style');
+            $('#tab3').removeClass('style');
+        });
+        $('.tab_menu #tab3').on('click',()=>{
+            $('#tab3').addClass('style');
+            $('#tab1').removeClass('style');
+            $('#tab2').removeClass('style');
+        });
+        */
+
+       /* 선생님이랑 한거 길게 쓴것
+       $('.tab_menu li:first-child').on('click',()=> {
+        $('.tab_menu li').removeClass('active');
+        $('.tab_menu li:first-child').addClass('active');
+       });
+       $('.tab_menu li').eq(1).on('click',()=> {
+        $('.tab_menu li').eq(1).addClass('active');
+        $('.tab_menu li').removeClass('active');
+       });
+       */
+
+       $('.tab_menu li .tab_btn').on('click',(e)=> {
+        $('.tab_menu li').removeClass('active');
+        $(e.currentTarget).parent().addClass('active');
+       });
+    </script>
+</body>
+</html> 

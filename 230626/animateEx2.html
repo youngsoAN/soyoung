@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>animateEx2</title>
+    <style>
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100%;
+        vertical-align: top;
+        object-fit: cover;
+      }
+      .container {
+        width: 50vw;
+        aspect-ratio: 2 / 1;
+        margin: 50px auto;
+        border: 3px solid #000;
+        position: relative;
+        overflow: hidden;
+      }
+      .container .btn_group {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+      }
+      .container .btn_group li {
+        text-indent: -9999px;
+        background-color: #8785f78e;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .container .btn_group li:hover {
+        background-color: #fff;
+      }
+      .container .slider {
+        display: flex;
+        width: 200vw; /* img : 50vw * 4 */
+        outline: 3px solid #f78585;
+      }
+      .container .slider li {
+        flex-grow: 1;
+        /* width: 200vw; */
+      }
+      /* .container {
+        margin: 50px auto;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        position: relative;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      .container .btn_group {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+      }
+      .container .btn_group li {
+        text-indent: -9999px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(0, 124, 182);
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .slider {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      } */
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="btn_group">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <ul class="slider">
+        <li>
+          <img
+            src="https://via.placeholder.com/400x200/81D4FA/fff.png?text=Img1"
+            alt="img1"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/400x200/81D400/fff.png?text=Img2"
+            alt="img2"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/400x200/firebrick/fff.png?text=Img3"
+            alt="img3"
+          />
+        </li>
+        <li>
+          <img
+            src="https://via.placeholder.com/400x200/800000/fff.png?text=Img4"
+            alt="img4"
+          />
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      /*
+      $(".btn_group li")
+        .eq(0)
+        .on("click", () => {
+          $(".slider").animate({ marginLeft: 0 }, 300);
+        });
+      $(".btn_group li")
+        .eq(1)
+        .on("click", () => {
+          $(".slider").animate({ marginLeft: "-50vw" }, 300);
+        });
+      $(".btn_group li")
+        .eq(2)
+        .on("click", () => {
+          $(".slider").animate({ marginLeft: "-100vw" }, 300);
+        });
+      $(".btn_group li")
+        .eq(3)
+        .on("click", () => {
+          $(".slider").animate({ marginLeft: "-150vw" }, 300);
+        });
+        */
+      $(".btn_group li").on("click", (e) => {
+        let idx = $(e.target).index(); // 인덱스 값을 가져오거나 리턴
+        $(".slider").animate({ marginLeft: -50 * idx + "vw" }, 300);
+      });
+    </script>
+  </body>
+</html>

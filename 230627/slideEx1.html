@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>slideEx1</title>
+    <link rel="stylesheet" href="../common/reset.css" />
+    <style>
+      .simpleSlide {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+      }
+
+      .simpleSlide .slideWrapper {
+        height: 100%;
+      }
+
+      .simpleSlide .slideWrapper .slideItem {
+        text-indent: -9999px;
+        width: 100%;
+        height: 100%;
+        background: no-repeat 50% / cover;
+        transition: 0.4s;
+        position: absolute;
+        opacity: 0;
+      }
+
+      .simpleSlide .slideWrapper #bg1 {
+        background-image: url(https://placehold.co/1000x600/213363/fff?text=bg1);
+      }
+
+      .simpleSlide .slideWrapper #bg2 {
+        background-image: url(https://placehold.co/1000x600/17594A/fff?text=bg2);
+      }
+
+      .simpleSlide .slideWrapper #bg3 {
+        background-image: url(https://placehold.co/1000x600/8EAC50/fff?text=bg3);
+      }
+
+      .simpleSlide .slideWrapper #bg4 {
+        background-image: url(https://placehold.co/1000x600/D3D04F/fff?text=bg4);
+      }
+
+      .simpleSlide .slideWrapper .slideItem.active {
+        opacity: 1;
+      }
+
+      .simpleSlide .slideBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .simpleSlide .slideBtn li {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 5px 10px 10px;
+      }
+
+      .simpleSlide .slideBtn li:hover {
+        background-color: rgba(255, 255, 255, 1);
+        line-height: 1.2;
+      }
+    </style>
+
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="simpleSlide">
+      <ul class="slideWrapper">
+        <li class="slideItem active" id="bg1">bg1</li>
+        <li class="slideItem" id="bg2">bg2</li>
+        <li class="slideItem" id="bg3">bg3</li>
+        <li class="slideItem" id="bg4">bg4</li>
+      </ul>
+      <ul class="slideBtn">
+        <li id="prevBtn">&lt;</li>
+        <li id="nextBtn">&gt;</li>
+      </ul>
+    </div>
+
+    <script>
+      let i = 0;
+
+      function nextSlide() {
+        $(".slideWrapper .slideItem").eq(i).removeClass("active");
+
+        i++; // 숫자가 1씩 계속 증가
+
+        // i의 숫자가 슬라이드 이미지가 가진 숫자보다 커지면
+        if (i >= $(".slideWrapper .slideItem").length) {
+          i = 0; // 다시 인덱스 번호 0으로 돌아와 처음 이미지가 보이게
+        }
+
+        $(".slideWrapper .slideItem").eq(i).addClass("active");
+      }
+
+      $("#nextBtn").on("click", nextSlide);
+
+      function prevSlide() {
+        $(".slideWrapper .slideItem").eq(i).removeClass("active");
+        i--;
+        if (i < 0) {
+          i = $(".slideWrapper .slideItem").length - 1;
+        }
+
+        $(".slideWrapper .slideItem").eq(i).addClass("active");
+      }
+      $("#prevBtn").on("click", prevSlide);
+
+      setInterval(nextSlide, 3000);
+    </script>
+  </body>
+</html>

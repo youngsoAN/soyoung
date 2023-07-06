@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>animateEx5</title>
+    <style>
+      body {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.3rem;
+        text-align: center;
+        color: #f7f1e5;
+      }
+
+      .btn {
+        background-color: #4c4b16;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        line-height: 100px;
+        float: left;
+        position: relative;
+      }
+
+      .btn:hover {
+        background-color: #33320c;
+      }
+
+      .global_nav {
+        float: left;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-left: -400px;
+      }
+
+      .global_nav li {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+      }
+
+      .global_nav li:nth-child(1) {
+        background-color: #898121;
+      }
+
+      .global_nav li:nth-child(2) {
+        background-color: #e7b10a;
+      }
+
+      .global_nav li:nth-child(3) {
+        background-color: #a76f6f;
+      }
+
+      .global_nav li:nth-child(4) {
+        background-color: #eab2a0;
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="btn" data-click="close">open</div>
+    <ul class="global_nav">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+
+    <script>
+      $(".btn").on("click", (e) => {
+        const target = $(e.target);
+        const deta = target.attr("deta-click");
+
+        if (deta === "open") {
+          target.attr({ "deta-click": "close" }).text("close");
+          $("global_nav").animate({ marginLeft: 0 }, 300);
+        } else {
+          target.attr({ "deta-click": "open" }).text("open");
+          $("global_nav").animate({ marginLeft: -400 }, 300);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>attr2</title>
+  <style>
+    .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 5px 20px;
+      cursor: pointer;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#btn2').on('click', () => {
+        // .attr(); html의 속성 변경
+        $('img').attr({ src: './images/model2.jpg', alt: 'img2' });
+      });
+
+      $('#btn1').on('click', () => {
+        // .attr(); html의 속성 변경
+        $('img').attr({ src: './images/model1.jpg', alt: '파란색 배경에 노란 세모 모양 선글라스를 낀 흑인 여성. 노란 옷을 입고 붉은 입술을 가지고 있음' });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn1">이미지 1</div>
+    <div class="btn" id="btn2">이미지 2</div>
+  </div>
+
+  <img src="./images/model1.jpg" alt="img1">
+</body>
+
+</html>

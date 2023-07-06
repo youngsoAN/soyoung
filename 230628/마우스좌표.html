@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>마우스 좌표</title>
+    <style>
+      body {
+        height: 200vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>마우스 좌표</h1>
+    <h2>
+      <a
+        href="https://ko.javascript.info/mouse-events-basics#ref-1501"
+        target="_blank"
+        >clientX, clientY와 pageX, pageY</a
+      >
+    </h2>
+
+    <script>
+      addEventListener("click", () => {
+        /*
+        // 브라우저 기준 마우스 좌표. 스크롤과 상관없음 (화면에 보이는 좌표 찍어줌)
+        console.log("브라우저 기준 x 좌표 event.clientX:", event.clientX);
+        console.log("브라우저 기준 y 좌표 event.clientY:", event.clientY);
+
+        // 요소 기준 마우스 좌표. 스크롤 포함 인식
+        console.log("요소 기준 x 좌표 event.offsetX:", event.offsetX);
+        console.log("요소 기준 y 좌표 event.offsetY:", event.offsetY);
+
+        // 페이지 기준 마우스 좌표. 스크롤 포함 인식
+        console.log("페이지 기준 x 좌표 event.pageX:", event.pageX);
+        console.log("페이지 기준 y 좌표 event.pageY:", event.pageY);
+        */
+        // 디바이스 기준. 스크롤과 상관 없음
+        console.log("디바이스 기준 x 좌표 event.screenX:", event.screenX);
+        console.log("디바이스 기준 y 좌표 event.screenY:", event.screenY);
+      });
+    </script>
+  </body>
+</html>

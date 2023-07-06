@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>slideEx3</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="../common/minireset.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./slideEx3.css" />
+    <script src="../common/jquery-3.7.0.min.js"></script>
+    <script defer src="./slideEx3.js"></script>
+  </head>
+  <body>
+    <div class="slide_wrapper">
+      <!-- 좌우 버튼 -->
+      <ul class="btn_group">
+        <li class="btn" id="prevBtn">&lt;</li>
+        <li class="btn" id="prevBtn">&gt;</li>
+      </ul>
+
+      <!-- 슬라이드 박스 -->
+      <section class="slide_item slide_box1 active">
+        <figure class="slide_img">img1</figure>
+        <div class="text_box_wrapper">
+          <div class="text_box_inner">
+            <h3 class="moving">SUBTITLE</h3>
+            <h2 class="moving">title1</h2>
+            <p class="moving">
+              오늘은 점심으로 무슨메뉴 먹을까? 섭웨 샌드위치 개맛도리인데 고르기
+              넘 어렵~~~
+            </p>
+            <a href="#" class="text_btn moving">더보기</a>
+          </div>
+        </div>
+      </section>
+      <section class="slide_item slide_box2">
+        <figure class="slide_img">img2</figure>
+        <div class="text_box_wrapper">
+          <div class="text_box_inner">
+            <h3 class="moving">SUBTITLE</h3>
+            <h2 class="moving">title2</h2>
+            <p class="moving">날씨도 좋은데 밖에 나가서 광합성 하고싶다</p>
+            <a href="#" class="text_btn moving">더보기</a>
+          </div>
+        </div>
+      </section>
+      <section class="slide_item slide_box3">
+        <figure class="slide_img">img2</figure>
+        <div class="text_box_wrapper">
+          <div class="text_box_inner">
+            <h3 class="moving">SUBTITLE</h3>
+            <h2 class="moving">title3</h2>
+            <p class="moving">
+              낮잠 한시간 자고 일어나면 소원이 없을듯 따아악 한시간만..
+            </p>
+            <a href="#" class="text_btn moving">더보기</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

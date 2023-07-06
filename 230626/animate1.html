@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>animate1</title>
+    <style>
+        .btn_group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 5px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn_group .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ff7878;
+    }
+    </style>
+    <!-- jQuery 기본문서 -->
+    <script src="../common/jquery-3.7.0.min.js"></script>
+    <!-- jQuery UI *jQuery 파일이 연결되어 있어야 작동 -->
+    <script src="../common/jquery-ui.min.js"></script>
+</head>
+<body>
+    <h1>.animate()</h1>
+    <p><a href="https://api.jquery.com/animate/#animate-properties-duration-easing-complete">jQuery ui</a></p>
+    <div class="btn_group">
+        <div class="btn">클릭</div>
+    </div>
+
+    <div class="box">제이쿼리 애니메이션</div>
+
+    <script>
+        $('.btn').on('click',()=>{
+            // .animate({속성: 값, 속성:값,....}, 진행시간, 움직임 형태....);
+            $('.box').animate({
+                'width': '500px',
+                height: 400,
+                fontSize:'1.5rem',
+                'font-weight':'bold',
+                color: 'teal',
+                backgroundColor: 'blue'
+            }, 1500,'easeInOutElastic');
+        });
+    </script>
+</body>
+</html>

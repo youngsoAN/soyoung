@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>prependTo+appendToEx2</title>
+    <style>
+        img{
+            width: 100%
+        }
+        .container {
+            width: 200px;
+            height: 100px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .container ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .container .btn_group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .container .btn_group li {
+            width: 30px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: #597497a8;
+            color: #fff;
+        }
+        .gallery li {
+            list-style: none;
+            text-align: center;
+        }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="btn_group">
+            <li>&lt;</li>
+            <li>&gt;</li>
+        </ul>
+        <div class="gallery">
+            <li><img src="https://via.placeholder.com/200x100/81D4FA/fff.png?text=Image1" alt="img1"></li>
+            <li><img src="https://via.placeholder.com/200x100/00ACC1/fff.png?text=Image2" alt="img2"></li>
+            <li><img src="https://via.placeholder.com/200x100/43A047/fff.png?text=Image3" alt="img3"></li>
+            <li><img src="https://via.placeholder.com/200x100/2E7D32/fff.png?text=Image4" alt="img4"></li>
+        </div>
+    </div>
+
+    <script>
+        // 왼쪽, 이전 버튼
+        $('.btn_group li:first-child').on('click',()=> {
+            $('.gallery li').last().prependTo('.gallery');// 제일 처음으로 보냄
+        });
+        // 오른쪽, 다음 버튼
+        $('.btn_group li').last().on('click', () => {
+            $('.gallery li').first().appendTo('.gallery');// 제일 마지막으로 보냄
+        });
+    </script>
+</body>
+</html>
