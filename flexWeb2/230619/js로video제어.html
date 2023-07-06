@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>js로video제어</title>
+  <style>
+    .wrapper {
+      display: flex;
+    }
+
+    .wrapper article {
+      width: 30vw;
+      /* height: 30vw; */
+      aspect-ratio: 5/4;
+      margin: 0 5px;
+      overflow: hidden;
+      border: 1px solid #000;
+    }
+
+    .wrapper article .video_wrapper {
+      filter: sepia(100%);
+      transition: 0.4s;
+    }
+
+    .wrapper article .video_wrapper:hover {
+      filter: none;
+      transform: scale(1.2);
+    }
+
+    /* .wrapper article video {
+      width: 280%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    } */
+    .wrapper article video {
+      width: 100%;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const articles = document.querySelectorAll('article');
+      const videos = document.querySelectorAll('video');
+
+      console.log(articles);
+      console.log(videos);
+      /*
+            articles[0].addEventListener('mouseover', () => {
+              videos[0].play();
+      
+              videos[2].play();
+            });
+            articles[1].addEventListener('mouseover', () => {
+              videos[1].play();
+            });
+            articles[2].addEventListener('mouseover', () => {
+              videos[2].play();
+            });
+            */
+      const videoPause = (event) => {
+        const target = event.target.querySelector('video');
+        target.pause();// 일시멈춤
+      }
+      articles.forEach(article => {
+        // 마우스를 위에 올렸을 때. 하위 노드에 영향을 주지 않음
+        article.addEventListener('mouseenter', (evt) => {
+          const target = evt.target;
+          console.log(evt.target);// 마우스를 올린 바로 그 대상
+          target.querySelector('video').play();
+        });
+
+        // 'mouseleave'마우스가 벗어났을 때. 하위 노드에 영향을 주지 않음
+        article.addEventListener('mouseleave', videoPause);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <article>
+      <h2 class="video_wrapper">
+        <video src="./images/vid.mp4" loop muted preload></video>
+      </h2>
+    </article>
+    <article>
+      <h2 class="video_wrapper">
+        <video src="./images/vid.mp4" loop muted preload></video>
+      </h2>
+    </article>
+    <article>
+      <h2 class="video_wrapper">
+        <video src="./images/vid.mp4" loop muted preload></video>
+      </h2>
+    </article>
+  </div>
+</body>
+
+</html>

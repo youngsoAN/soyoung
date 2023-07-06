@@ -1,0 +1,33 @@
+<script>
+  /*
+    https://ko.javascript.info/introduction-browser-events
+    
+    이벤트란?
+      무언가 일어났다는 신호
+      마우스, 폼 요소, 키보드, 문서, css 이벤트
+      DOM에서 발생하는 이벤트 -> 마우스, 폼 요소, 키보드, 문서, css 이벤트
+
+      표준 이벤트 모델
+      EventTarget.addEventListener()
+      https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener
+      대상: Element, Document,
+
+      addEventListener(type, listener);
+      addEventListener('이벤트명', 콜백함수);
+
+      고전 이벤트 모델
+      <a href="#" onclick="fn()">
+        .click(function() {})
+        on접두어 .on('click', function() {})
+  */
+  /*
+   window.addEventListener('click', () => {
+     window.alert('클릭했습니다.');
+   });
+   */
+
+  //  대상을 지정하지 않으면 전역 객체 window 바인딩binding
+  addEventListener('click', () => {
+    alert('클릭했습니다.');
+  });
+</script>

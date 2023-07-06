@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>event5-이벤트모델</title>
+  <!-- <script defer src="event5.js"></script> -->
+  <script src="event5.js"></script>
+</head>
+
+<body>
+  <h1>이벤트 모델</h1>
+  <h2>.addEventListener('이벤트타입',리스너)</h2>
+  <a href="https://ko.javascript.info/mouse-events-basics" target="_blank">마우스 이벤트 참고</a>
+
+  <dl>
+    <dt>이벤트 핸들러 event handler</dt>
+    <dd>이벤트 발생시 실행되는 코드 모음. 실행하는 함수</dd>
+    <dd>특정 요소에 지정된 이벤트가 발생하면 이벤트 리스너에 연결된 이벤트 핸들러 실행</dd>
+  </dl>
+
+  <dl>
+    <dt>이벤트 리스너 event listener</dt>
+    <dd>특정 이벤트에 대해 일어날 동작</dd>
+    <dd>보통 이벤트 리스너와 이벤트 핸들러를 합쳐 이벤트 리스너라고 함</dd>
+  </dl>
+  <ol id="event1">
+    <li>click: 클릭했을 때</li>
+    <li>dblclick: 더블 클릭했을 때</li>
+    <li>mousemove: 마우스가 움직였을 때</li>
+    <li>mousedown: 버튼을 눌렀을 때</li>
+    <li>mouseup: 버튼을 눌렀다 뗐을 때</li>
+    <li>mouseover: 마우스가 올려졌을 때. 하위 노드에 영향을 줌</li>
+    <li>mouseout: 마우스가 벗어났을 때. 하위 노드에 영향을 줌</li>
+  </ol>
+</body>
+
+</html>

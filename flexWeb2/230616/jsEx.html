@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>list</title>
+</head>
+
+<body>
+  <h1>유자차</h1>
+  <p><em>손쉽게 마시는 천연 비타민C 유자차, 유자를 깨끗이 씻어 건더기까지 간 후 설탕을 섞어 만들어보세요.</em><br>향도 좋고 만드는 법도 간단하답니다.</p>
+  <dl>
+    <dt>유자차란?</dt>
+    <dd>유자를 가늘게 채 썰어 설탕에 절여 두었다가 뜨거운 물에 타서 마시는 차.</dd>
+  </dl>
+
+  <section>
+    <h2>요리 재료</h2>
+    <ul>
+      <li>유자 700g (4개)</li>
+      <li>설탕 700g (4컵)</li>
+    </ul>
+
+    <h2>요리 과정</h2>
+    <ol>
+      <li>유자는 깨끗이 씻어 4등분 한 후 반으로 갈라 속의 씨앗을 뺀다.</li>
+      <li>손질한 유자는 믹서나 핸드믹서로 곱게 간다.</li>
+      <li>유자와 동량의 설탕을 넣고 고루 섞은 후 통에 담는다.</li>
+      <li>하루가 지난 후 부터는 끓는 물에 유자를 넣고 잘 섞어 마신다.</li>
+    </ol>
+  </section>
+
+  <script>
+    // DOM 탐색
+    // h1 : color 변경
+    // p : border
+    // dl : bgc
+    // section : border
+    // h2 :color
+    // li : line-height, font-weight
+
+    const h1 = document.querySelector('h1');
+    const h2 = document.querySelector('h2');
+    const p = document.querySelector('p');
+    const dl = document.querySelector('dl');
+    const li = document.querySelectorAll('li');
+    const section = document.querySelector('section');
+
+    h1.style.color = 'pink';
+    h2.style.color = 'orange';
+    p.style.borderBottom = '3px solid #ddd';
+    section.style.border = '3px solid #70B1FA';
+    dl.style.backgroundColor = '#D6FDFD';
+    li[0].style.lineHeight = '2';
+    li[1].style.fontWeight = 'bold';
+
+    /*
+    수민언니꺼
+        const dl = document.querySelector("dl");
+        dl.style.backgroundColor = "orange";
+    
+        // section : border
+        const section = document.querySelector("section");
+    
+        // h2 : color
+        const h2 = document.querySelectorAll("h2");
+        h2.forEach((h2s) => {
+          h2s.style.color = "green";
+        });
+    
+        // li : line-height, font-weight
+        const lis = document.querySelectorAll("li");
+        lis.forEach((lis) => {
+          lis.style.lineHeight = "3rem";
+          lis.style.fontWeight = "bold"
+        });
+    
+    
+        // ol > li : bgc
+        const olli = document.querySelector("olli");
+        olli.forEach((olli) => {
+          olli.style.backgroundColor = "violet";
+        });
+        */
+  </script>
+</body>
+
+</html>
