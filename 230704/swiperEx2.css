@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+#main-slide {
+  width: 100%;
+  height: 80vh;
+  background-color: #ddd;
+}
+
+/*
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+*/
+
+/* 개별 이미지 */
+#main-slide li {
+  background: no-repeat 50% / cover;
+}
+
+#main-slide #bg1 {
+  background-image: url(https://placehold.co/1000x500/A6D0DD/000?text=bg1);
+}
+
+#main-slide #bg2 {
+  background-image: url(https://placehold.co/1000x500/FF6969/000?text=bg2);
+}
+
+#main-slide #bg3 {
+  background-image: url(https://placehold.co/1000x500/FFD3B0/000?text=bg3);
+}
+
+#main-slide #bg4 {
+  background-image: url(https://placehold.co/1000x500/ECC9EE/000?text=bg4);
+}
+
+/* 텍스트 */
+#main-slide .text-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  width: 400px;
+  /* height: 200px; */
+  background-color: rgba(255, 225, 255, 0.9);
+  padding: 20px;
+}
+
+#main-slide .text-wrapper .title {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+#main-slide .text-wrapper .subtitle {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+#main-slide .text-wrapper .text {
+  line-height: 1.4;
+}
+
+/* pagination */
+#main-slide .my-pagination {
+  border: 1px solid #000;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 225, 255, 0.9);
+  line-height: 60px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center; */
+}
+
+/* 화살표 버튼 */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "👈🏼";
+  display: block;
+  width: 20px;
+  height: 50px;
+  /* background-color: #fff; */
+  opacity: 0.5;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-rtl:hover .swiper-button-nex:hover::after {
+  transform: translateY(-5px);
+  opacity: 1;
+}

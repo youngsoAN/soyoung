@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>matchMedia</title>
+  </head>
+  <body>
+    <script>
+      /*
+        https://developer.mozilla.org/ko/docs/Web/API/Window/matchMedia
+
+        window.matchMedia(); 미디어쿼리 객체 반환
+            matchMedia('(min-width: 768px)');
+            matchMedia('screen and (min-width:768px) and (max-width:1241px)');
+            matchMedia('width > 768px').matches; 지정한 범위 안의 값인지 boolean으로 반환
+        */
+
+      const mq = matchMedia("(width > 768px)");
+      const view = (bg, txt) => {
+        document.body.style.backgroundColor = bg;
+        document.body.innerHTML = `<h1>768px ${txt} 화면</h1>`;
+      };
+      /*
+      if (mq.matches) {
+        view("orange");
+        document.body.innerHTML = "<h1>768px 이상 화면</h1>";
+      } else {
+        view("tomato");
+        document.body.innerHTML = "<h1>768px 이하 화면</h1>";
+      }
+      */
+      mq.matches ? view("orange", "이상의") : view("tomato", "미만의");
+    </script>
+  </body>
+</html>

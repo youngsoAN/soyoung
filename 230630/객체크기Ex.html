@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>객체크기Ex</title>
+    <style>
+      body {
+        margin: 0;
+        height: 400vh;
+      }
+      .pregress_bar_box {
+        width: 100%;
+        height: 30px;
+        background-color: #000000;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .pregress_bar_box .progress_Bar {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(to left, #00ff6a, #77b2ff, #001aff);
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <div class="pregress_bar_box">
+      <div class="progress_Bar"></div>
+    </div>
+    <h1>progress bar</h1>
+
+    <script>
+      const progress = () => {
+        // 문서 전체 높이로 스크롤바로 인해 숨겨진 부분까지 포함
+        // const scrollHt = $(document).height();
+        const scrollHt = document.documentElement.scrollHeight;
+
+        // 스크롤바 미포함 브라우저 내부 높이
+        // const slientHt = $(window).height();
+        const clientHt = document.documentElement.clientHeight;
+        console.log(scrollHt, clientHt);
+
+        const total = scrollHt - clientHt;
+
+        const scrollWt = (scrollY / total) * 100;
+
+        // const = scrollWt = () * 100;
+
+        $(".pregress_bar_box .progress_Bar").css({ width: scrollWt + "%" });
+      };
+      $(window).on("scroll", progress);
+    </script>
+  </body>
+</html>

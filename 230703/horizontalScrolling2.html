@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>horizontalScrolling2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      body {
+        overflow-x: hidden;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .box {
+        height: 100vh;
+        background-color: #d6e0ff;
+      }
+      .box:nth-of-type(1) {
+        background-color: #d1eaff;
+      }
+      .box:nth-of-type(2) {
+        background-color: #7ce5ff;
+      }
+      .box:nth-of-type(3) {
+        background-color: #77b2ff;
+      }
+      .horizontal_container {
+        width: 100%;
+        position: relative;
+      }
+      .horizontal_container .sticky_box {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
+      .horizontal_container .sticky_box .horizontal_inner_box {
+        position: absolute;
+        display: flex;
+        width: 300%;
+      }
+      .horizontal_container .sticky_box .horizontal_inner_box li {
+        width: 100%;
+        height: 100vh;
+      }
+      .horizontal_container .sticky_box .horizontal_inner_box .row1 {
+        background-color: #ff9393;
+      }
+      .horizontal_container .sticky_box .horizontal_inner_box .row2 {
+        background-color: #ffc79a;
+      }
+      .horizontal_container .sticky_box .horizontal_inner_box .row3 {
+        background-color: #d9ff93;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="box">
+      <h3>box1</h3>
+    </section>
+
+    <!-- 가로 스크롤 영역 -->
+    <div class="horizontal_container">
+      <!-- pos:sticky -->
+      <div class="sticky_box">
+        <!-- 실제 가로로 움직이는 영역 -->
+        <ul class="horizontal_inner_box">
+          <li class="row1">row_box1</li>
+          <li class="row2">row_box2</li>
+          <li class="row3">row_box3</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="box">
+      <h3>box3</h3>
+    </section>
+    <section class="box">
+      <h3>box4</h3>
+    </section>
+
+    <script>
+      const horizontalContainer = document.querySelector(
+        ".horizontal_container"
+      );
+      const stickyBox = document.querySelector(".sticky_box");
+      const innerBox = document.querySelector(".horizontal_inner_box");
+
+      const calcHt = (ht) => {
+        return (
+          ht.scrollWidth -
+          document.documentElement.clientWidth +
+          document.documentElement.clientHeight
+        );
+      };
+      console.log("innerBox: ", innerBox.scrollWidth);
+      console.log("clientWidth: ", document.documentElement.clientWidth);
+      console.log("clientHeight: ", document.documentElement.clientHeight);
+      console.log("calcHt:", calcHt(innerBox));
+
+      horizontalContainer.style.height = `${calcHt(innerBox)}px`;
+
+      const scrolled = () => {
+        console.log("stickyBox.offsetTop:", stickyBox.offsetTop);
+        innerBox.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
+      };
+      /* 
+      offsetTop:
+        offsetParent를 기준으로 거리를 알려 줌
+        offsetParent는 offset의 가장 가까운 포지션 값으로 부모 요소에 포지션이 없는 경우 body 기준
+    */
+
+      addEventListener("scroll", scrolled);
+    </script>
+  </body>
+</html>

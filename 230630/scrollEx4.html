@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollEx4</title>
+    <!-- open graph -->
+    <meta property="og:title" content="scrollEx4" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- reset -->
+    <link rel="stylesheet" href="../common/minireset.min.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 내가 작성한 style. common style -->
+    <!-- <link rel="stylesheet" href="./common.css" /> -->
+    <!-- 내가 작성한 style. 개별, 이 페이지에만 들어가는 style -->
+    <link rel="stylesheet" href="./scrollEx4.css" />
+
+    <script src="../common/jquery-3.7.0.min.js"></script>
+    <script defer src="./scrollEx4.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="transit">
+        <h1 class="title flex_wrap">
+          <strong class="title_logo">로고</strong>
+          <span class="title_text transit">부드럽게 이동해 봅시다</span>
+        </h1>
+        <div class="menu_wrapper flex_wrap">
+          <!-- 모바일 메뉴 -->
+          <div id="toggle_btn" class="flex_wrap">
+            <div class="mobile_icon">
+              <span class="bar1 transit"></span>
+              <span class="bar2 transit"></span>
+              <span class="bar3 transit"></span>
+            </div>
+          </div>
+
+          <!-- pc 메뉴 -->
+          <menu id="global_nav" class="flex_wrap transit">
+            <li><a href="#content1">box1</a></li>
+            <li><a href="#content2">box2</a></li>
+            <li><a href="#content3">box3</a></li>
+            <li><a href="#content4">box4</a></li>
+          </menu>
+        </div>
+      </nav>
+      <div id="slide_box">slide</div>
+    </header>
+
+    <article id="content1" class="box1">
+      <h3>box1</h3>
+    </article>
+    <article id="content2" class="box2">
+      <h3>box2</h3>
+    </article>
+    <article id="content3" class="box3">
+      <h3>box3</h3>
+    </article>
+    <article id="content4" class="box4">
+      <h3>box4</h3>
+    </article>
+  </body>
+</html>

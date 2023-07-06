@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>scrollEx5</title>
+    <style>
+      body {
+        height: 400vh;
+      }
+      .obj {
+        /* border: 1px solid #000; */
+        position: fixed;
+        top: 20%;
+        left: 30%;
+        transform: translate(-50% -50%);
+        width: 300px;
+        height: 210px;
+
+        /* stroke-dasharray: 50 5; 점선 간격 */
+        /* stroke-dashoffset: 10; 시작 위치 */
+      }
+    </style>
+    <script src="../common/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <!-- https://www.w3schools.com/graphics/svg_path.asp -->
+    <svg class="obj">
+      <path
+        d="M150 0 L75 200 L225 200 Z"
+        fill="none"
+        stroke="#8EAC50"
+        stroke-width="4"
+      />
+    </svg>
+
+    <script>
+      /*
+        .strokeDasharray; 점선 간격
+        .strokeDashoffset; 시작 위치
+
+        SVGGeometryElement.getTotalLength(); svg path 총 길이를 값으로 반환
+        */
+
+      const objPath = document.querySelector(".obj path");
+      const path = objPath.getTotalLength();
+      console.log(path);
+
+      objPath.style.strokeDasharray = path;
+      objPath.style.strokeDashoffset = path;
+
+      const scrolled = () => {
+        const windScrollTop = document.documentElement.scrollTop;
+        const scrollHt = document.documentElement.scrollHeight;
+        const clientHt = document.documentElement.clientHeight;
+
+        let total = windScrollTop / (scrollHt - clientHt);
+
+        const action = path * total;
+        objPath.style.strokeDashoffset = path - action;
+      };
+
+      addEventListener("scroll", scrolled);
+    </script>
+  </body>
+</html>

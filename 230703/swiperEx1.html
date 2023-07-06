@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>swiperEx1</title>
+    <!-- meta, favicon... -->
+
+    <!-- reset css -->
+    <!-- fonts css -->
+    <!-- swiper css -->
+    <link rel="stylesheet" href="../common/swiper-bundle.min.css" />
+    <!-- 내가 작성한 css -->
+    <style>
+      /* :root { 전역 변수
+      --swiper-theme-color: #fff;
+    } */
+
+      body {
+        margin: 0;
+      }
+
+      .mySwiper1 {
+        background-color: #ddd;
+        height: 80vh;
+        overflow: hidden;
+
+        /* 지역변수 선언 */
+        --swiper-theme-color: #fff;
+        --swiper-navigation-size: 2rem;
+      }
+
+      .mySwiper1 .swiper-slide {
+        background: no-repeat 50% / cover;
+      }
+
+      .mySwiper1 .bg1 {
+        background-image: url(https://placehold.co/1000x500/B70404/000?text=bg1);
+      }
+
+      .mySwiper1 .bg2 {
+        background-image: url(https://placehold.co/1000x500/DB005B/000?text=bg2);
+      }
+
+      .mySwiper1 .bg3 {
+        background-image: url(https://placehold.co/1000x500/F79327/000?text=bg3);
+      }
+
+      .mySwiper1 .bg4 {
+        background-image: url(https://placehold.co/1000x500/FFE569/000?text=bg4);
+      }
+
+      .mySwiper1 .bg5 {
+        background-image: url(https://placehold.co/1000x500/025464/000?text=bg5);
+      }
+
+      /* mySwiper1 style */
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        /* font-size: 1rem */
+      }
+
+      .mySwiper1 .swiper-pagination-bullet {
+        width: 30px;
+        height: 10px;
+        border-radius: 0;
+      }
+
+      .mySwiper2 {
+        background-color: #ddd;
+        width: 80vw;
+        margin: 100px auto;
+        height: 60vh;
+        overflow: hidden;
+      }
+
+      .mySwiper2 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+    <!-- jquery -->
+    <script src="../common/jquery-3.7.0.min.js"></script>
+    <!-- swiper js -->
+    <script src="../common/swiper-bundle.min.js"></script>
+    <!-- 내가 작성한 js -->
+    <!-- <script>
+    $(document)
+    document.addEventListener('')
+  </script> -->
+  </head>
+
+  <body>
+    <!-- .swiper 모든 스와이퍼 옵션은 이 영역 안에 작성되어야 함 -->
+    <div class="swiper mySwiper1">
+      <!-- .swiper-wrapper 슬라이드 이미지 영역 -->
+      <div class="swiper-wrapper">
+        <!-- .swiper-slide 개별 이미지 -->
+        <div class="swiper-slide bg1">Slide 1</div>
+        <div class="swiper-slide bg2">Slide 2</div>
+        <div class="swiper-slide bg3">Slide 3</div>
+        <div class="swiper-slide bg4">Slide 4</div>
+        <div class="swiper-slide bg5">Slide 5</div>
+      </div>
+      <!-- 추가 옵션: 좌우 버튼 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 추가 옵션: 하단 페이지내이션 -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://placehold.co/1000x500/FAF0E4/000?text=img1"
+            alt="img1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://placehold.co/1000x500/9BCDD2/000?text=img2"
+            alt="img2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://placehold.co/1000x500/FF8551/000?text=img3"
+            alt="img3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://placehold.co/1000x500/FFDEDE/000?text=img4"
+            alt="img4"
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination mySwiper2-pagenation"></div>
+    </div>
+
+    <script>
+      // const 내가정한식별자명 = new Swiper('대상', { 객체(옵션) });
+      const mySwiper1 = new Swiper(".mySwiper1", {
+        // direction: 'vertical', 세로 방향 슬라이드
+        loop: true, // 무한 반복
+
+        pagination: {
+          // 하단 페이지네이션
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+
+        navigation: {
+          // 좌 우 화살표
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const mySwiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        pagination: {
+          // 하단 페이지네이션
+          el: ".mySwiper2 .swiper-pagination",
+          clickable: true,
+        },
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

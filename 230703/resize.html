@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>resize</title>
+  </head>
+  <body>
+    <script>
+      /*
+         https://developer.mozilla.org/ko/docs/Web/API/Window/resize_event
+           jQuery:
+               $(window).on('resize', () => {});
+           js:
+               window.addEventlistener('resize', () => {});
+           */
+      const mq = matchMedia("(width > 768px)");
+
+      const view = (bg, txt) => {
+        document.body.style.backgroundColor = bg;
+        document.body.innerHTML = `<h1>768px ${txt} 화면</h1>`;
+      };
+      /*
+         addEventListener("resize", () => {
+           // 리사이즈 이벤트가 발생했을 때
+           console.log("리사이즈 됨");
+           mq.matches ? view("orange", "이상의") : view("tomato", "미만의");
+         });
+         */
+
+      //   즉시 실행 함수를 통해 처음 화면을 열었을때 바로 실행
+      (resizeWin = () => {
+        mq.matches ? view("orange", "이상의") : view("tomato", "미만의");
+      })();
+
+      addEventListener("resize", resizeWin);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>vegasEx</title>
+  <link rel="stylesheet" href="../common/minireset.min.css">
+  <link rel="stylesheet" href="./vegas.min.css">
+  <!-- 내가 작업한 css -->
+  <!-- <link rel="stylesheet" href="./vegasEx.css"> -->
+  <style>
+    .container {
+      width: 80vw;
+      height: 50vh;
+      border: 3px solid #000;
+      margin: 50px auto;
+    }
+
+    .container .btn {
+      border: 3px solid #000;
+      background-color: #ffffff;
+      color: inherit;
+      padding: 10px 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container .btn:hover {
+      background-color: #ffceceb9;
+    }
+
+    .container .vegas-timer {
+      top: 0;
+      bottom: auto;
+      height: 6px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script src="./vegas.min.js"></script>
+  <!-- 내가 작성한 js -->
+  <script>
+    $(document).ready(function () {
+      $('.container').vegas({
+        slides: [
+          { src: './images/bg1.jpg' },
+          { src: './images/bg2.jpg' },
+          { src: './images/bg3.jpg' },
+          { src: './images/bg4.jpg' }
+        ],
+        timer: true,
+        delay: 5000,
+        overlay: './overlays/01.jpg',// 이미지 위에 필터처럼 덧씌움
+        shuffle: true,
+        // transition: 'zoomOut'
+        animation: 'kenburnsDownLeft'
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#" class="btn">고스트 버튼</a>
+  </div>
+
+</body>
+
+</html>

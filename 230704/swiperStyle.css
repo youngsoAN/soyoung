@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: "Geologica", "나눔고딕", sans-serif;
+  font-weight: 200;
+}
+
+/* swiper 공통 스타일 */
+#main-slide {
+  /* 지역 변수 선언 */
+  --swiper-theme-color: #fff;
+}

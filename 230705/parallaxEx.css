@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+/* 'Raleway' 'Orbit' */
+@import url("https://fonts.googleapis.com/css2?family=Orbit&family=Raleway:wght@900&display=swap");
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+img {
+  width: auto;
+}
+
+body {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: #ddd; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 999;
+}
+header.colorChange .logo {
+  fill: #fff;
+}
+
+header .info {
+  display: flex;
+}
+
+header .info a {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0 14px;
+}
+
+/* navigation */
+.global-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  z-index: 99;
+}
+
+.global-nav li a {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  /* pointer-events: none; */
+}
+
+.global-nav li a .dot {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  text-indent: -9999px;
+  /* pointer-events: all; */
+}
+
+.global-nav li a .menu-label {
+  margin-right: 16px;
+  opacity: 0;
+}
+
+.global-nav li a:hover .menu-label,
+.global-nav li a.active .menu-label {
+  opacity: 1;
+}
+
+.global-nav li a.active .dot {
+  transform: scale(1.6);
+  border-color: #fff;
+}
+
+.global-nav li:nth-child(1) a.active .dot {
+  background-color: #e3d9bf;
+}
+
+.global-nav li:nth-child(2) a.active .dot {
+  background-color: #00394f;
+}
+
+.global-nav li:nth-child(3) a.active .dot {
+  background-color: #be2934;
+}
+
+.global-nav li:nth-child(4) a.active .dot {
+  background-color: #69375c;
+}
+
+/* main.container */
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box1 {
+  background: #e3d9bf url(./images/bg1.png) no-repeat fixed 80% -40%;
+}
+
+.container .box2 {
+  background: #00394f url(./images/bg2.png) no-repeat fixed 50%;
+}
+
+.container .box3 {
+  background: #be2934 url(./images/bg3.png) no-repeat fixed 50%;
+}
+
+.container .box4 {
+  background: #69375c url(./images/bg4.png) no-repeat fixed 50%;
+}
+
+/* 텍스트 */
+.container .box .txt-wrapper {
+  width: 70vw;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.container .box .txt-wrapper h2 {
+  color: #00394f;
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+}
+
+.container .box .txt-wrapper h2 + p {
+  font-family: "Orbit", -apple-system, BlinkMacSystemFont, "Malgun Gothic",
+    "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.6;
+  width: 400px;
+  position: absolute;
+  bottom: -20px;
+  left: 400px;
+  font-size: 1.1rem;
+}
+
+.container .box .txt-wrapper h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.container .box .txt-wrapper .circle {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+/* 움직이는 이미지 */
+.container .box img {
+  position: absolute;
+}
+
+.container .box .box2-left,
+.container .box .box3-left,
+.container .box .box4-left {
+  left: -200px;
+  top: 70px;
+}
+
+.container .box .box2-right,
+.container .box .box3-right,
+.container .box .box4-right {
+  right: 100px;
+  bottom: -50px;
+}
